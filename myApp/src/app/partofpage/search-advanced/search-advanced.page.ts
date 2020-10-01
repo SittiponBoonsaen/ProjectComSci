@@ -45,10 +45,6 @@ export class SearchAdvancedPage implements OnInit {
         .subscribe(data => {
           this.selectedamphures = data;
           console.log(this.selectedamphures);
-        },error => {
-          let navigate = this.router.navigate(['/login']);
-          console.log("login error");
-          window.alert("login fail");
         });
   }
 

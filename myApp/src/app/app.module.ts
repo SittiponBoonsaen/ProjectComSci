@@ -11,11 +11,19 @@ import { AppRoutingModule } from './app-routing.module';
 
 import {HttpClient , HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {InputTextModule} from 'primeng/inputtext';
+import {TableModule} from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
+import {RatingModule} from 'primeng/rating';
+
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,FormsModule],
+  imports: [IonicModule.forRoot(), BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, InputTextModule,
+    TableModule, ButtonModule, RatingModule],
   providers: [
     StatusBar,
     SplashScreen,

@@ -11,6 +11,7 @@ import {DatapassService} from '../datapass.service';
 export class LoginPage implements OnInit {
   username: any;
   password: any;
+  valuedegree: any;
 
 
   constructor(private Http: HttpClient, private router: Router, public datapassService: DatapassService) { }
@@ -22,14 +23,15 @@ export class LoginPage implements OnInit {
   login() {
     let dataJSON = {
       'username_member': this.username,
-      'password_member': this.password
+      'password_member': this.password,
+      'status_member': this.valuedegree
     };
     console.log(dataJSON);
     this.Http.post('http://localhost/apiFinal/usermember/login',JSON.stringify(dataJSON)).subscribe(data =>{
       console.log("login complete");
       let navigate = this.router.navigate(['/home']);
       console.log(data);
-      this.datapassService = this.data;
+      // this.datapassService = this.data;
     },error => {
       let navigate = this.router.navigate(['/login']);
       console.log("login error");
