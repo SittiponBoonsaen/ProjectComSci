@@ -13,19 +13,15 @@ export class MyhomePage implements OnInit {
 
 
 
-  constructor(private Http: HttpClient, private router: Router, private data: DatapassService) {
+  constructor(private Http: HttpClient, private router: Router, private datapass: DatapassService) {
 
 
   }
 
   ngOnInit() {
-      this.Http.get('http://localhost/apiFinal/getstore')
-          .subscribe(data => {
-              this.getstore  = data;
-              console.log(this.getstore);
-          });
-
+      this.getstore = this.datapass.datastore;
   }
+
   clickstore(idstore) {
       console.log(idstore);
 
@@ -34,14 +30,11 @@ export class MyhomePage implements OnInit {
         };
         this.Http.post('http://localhost/apiFinal/getingfield',JSON.stringify(dataJSON))
             .subscribe(datafield => {
-                this.data.datafield  = datafield;
-                // console.log(this.data.datafield);
+                this.datapass.datafield  = datafield;
                 this.Http.post('http://localhost/apiFinal/getstoreformID',JSON.stringify(dataJSON))
                     .subscribe(datastore => {
-                        this.data.datastore = datastore;
-                        // console.log(this.data.datastore);
+                        this.datapass.getingfieldfromstore = datastore;
                         let navigate = this.router.navigate(['/myhome-field']);
-
                     });
             });
   }

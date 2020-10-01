@@ -6,13 +6,16 @@
 </ion-header>
 
 <ion-content>
-  <ion-searchbar showCancelButton="focus" cancelButtonText="ยกเลิก"></ion-searchbar>
+  <ion-searchbar (ionChange)="searchmethod($event)" showCancelButton="focus" cancelButtonText="ยกเลิก"></ion-searchbar>
     <ion-item>
-
       <div class="ion-text-wrap" style="margin-left: 260px" >
         <ion-label><a (click)="searchAdvanced()">ค้นหาขั้นสูง</a></ion-label>
       </div>
-
   </ion-item>
+
+  <ion-list *ngIf="isItemAvailable" >
+    <ion-item (click)="clickstore(data.id_store)" *ngFor="let data of datasearch | filtro: textsearch: 'name_store'">
+      {{ data.name_store }}</ion-item>
+  </ion-list>
 
 </ion-content>

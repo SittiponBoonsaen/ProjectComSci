@@ -17,6 +17,14 @@ export class LoginPage implements OnInit {
   constructor(private Http: HttpClient, private router: Router, public datapassService: DatapassService) { }
 
   ngOnInit() {
+    this.Http.get('http://localhost/apiFinal/getstore')
+        .subscribe(data => {
+          this.datapassService.datastore = data;
+        });
+    this.Http.get<any[]>('http://localhost/apiFinal/province')
+        .subscribe(data => {
+          this.datapassService.selectedprovince = data;
+        });
   }
 
 

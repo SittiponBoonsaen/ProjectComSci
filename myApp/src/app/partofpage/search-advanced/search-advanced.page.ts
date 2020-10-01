@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {DatapassService} from '../../datapass.service';
 
 @Component({
   selector: 'app-search-advanced',
@@ -18,14 +19,10 @@ export class SearchAdvancedPage implements OnInit {
   mySelectamphures: any;
 
 
-  constructor(private Http: HttpClient) {
+  constructor(private Http: HttpClient, private datapass: DatapassService) {
     this.timeMin2 = this.timeMin;
     this.timeMax2 = this.timeMax;
-    this.Http.get('http://localhost/apiFinal/province')
-        .subscribe(data => {
-          this.selectedprovince = data;
-          console.log(this.selectedprovince);
-        });
+    this.selectedprovince = this.datapass.selectedprovince;
   }
 
   ngOnInit() {

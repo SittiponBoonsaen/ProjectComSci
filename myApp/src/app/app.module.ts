@@ -17,13 +17,14 @@ import {InputTextModule} from 'primeng/inputtext';
 import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
 import {RatingModule} from 'primeng/rating';
+import {PipesModule} from './pipes/pipes.module';
 
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [IonicModule.forRoot(), BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, InputTextModule,
-    TableModule, ButtonModule, RatingModule],
+    TableModule, ButtonModule, RatingModule, PipesModule],
   providers: [
     StatusBar,
     SplashScreen,
