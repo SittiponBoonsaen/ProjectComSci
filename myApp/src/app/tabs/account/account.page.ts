@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DatapassService} from '../../datapass.service';
 
 @Component({
   selector: 'app-account',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./account.page.scss'],
 })
 export class AccountPage implements OnInit {
-
-  constructor() { }
+  dataAccount;
+  constructor(private datapass: DatapassService) { }
 
   ngOnInit() {
+    this.dataAccount = this.datapass.userIDLogin;
   }
 
 }

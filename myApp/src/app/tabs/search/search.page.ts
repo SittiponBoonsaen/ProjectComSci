@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {DatapassService} from '../../datapass.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-search',
@@ -12,7 +13,7 @@ export class SearchPage implements OnInit {
   datasearch: any[] = [];
   textsearch = '';
   isItemAvailable = false;
-  constructor(private router: Router, private datapass: DatapassService) { }
+  constructor(private router: Router, private datapass: DatapassService,private Http: HttpClient) { }
 
   ngOnInit() {
     this.datasearch = this.datapass.datastore;
@@ -32,7 +33,19 @@ export class SearchPage implements OnInit {
     }
   }
 
-  clickstore( id_store : any) {
-      console.log(id_store);
+  clickstore(id_store : any) {
+
+      let dataJSON = {
+        'id_store': id_store,
+      };
+      this.Http.post('http://localhost/apiFinal/getingfield',JSON.stringify(dataJSON))
+          .subscribe(datafield => {
+            this.datapass.datafield  = datafield;
+            this.Http.post('http://localhost/apiFinal/getstoreformID',JSON.stringify(dataJSON))
+                .subscribe(datastore => {
+                  this.datapass.getingfieldfromstore = datastore;
+                  let navigate = this.router.navigate(['/myhome-field']);
+                });
+          });
   }
 }
