@@ -1,14 +1,19 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>myhome-field</ion-title>
+    <ion-title>
+      <ion-item *ngFor="let datastore of datapass.datastore">
+        <img style="width:100%" src="data:image/png;base64,{{datastore.picture_store}}">
+      </ion-item>
+
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let getfield of datapass.getfield" (click)="clickfield(getfield.id_field)">
+    <ion-item *ngFor="let datafield of datapass.datafield" (click)="clickfield(datafield.id_field)">
       <table>
-        <img style="width: 50x; height: 50px;" src="data:image/png;base64,{{getfield.picture_picturefield}}">
+        <img style="width: 50x; height: 50px;" src="data:image/png;base64,{{datafield.picture_picturefield}}">
       </table>
       <tr>
         <th>
@@ -22,11 +27,11 @@
       </tr>
       <tr>
         <th>
-          {{getfield.name_field}}
+          {{datafield.name_field}}
         </th>
         <br>
         <th>
-          {{getfield.status_field}}
+          {{datafield.status_field}}
         </th>
 
       </tr>
