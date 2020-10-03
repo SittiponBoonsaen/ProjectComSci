@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {DatapassService} from '../datapass.service';
+import {IonRouterOutlet} from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +15,10 @@ export class LoginPage implements OnInit {
   valuedegree: any;
 
 
-  constructor(private Http: HttpClient, private router: Router, public datapassService: DatapassService) { }
+  constructor(private Http: HttpClient, private router: Router, public datapassService: DatapassService, private routerOutlet: IonRouterOutlet) { }
 
   ngOnInit() {
+    this.routerOutlet.swipeGesture = false;
     this.Http.get('http://localhost/apiFinal/getstore')
         .subscribe(data => {
           this.datapassService.datastore = data;
@@ -36,6 +38,7 @@ export class LoginPage implements OnInit {
     };
     this.Http.post('http://localhost/apiFinal/usermember/login',JSON.stringify(dataJSON)).subscribe(data =>{
       console.log("login complete");
+      this.router.setUpLocationChangeListener();
       let navigate = this.router.navigate(['/home']);
       console.log(data);
       this.datapassService.userIDLogin = data;

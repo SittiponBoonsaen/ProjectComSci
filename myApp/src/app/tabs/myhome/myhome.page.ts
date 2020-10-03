@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {DatapassService} from '../../datapass.service';
+import {IonRouterOutlet} from '@ionic/angular';
 
 @Component({
   selector: 'app-myhome',
@@ -13,13 +14,14 @@ export class MyhomePage implements OnInit {
 
 
 
-  constructor(private Http: HttpClient, private router: Router, private datapass: DatapassService) {
+  constructor(private Http: HttpClient, private router: Router, private datapass: DatapassService, private routerOutlet: IonRouterOutlet) {
 
 
   }
 
   ngOnInit() {
       this.getstore = this.datapass.datastore;
+      // this.routerOutlet.swipeGesture = false;
   }
 
   clickstore(idstore) {
