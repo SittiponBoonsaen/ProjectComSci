@@ -26,8 +26,8 @@ $app->post('/usermember/login', function (Request $request, Response $response, 
     $body = $request->getBody();
     $bodyArr = json_decode($body,true);
     $conn = $GLOBALS['dbconn']; // groblas หาทั้ง project
-    $stmt = $conn->prepare("SELECT * FROM usermember WHERE username_member=? and password_member=?");
-    $stmt -> bind_param("ss",$bodyArr['username_member'],$bodyArr['password_member']);
+    $stmt = $conn->prepare("SELECT * FROM usermember WHERE username_member=? and password_member=? and status_member=?");
+    $stmt -> bind_param("sss",$bodyArr['username_member'],$bodyArr['password_member'],$bodyArr['status_member']);
     $stmt->execute(); 
     $result = $stmt->get_result();
     $data=array();

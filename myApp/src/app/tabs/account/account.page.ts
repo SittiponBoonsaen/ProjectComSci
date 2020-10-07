@@ -15,7 +15,7 @@ export class AccountPage implements OnInit {
   ngOnInit() {
     this.dataAccount = this.datapass.userIDLogin;
   }
-
+  // ทำที่อยู่สนามและร้านค้า
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
