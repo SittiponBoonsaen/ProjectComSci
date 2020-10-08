@@ -21,7 +21,7 @@ export class SearchPage implements OnInit {
   }
 
   searchAdvanced() {
-    const navigate = this.router.navigate(['/search-advanced']);
+    const navigate = this.router.navigate(['/home/tabs/search/search-advanced']);
   }
   searchmethod(event) {
     if (event.detail.value !== ''){

@@ -23,27 +23,27 @@
             </div>
           </div>
           <br>
-          <div class="">
+          <div class="underline">
               <li class="active">
-                <a href="#">
+                <a>
                   <ion-icon name="home-outline"></ion-icon>
                   Overview </a>
               </li>
 
-              <li>
-                <a href="#">
+              <li  (click)="goTosettingprofile()" >
+                <a>
                   <ion-icon name="settings-outline"></ion-icon>
                     Account Settings </a>
               </li>
 
               <li *ngIf=" data.status_member == '2'">
-                <a href="#">
+                <a>
                   <ion-icon name="business-outline"></ion-icon>
                   Add Store </a>
               </li>
 
               <li>
-                <a href="#">
+                <a>
                   <ion-icon name="chatbubbles-outline"></ion-icon>
                   Help </a>
               </li>

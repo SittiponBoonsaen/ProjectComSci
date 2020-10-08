@@ -41,4 +41,8 @@ export class AccountPage implements OnInit {
 
     await alert.present();
   }
+
+  goTosettingprofile() {
+    let navigate = this.router.navigate(['/home/tabs/account/editprofile']);
+  }
 }

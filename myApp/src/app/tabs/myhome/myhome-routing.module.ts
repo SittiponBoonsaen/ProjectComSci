@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: MyhomePage
-  }
+  },
+  {
+    path: 'myhome-field',
+    loadChildren: () => import('../../partofpage/myhome-field/myhome-field.module').then( m => m.MyhomeFieldPageModule)
+  },
 ];
 
 @NgModule({

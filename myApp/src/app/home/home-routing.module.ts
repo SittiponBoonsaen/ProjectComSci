@@ -32,7 +32,16 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () => import('../tabs/account/account.module').then(m => m.AccountPageModule)
-          }
+          },
+        ]
+      },
+      {
+        path: 'account/editprofile',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../partofpage/editprofile/editprofile.module').then(m => m.EditprofilePageModule)
+          },
         ]
       },
       {

@@ -18,7 +18,7 @@ import {TableModule} from 'primeng/table';
 import {ButtonModule} from 'primeng/button';
 import {RatingModule} from 'primeng/rating';
 import {PipesModule} from './pipes/pipes.module';
-
+import {NavController} from '@ionic/angular';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,6 +30,7 @@ import {PipesModule} from './pipes/pipes.module';
     SplashScreen,
     HttpClient , HttpClientModule,
     FormsModule,
+    NavController,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

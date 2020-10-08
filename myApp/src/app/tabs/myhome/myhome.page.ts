@@ -36,7 +36,7 @@ export class MyhomePage implements OnInit {
                 this.Http.post('http://localhost/apiFinal/getstoreformID',JSON.stringify(dataJSON))
                     .subscribe(datastore => {
                         this.datapass.getingfieldfromstore = datastore;
-                        let navigate = this.router.navigate(['/myhome-field']);
+                        let navigate = this.router.navigate(['/home/tabs/myhome/myhome-field']);
                     });
             });
   }

@@ -1,21 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <div>
-      <ion-title>searchAdvanced</ion-title>
-    </div>
-
-    <div>
-      <ion-toolbar>
-        <ion-buttons slot="start">
-          <ion-back-button style="margin-right: 290px">back</ion-back-button>
+        <ion-buttons>
+          <ion-back-button defaultHref="home"></ion-back-button>
         </ion-buttons>
-      </ion-toolbar>
-    </div>
+        <ion-buttons slot="primary">
+          <ion-button color="secondary">
+            Done
+          </ion-button>
+        </ion-buttons>
+        <ion-title>ค้นหาขั้นสูง</ion-title>
 
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
 
   <ion-range dualKnobs="true" [min]=timeMin [max]=timeMax step="3"
               [(ngModel)]="time" (ionChange)="setBadge(time)" ></ion-range>
@@ -49,5 +48,4 @@
 
 </ion-content>
 
-<ion-button color="success" [routerLink]="'/tabs/search'">Success</ion-button>
 
