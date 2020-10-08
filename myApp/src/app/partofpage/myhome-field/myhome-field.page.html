@@ -3,7 +3,7 @@
   <ion-toolbar>
     <ion-title>
         <ion-toolbar>
-            <ion-buttons slot="start" style="margin-right: 290px">
+            <ion-buttons slot="start">
                 <ion-back-button >back</ion-back-button>
             </ion-buttons>
         </ion-toolbar>
@@ -29,8 +29,8 @@
           <tbody>
           <tr>
 <!--            <th scope="row">1</th>-->
-            <td class="w-500">
-              <img src="data:image/png;base64,{{data.picture_picturefield}}" [alt]="data.name_field">
+            <td>
+              <img style="height: 200px;width: 300px" src="data:image/png;base64,{{data.picture_picturefield}}" [alt]="data.name_field">
             </td>
             <td>{{data.name_field}}</td>
             <td>{{data.price_field}}</td>
