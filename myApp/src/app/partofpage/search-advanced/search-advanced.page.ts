@@ -26,11 +26,12 @@ export class SearchAdvancedPage implements OnInit {
   }
 
   ngOnInit() {
-
   }
   setBadge(time) {
     this.timeMin2 = time.lower;
     this.timeMax2 = time.upper;
+    console.log(this.timeMin2);
+    console.log(this.timeMax2);
   }
 
   selectedprovincemethod(select: any) {

@@ -3,7 +3,7 @@
         <ion-buttons>
           <ion-back-button defaultHref="home"></ion-back-button>
         </ion-buttons>
-        <ion-buttons slot="primary">
+        <ion-buttons slot="primary" >
           <ion-button color="secondary">
             Done
           </ion-button>
@@ -24,6 +24,7 @@
       <ion-text color="primary">{{this.timeMax2}}บาท</ion-text>
     </ion-item>
   </div>
+
   <ion-item>
     <ion-label>Select: province</ion-label>
     <ion-select class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
@@ -39,9 +40,10 @@
                           value="{{amphures.id}}"> {{amphures.name_th}} </ion-select-option>
     </ion-select>
   </ion-item>
+
   <ion-item>
     <ion-label>Time</ion-label>
-    <ion-datetime displayFormat="DD : MMMM"></ion-datetime>
+    <ion-datetime cancelText="cancel" doneText="done" displayFormat="DD : MMMM"></ion-datetime>
   </ion-item>
 
 
