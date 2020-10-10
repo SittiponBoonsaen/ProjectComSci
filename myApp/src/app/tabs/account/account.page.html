@@ -36,7 +36,7 @@
                     Account Settings </a>
               </li>
 
-              <li *ngIf=" data.status_member == '2'">
+              <li *ngIf=" data.status_member == '2'" (click)="goToAddStore()">
                 <a>
                   <ion-icon name="business-outline"></ion-icon>
                   Add Store </a>

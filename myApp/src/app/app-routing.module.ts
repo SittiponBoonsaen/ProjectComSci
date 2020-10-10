@@ -18,9 +18,6 @@ const routes: Routes = [
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
-  },  {
-    path: 'addstore',
-    loadChildren: () => import('./partofpage/addstore/addstore.module').then( m => m.AddstorePageModule)
   },
 
 ];

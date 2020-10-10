@@ -25,7 +25,7 @@ export class AccountPage implements OnInit {
         {
           text: 'ใช่',
           handler: () => {
-            let navigate = this.router.navigate(['/login']);
+            const navigate = this.router.navigate(['/login']);
             console.log('Confirm Okay');
           }
         }, {
@@ -43,6 +43,10 @@ export class AccountPage implements OnInit {
   }
 
   goTosettingprofile() {
-    let navigate = this.router.navigate(['/home/tabs/account/editprofile']);
+    const navigate = this.router.navigate(['/home/tabs/account/editprofile']);
+  }
+
+  goToAddStore() {
+    const navigate = this.router.navigate(['/home/tabs/account/addstore']);
   }
 }
