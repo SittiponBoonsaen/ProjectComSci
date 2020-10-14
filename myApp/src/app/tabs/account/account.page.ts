@@ -46,7 +46,7 @@ export class AccountPage implements OnInit {
     const navigate = this.router.navigate(['/home/tabs/account/editprofile']);
   }
 
-  goToAddStore() {
-    const navigate = this.router.navigate(['/home/tabs/account/addstore']);
+  goTomanageStore() {
+    const navigate = this.router.navigate(['/home/tabs/account/managestore']);
   }
 }

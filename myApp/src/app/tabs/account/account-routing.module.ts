@@ -9,12 +9,8 @@ const routes: Routes = [
     component: AccountPage
   },
   {
-    path: 'addstore',
-    loadChildren: () => import('../../partofpage/addstore/addstore.module').then( m => m.AddstorePageModule)
-  },
-  {
-    path: 'addfield',
-    loadChildren: () => import('../../partofpage/addfield/addfield.module').then( m => m.AddfieldPageModule)
+    path: 'managestore',
+    loadChildren: () => import('../../partofpage/managestore/managestore.module').then( m => m.ManagestorePageModule)
   },
 ];
 

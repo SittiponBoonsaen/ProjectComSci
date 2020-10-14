@@ -18,11 +18,7 @@ const routes: Routes = [
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
-  },  {
-    path: 'managestore',
-    loadChildren: () => import('./partofpage/managestore/managestore.module').then( m => m.ManagestorePageModule)
   },
-
 
 ];
 
