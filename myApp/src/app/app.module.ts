@@ -19,6 +19,7 @@ import {ButtonModule} from 'primeng/button';
 import {RatingModule} from 'primeng/rating';
 import {PipesModule} from './pipes/pipes.module';
 import {NavController} from '@ionic/angular';
+import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +32,7 @@ import {NavController} from '@ionic/angular';
     HttpClient , HttpClientModule,
     FormsModule,
     NavController,
+    LocalNotifications,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
