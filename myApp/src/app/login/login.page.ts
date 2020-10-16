@@ -19,11 +19,11 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.routerOutlet.swipeGesture = false;
-    this.Http.get('http://localhost/apiFinal/getstore')
+    this.Http.get('http://localhost:5000/apiFinal/getstore')
         .subscribe(data => {
           this.datapassService.datastore = data;
         });
-    this.Http.get<any[]>('http://localhost/apiFinal/province')
+    this.Http.get<any[]>('http://localhost:5000/apiFinal/province')
         .subscribe(data => {
           this.datapassService.selectedprovince = data;
         });
@@ -36,7 +36,7 @@ export class LoginPage implements OnInit {
       'password_member': this.password,
       'status_member': this.valuedegree
     };
-    this.Http.post('http://localhost/apiFinal/usermember/login',JSON.stringify(dataJSON)).subscribe(data =>{
+    this.Http.post('http://localhost:5000/apiFinal/usermember/login',JSON.stringify(dataJSON)).subscribe(data =>{
       console.log("login complete");
       this.router.setUpLocationChangeListener();
       let navigate = this.router.navigate(['/home']);
