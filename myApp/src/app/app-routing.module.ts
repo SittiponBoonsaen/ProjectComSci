@@ -19,15 +19,6 @@ const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full'
   },
-  {
-    path: 'search-advanced',
-    loadChildren: () => import('./partofpage/search-advanced/search-advanced.module').then( m => m.SearchAdvancedPageModule)
-  },  {
-    path: 'myhome-field',
-    loadChildren: () => import('./partofpage/myhome-field/myhome-field.module').then( m => m.MyhomeFieldPageModule)
-  },
-
-
 
 ];
 

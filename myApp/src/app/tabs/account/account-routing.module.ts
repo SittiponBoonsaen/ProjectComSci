@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: AccountPage
-  }
+  },
+  {
+    path: 'managestore',
+    loadChildren: () => import('../../partofpage/managestore/managestore.module').then( m => m.ManagestorePageModule)
+  },
 ];
 
 @NgModule({

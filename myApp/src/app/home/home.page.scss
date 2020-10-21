@@ -25,3 +25,10 @@
 #container a {
   text-decoration: none;
 }
+.center img {
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
