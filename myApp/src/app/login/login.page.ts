@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 import {DatapassService} from '../datapass.service';
+import {IonRouterOutlet} from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +15,18 @@ export class LoginPage implements OnInit {
   valuedegree: any;
 
 
-  constructor(private Http: HttpClient, private router: Router, public datapassService: DatapassService) { }
+  constructor(private Http: HttpClient, private router: Router, public datapassService: DatapassService, private routerOutlet: IonRouterOutlet) { }
 
   ngOnInit() {
+    this.routerOutlet.swipeGesture = false;
+    this.Http.get('http://localhost:5000/apiFinal/getstore')
+        .subscribe(data => {
+          this.datapassService.datastore = data;
+        });
+    this.Http.get<any[]>('http://localhost:5000/apiFinal/province')
+        .subscribe(data => {
+          this.datapassService.selectedprovince = data;
+        });
   }
 
 
@@ -26,12 +36,12 @@ export class LoginPage implements OnInit {
       'password_member': this.password,
       'status_member': this.valuedegree
     };
-    console.log(dataJSON);
-    this.Http.post('http://localhost/apiFinal/usermember/login',JSON.stringify(dataJSON)).subscribe(data =>{
+    this.Http.post('http://localhost:5000/apiFinal/usermember/login',JSON.stringify(dataJSON)).subscribe(data =>{
       console.log("login complete");
+      this.router.setUpLocationChangeListener();
       let navigate = this.router.navigate(['/home']);
       console.log(data);
-      // this.datapassService = this.data;
+      this.datapassService.userIDLogin = data;
     },error => {
       let navigate = this.router.navigate(['/login']);
       console.log("login error");
@@ -40,6 +50,5 @@ export class LoginPage implements OnInit {
   }
 
   segmentChanged(valuedegree: any) {
-    console.log(valuedegree);
   }
 }

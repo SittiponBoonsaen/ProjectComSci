@@ -37,13 +37,13 @@ export class RegisterPage implements OnInit {
       "status_member": this.status
     };
     console.log(dataJSON);
-    this.Http.post('http://localhost/apiFinal/usermember/register',JSON.stringify(dataJSON)).subscribe(data =>{
+    this.Http.post('http://localhost:5000/apiFinal/usermember/register',JSON.stringify(dataJSON)).subscribe(data =>{
       console.log("register complete");
-      let navigate = this.router.navigate(['/login']);
+      const navigate = this.router.navigate(['/login']);
       console.log(data);
       window.alert("register complete");
     },error => {
-      let navigate = this.router.navigate(['/login']);
+      const navigate = this.router.navigate(['/login']);
       console.log(error);
       window.alert("register fail");
     });

@@ -37,6 +37,23 @@ $app->get('/getstore', function (Request $request, Response $response, array $ar
     // $response->getBody()->write("Number rows, $num");
     return $response->withHeader('Content-Type','application/json');
 });
+$app->post('/getstoreformID', function (Request $request, Response $response, array $args) {
+    $body = $request->getBody();
+    $bodyArray = json_decode($body,true);
+    $conn = $GLOBALS['dbconn'];
+    $stmt = $conn->prepare("select * from store where id_store = ?");
+    $stmt->bind_param("s",$bodyArray['id_store']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $data = array();
+    while($row = $result ->fetch_assoc()){
+        array_push($data,$row);
+    }
+    $json = json_encode($data);
+    $response->getBody()->write($json);
+    return $response->withHeader('Content-Type', 'application/json');
+});
+
 
 $app->post('/getingfield', function (Request $request, Response $response, array $args) {
     $body = $request->getBody();

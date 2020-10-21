@@ -1,17 +1,20 @@
 <ion-header>
   <ion-toolbar>
-    <div>
-      <ion-title>searchAdvanced</ion-title>
-    </div>
-
-    <div>
-      <ion-back-button style="margin-right: 290px"  defaultHref="/search"></ion-back-button >
-    </div>
+        <ion-buttons>
+          <ion-back-button defaultHref="home"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="primary" >
+          <ion-button color="secondary">
+            Done
+          </ion-button>
+        </ion-buttons>
+        <ion-title>ค้นหาขั้นสูง</ion-title>
 
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
 
   <ion-range dualKnobs="true" [min]=timeMin [max]=timeMax step="3"
               [(ngModel)]="time" (ionChange)="setBadge(time)" ></ion-range>
@@ -21,6 +24,7 @@
       <ion-text color="primary">{{this.timeMax2}}บาท</ion-text>
     </ion-item>
   </div>
+
   <ion-item>
     <ion-label>Select: province</ion-label>
     <ion-select class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
@@ -36,14 +40,14 @@
                           value="{{amphures.id}}"> {{amphures.name_th}} </ion-select-option>
     </ion-select>
   </ion-item>
-  <ion-item>
-    <ion-label>Time</ion-label>
-    <ion-datetime displayFormat="DD : MMMM"></ion-datetime>
-  </ion-item>
+
+<!--  <ion-item>-->
+<!--    <ion-label>Time</ion-label>-->
+<!--    <ion-datetime cancelText="cancel" doneText="done" displayFormat="DD : MMMM"></ion-datetime>-->
+<!--  </ion-item>-->
 
 
 
 </ion-content>
 
-<ion-button color="success" [routerLink]="'/tabs/search'">Success</ion-button>
 
