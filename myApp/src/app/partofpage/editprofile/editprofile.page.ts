@@ -1,7 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Router} from '@angular/router';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-editprofile',
@@ -10,18 +7,9 @@ import {Router} from '@angular/router';
 })
 export class EditprofilePage implements OnInit {
 
-  @ViewChild('filebin') filebtn: {
-      nativeElement: HTMLInputElement
-  };
-  constructor(private Http: HttpClient, private router: Router) { }
+  constructor() { }
+
   ngOnInit() {
   }
-  uploadimage(event) {
-    const files = event.target.files;
-    console.log(files);
-  }
 
-  undateprofile() {
-    this.filebtn.nativeElement.click();
-  }
 }
