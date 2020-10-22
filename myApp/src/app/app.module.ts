@@ -21,6 +21,7 @@ import {PipesModule} from './pipes/pipes.module';
 import {NavController} from '@ionic/angular';
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

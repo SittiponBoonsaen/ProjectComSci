@@ -19,7 +19,7 @@ export class RegisterPage implements OnInit {
 
 
 
-  constructor(private Http: HttpClient,private router: Router) { }
+  constructor(private Http: HttpClient, private router: Router) { }
 
   ngOnInit() {
   }

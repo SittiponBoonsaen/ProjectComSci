@@ -5,5 +5,16 @@
 </ion-header>
 
 <ion-content>
+  <div class="profile-userpic">
+    <img src="assets/img/default-avatar.png">
+  </div>
+
+    <div class="">
+      <input type="file" name="myImage" accept="image/png,image/jpeg" #filebin (change)="uploadimage($event)" />
+    </div>
+
+    <div>
+      <ion-button (click)="save()">SAVE</ion-button>
+    </div>
 
 </ion-content>
