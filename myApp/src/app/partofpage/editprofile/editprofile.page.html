@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
 <ion-header>
   <ion-toolbar>
     <ion-title>editprofile</ion-title>
@@ -5,17 +7,13 @@
 </ion-header>
 
 <ion-content>
-  <div class="profile-userpic">
+  <div class="padding">
     <img src="assets/img/default-avatar.png">
-  </div>
-
-  <div class="">
-    <input type="file" name="myImage" accept="image/png,image/jpeg" #filebin (click)="presentAlertConfirm()" />
   </div>
 
   <div>
     <ion-button (click)="selectImage()">SAVE</ion-button>
   </div>
-
+  <button type="button" class="btn btn-secondary">Secondary</button>
 </ion-content>
 
