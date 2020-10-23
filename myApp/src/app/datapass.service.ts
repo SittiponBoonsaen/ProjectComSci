@@ -4,7 +4,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DatapassService {
-  getfield;
   userIDLogin;
+  datafield;
+  getingfieldfromstore;
+  datastore;
+  selectedprovince;
   constructor() { }
 }

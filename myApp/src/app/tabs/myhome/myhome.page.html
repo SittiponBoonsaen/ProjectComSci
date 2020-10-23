@@ -2,43 +2,51 @@
 
 <ion-header>
   <ion-toolbar>
-    <ion-title>JongSnam</ion-title>
+
+
+    <ion-title style="margin-left:  -130px" >JongSnam</ion-title>
+
+      <ion-button class="button" (click)="Gosearch()">
+          <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button class="button" (click)="notifications()">
+          <ion-icon name="notifications-outline"></ion-icon>
+      </ion-button>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-      <ion-list>
-        <ion-item *ngFor="let store of this.getstore" (click)="clickstore(store.id_store)">
-            <table>
-                <img style="width: 50x; height: 50px;" src="data:image/png;base64,{{store.picture_store}}">
-            </table>
-            <tr>
-                <th>
-                    ชื่อร้าน :
-                </th>
-                <br>
-                <th>
-                    เบอร์โทร :
-                </th>
+    <div class="card">
+        <p-dataView #dv [value]="getstore" [paginator]="true" [rows]="9" filterBy="name"
+                    [sortField]="sortField" [sortOrder]="sortOrder" >
+            <ng-template pTemplate="header">
+                <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
 
-            </tr>
-            <tr>
-                <th>
-                    {{store.name_store}}
-                </th>
-                <br>
-                <th>
-                    {{store.telephone_store}}
-                </th>
+                </div>
+            </ng-template>
+            <ng-template let-getstore pTemplate="listItem">
+                <div class="p-col-12" (click)="clickstore(getstore.id_store)">
+                    <div class="product-list-item">
+                        <img src="data:image/png;base64,{{getstore.picture_store}}" [alt]="getstore.name_store"/>
 
-            </tr>
+                        <div class="product-list-detail">
+                            <div class="product-name">{{getstore.name_store}}</div>
+                            <div class="product-description">{{getstore.description}}</div>
+                            <p-rating [ngModel]="getstore.rating" [readonly]="true" [cancel]="false"></p-rating>
+                            <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{getstore.category}}</span>
+                        </div>
+                        <div class="product-list-action">
+<!--                            <span class="product-price">${{getstore.price}}</span>-->
+                            <p-button icon="pi pi-shopping-cart" label="ดูรายละเอียด" (onClick)="clickstore(getstore.id_store)" [disabled]="getstore.inventoryStatus === 'OUTOFSTOCK'"></p-button>
+<!--                            <span [class]="'product-badge status-' + getstore.inventoryStatus.toLowerCase()">{{getstore.inventoryStatus}}</span>-->
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-dataView>
+    </div>
 
-
-
-        </ion-item>
-
-      </ion-list>
 
 </ion-content>
 

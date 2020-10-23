@@ -9,16 +9,24 @@ import {DatapassService} from '../../datapass.service';
 })
 export class MyhomeFieldPage implements OnInit {
 
+  datastore;
+  datafield;
   constructor(private datapass: DatapassService) {
-      console.log(datapass.getfield);
+    console.log("--");
+    console.log(datapass.datastore);
+    console.log("--");
+    console.log(datapass.datafield);
   }
 
   ngOnInit() {
-    // console.log(getfield);
+      this.datastore = this.datapass.datastore;
+      this.datafield = this.datapass.datafield;
+
   }
 
 
   clickfield(id_field: any) {
-    
+    console.log(id_field);
   }
+
 }

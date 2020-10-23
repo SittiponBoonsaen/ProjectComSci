@@ -1,36 +1,44 @@
+
 <ion-header>
   <ion-toolbar>
-    <ion-title>myhome-field</ion-title>
+    <ion-title>
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-back-button >back</ion-back-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let getfield of datapass.getfield" (click)="clickfield(getfield.id_field)">
-      <table>
-        <img style="width: 50x; height: 50px;" src="data:image/png;base64,{{getfield.picture_picturefield}}">
-      </table>
-      <tr>
-        <th>
-          ชื่อสนาม :
-        </th>
-        <br>
-        <th>
-          เบอร์โทร :
-        </th>
+  <div class="container">
+    <div class="row"  *ngFor="let data of datafield" (click)="clickfield(data.id_field)">
+      <div class="col-12">
+        <table class="table table-image">
+          <thead>
+          <tr>
+<!--            <th scope="col">Day</th>-->
+            <th scope="col">รูปภาพ</th>
+            <th scope="col">ชื่อสนาม</th>
 
-      </tr>
-      <tr>
-        <th>
-          {{getfield.name_field}}
-        </th>
-        <br>
-        <th>
-          {{getfield.status_field}}
-        </th>
+            <th scope="col">ราคา/ชม.</th>
+          </tr>
+          </thead>
 
-      </tr>
-    </ion-item>
-  </ion-list>
+          <tbody>
+          <tr>
+<!--            <th scope="row">1</th>-->
+            <td>
+              <img style="height: 200px;width: 300px" src="data:image/png;base64,{{data.picture_picturefield}}" [alt]="data.name_field">
+            </td>
+            <td>{{data.name_field}}</td>
+            <td>{{data.price_field}}</td>
+          </tr>
 
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </ion-content>

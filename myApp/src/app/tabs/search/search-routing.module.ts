@@ -7,7 +7,12 @@ const routes: Routes = [
   {
     path: '',
     component: SearchPage
-  }
+
+  },
+  {
+    path: 'search-advanced',
+    loadChildren: () => import('../../partofpage/search-advanced/search-advanced.module').then( m => m.SearchAdvancedPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {DatapassService} from '../../datapass.service';
 
 @Component({
   selector: 'app-search-advanced',
@@ -18,22 +19,19 @@ export class SearchAdvancedPage implements OnInit {
   mySelectamphures: any;
 
 
-  constructor(private Http: HttpClient) {
+  constructor(private Http: HttpClient, private datapass: DatapassService) {
     this.timeMin2 = this.timeMin;
     this.timeMax2 = this.timeMax;
-    this.Http.get('http://localhost/apiFinal/province')
-        .subscribe(data => {
-          this.selectedprovince = data;
-          console.log(this.selectedprovince);
-        });
+    this.selectedprovince = this.datapass.selectedprovince;
   }
 
   ngOnInit() {
-
   }
   setBadge(time) {
     this.timeMin2 = time.lower;
     this.timeMax2 = time.upper;
+    console.log(this.timeMin2);
+    console.log(this.timeMax2);
   }
 
   selectedprovincemethod(select: any) {
@@ -41,14 +39,10 @@ export class SearchAdvancedPage implements OnInit {
     let dataJSON = {
       'PATIENT_ID': select,
     };
-    this.Http.post('http://localhost/apiFinal/amphures',JSON.stringify(dataJSON))
+    this.Http.post('http://localhost:5000/apiFinal/amphures',JSON.stringify(dataJSON))
         .subscribe(data => {
           this.selectedamphures = data;
           console.log(this.selectedamphures);
-        },error => {
-          let navigate = this.router.navigate(['/login']);
-          console.log("login error");
-          window.alert("login fail");
         });
   }
 
