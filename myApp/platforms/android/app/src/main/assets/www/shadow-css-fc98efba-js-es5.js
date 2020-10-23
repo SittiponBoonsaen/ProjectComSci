@@ -13,7 +13,7 @@
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["shadow-css-fc98efba-js"], {
     /***/
-    "./node_modules/@ionic/core/dist/esm/shadow-css-fc98efba.js":
+    "/xFy":
     /*!******************************************************************!*\
       !*** ./node_modules/@ionic/core/dist/esm/shadow-css-fc98efba.js ***!
       \******************************************************************/
@@ -21,7 +21,7 @@
     /*! exports provided: scopeCss */
 
     /***/
-    function node_modulesIonicCoreDistEsmShadowCssFc98efbaJs(module, __webpack_exports__, __webpack_require__) {
+    function xFy(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);

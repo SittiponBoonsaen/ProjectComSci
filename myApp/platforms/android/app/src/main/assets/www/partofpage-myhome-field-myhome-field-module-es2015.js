@@ -1,6 +1,32 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["partofpage-myhome-field-myhome-field-module"],{
 
-/***/ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-scrollpanel.js":
+/***/ "7eH+":
+/*!****************************************************************!*\
+  !*** ./src/app/partofpage/myhome-field/myhome-field.page.scss ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".container {\n  padding: 2rem 0rem;\n}\n\nh4 {\n  margin: 2rem 0rem 1rem;\n}\n\n.table-image td, .table-image th {\n  vertical-align: middle;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9teWhvbWUtZmllbGQvbXlob21lLWZpZWxkLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxzQkFBQTtBQUNGOztBQUdFO0VBQ0Usc0JBQUE7QUFBSiIsImZpbGUiOiJzcmMvYXBwL3BhcnRvZnBhZ2UvbXlob21lLWZpZWxkL215aG9tZS1maWVsZC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcclxuICBwYWRkaW5nOiAycmVtIDByZW07XHJcbn1cclxuXHJcbmg0IHtcclxuICBtYXJnaW46IDJyZW0gMHJlbSAxcmVtO1xyXG59XHJcblxyXG4udGFibGUtaW1hZ2Uge1xyXG4gIHRkLCB0aCB7XHJcbiAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG4gIH1cclxufVxyXG4iXX0= */");
+
+/***/ }),
+
+/***/ "FBOb":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/partofpage/myhome-field/myhome-field.page.html ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>\r\n        <ion-toolbar>\r\n            <ion-buttons slot=\"start\">\r\n                <ion-back-button >back</ion-back-button>\r\n            </ion-buttons>\r\n        </ion-toolbar>\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <div class=\"container\">\r\n    <div class=\"row\"  *ngFor=\"let data of datafield\" (click)=\"clickfield(data.id_field)\">\r\n      <div class=\"col-12\">\r\n        <table class=\"table table-image\">\r\n          <thead>\r\n          <tr>\r\n<!--            <th scope=\"col\">Day</th>-->\r\n            <th scope=\"col\">รูปภาพ</th>\r\n            <th scope=\"col\">ชื่อสนาม</th>\r\n\r\n            <th scope=\"col\">ราคา/ชม.</th>\r\n          </tr>\r\n          </thead>\r\n\r\n          <tbody>\r\n          <tr>\r\n<!--            <th scope=\"row\">1</th>-->\r\n            <td>\r\n              <img style=\"height: 200px;width: 300px\" src=\"data:image/png;base64,{{data.picture_picturefield}}\" [alt]=\"data.name_field\">\r\n            </td>\r\n            <td>{{data.name_field}}</td>\r\n            <td>{{data.price_field}}</td>\r\n          </tr>\r\n\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</ion-content>\r\n");
+
+/***/ }),
+
+/***/ "SSqW":
 /*!***************************************************************************!*\
   !*** ./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-scrollpanel.js ***!
   \***************************************************************************/
@@ -11,10 +37,10 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollPanel", function() { return ScrollPanel; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScrollPanelModule", function() { return ScrollPanelModule; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var primeng_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! primeng/dom */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dom.js");
-/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-api.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var primeng_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! primeng/dom */ "YyRF");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/api */ "7zfz");
 
 
 
@@ -305,20 +331,7 @@ ScrollPanelModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefine
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/partofpage/myhome-field/myhome-field.page.html":
-/*!******************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/partofpage/myhome-field/myhome-field.page.html ***!
-  \******************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>\r\n        <ion-toolbar>\r\n            <ion-buttons slot=\"start\">\r\n                <ion-back-button >back</ion-back-button>\r\n            </ion-buttons>\r\n        </ion-toolbar>\r\n    </ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <div class=\"container\">\r\n    <div class=\"row\"  *ngFor=\"let data of datafield\" (click)=\"clickfield(data.id_field)\">\r\n      <div class=\"col-12\">\r\n        <table class=\"table table-image\">\r\n          <thead>\r\n          <tr>\r\n<!--            <th scope=\"col\">Day</th>-->\r\n            <th scope=\"col\">รูปภาพ</th>\r\n            <th scope=\"col\">ชื่อสนาม</th>\r\n\r\n            <th scope=\"col\">ราคา/ชม.</th>\r\n          </tr>\r\n          </thead>\r\n\r\n          <tbody>\r\n          <tr>\r\n<!--            <th scope=\"row\">1</th>-->\r\n            <td>\r\n              <img style=\"height: 200px;width: 300px\" src=\"data:image/png;base64,{{data.picture_picturefield}}\" [alt]=\"data.name_field\">\r\n            </td>\r\n            <td>{{data.name_field}}</td>\r\n            <td>{{data.price_field}}</td>\r\n          </tr>\r\n\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</ion-content>\r\n");
-
-/***/ }),
-
-/***/ "./src/app/partofpage/myhome-field/myhome-field-routing.module.ts":
+/***/ "aaf9":
 /*!************************************************************************!*\
   !*** ./src/app/partofpage/myhome-field/myhome-field-routing.module.ts ***!
   \************************************************************************/
@@ -328,10 +341,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyhomeFieldPageRoutingModule", function() { return MyhomeFieldPageRoutingModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _myhome_field_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./myhome-field.page */ "./src/app/partofpage/myhome-field/myhome-field.page.ts");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _myhome_field_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./myhome-field.page */ "ivYA");
 
 
 
@@ -355,7 +368,7 @@ MyhomeFieldPageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__deco
 
 /***/ }),
 
-/***/ "./src/app/partofpage/myhome-field/myhome-field.module.ts":
+/***/ "h74Z":
 /*!****************************************************************!*\
   !*** ./src/app/partofpage/myhome-field/myhome-field.module.ts ***!
   \****************************************************************/
@@ -365,16 +378,16 @@ MyhomeFieldPageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__deco
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyhomeFieldPageModule", function() { return MyhomeFieldPageModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-/* harmony import */ var _myhome_field_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./myhome-field-routing.module */ "./src/app/partofpage/myhome-field/myhome-field-routing.module.ts");
-/* harmony import */ var _myhome_field_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./myhome-field.page */ "./src/app/partofpage/myhome-field/myhome-field.page.ts");
-/* harmony import */ var primeng_dataview__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/dataview */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dataview.js");
-/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/button */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-button.js");
-/* harmony import */ var primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! primeng/scrollpanel */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-scrollpanel.js");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "TEn/");
+/* harmony import */ var _myhome_field_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./myhome-field-routing.module */ "aaf9");
+/* harmony import */ var _myhome_field_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./myhome-field.page */ "ivYA");
+/* harmony import */ var primeng_dataview__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/dataview */ "8CEF");
+/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/button */ "jIHw");
+/* harmony import */ var primeng_scrollpanel__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! primeng/scrollpanel */ "SSqW");
 
 
 
@@ -406,20 +419,7 @@ MyhomeFieldPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
 
 /***/ }),
 
-/***/ "./src/app/partofpage/myhome-field/myhome-field.page.scss":
-/*!****************************************************************!*\
-  !*** ./src/app/partofpage/myhome-field/myhome-field.page.scss ***!
-  \****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".container {\n  padding: 2rem 0rem;\n}\n\nh4 {\n  margin: 2rem 0rem 1rem;\n}\n\n.table-image td, .table-image th {\n  vertical-align: middle;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9teWhvbWUtZmllbGQvbXlob21lLWZpZWxkLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGtCQUFBO0FBQ0Y7O0FBRUE7RUFDRSxzQkFBQTtBQUNGOztBQUdFO0VBQ0Usc0JBQUE7QUFBSiIsImZpbGUiOiJzcmMvYXBwL3BhcnRvZnBhZ2UvbXlob21lLWZpZWxkL215aG9tZS1maWVsZC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcclxuICBwYWRkaW5nOiAycmVtIDByZW07XHJcbn1cclxuXHJcbmg0IHtcclxuICBtYXJnaW46IDJyZW0gMHJlbSAxcmVtO1xyXG59XHJcblxyXG4udGFibGUtaW1hZ2Uge1xyXG4gIHRkLCB0aCB7XHJcbiAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG4gIH1cclxufVxyXG4iXX0= */");
-
-/***/ }),
-
-/***/ "./src/app/partofpage/myhome-field/myhome-field.page.ts":
+/***/ "ivYA":
 /*!**************************************************************!*\
   !*** ./src/app/partofpage/myhome-field/myhome-field.page.ts ***!
   \**************************************************************/
@@ -429,9 +429,13 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyhomeFieldPage", function() { return MyhomeFieldPage; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _datapass_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../datapass.service */ "./src/app/datapass.service.ts");
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_myhome_field_page_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./myhome-field.page.html */ "FBOb");
+/* harmony import */ var _myhome_field_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./myhome-field.page.scss */ "7eH+");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _datapass_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../datapass.service */ "woWk");
+
+
 
 
 
@@ -452,13 +456,13 @@ let MyhomeFieldPage = class MyhomeFieldPage {
     }
 };
 MyhomeFieldPage.ctorParameters = () => [
-    { type: _datapass_service__WEBPACK_IMPORTED_MODULE_2__["DatapassService"] }
+    { type: _datapass_service__WEBPACK_IMPORTED_MODULE_4__["DatapassService"] }
 ];
 MyhomeFieldPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-myhome-field',
-        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./myhome-field.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/partofpage/myhome-field/myhome-field.page.html")).default,
-        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./myhome-field.page.scss */ "./src/app/partofpage/myhome-field/myhome-field.page.scss")).default]
+        template: _raw_loader_myhome_field_page_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_myhome_field_page_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
     })
 ], MyhomeFieldPage);
 

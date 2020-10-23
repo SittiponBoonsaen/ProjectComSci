@@ -1,7 +1,7 @@
 (function () {
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["polyfills-css-shim"], {
     /***/
-    "./node_modules/@ionic/core/dist/esm/css-shim-8d8ae078.js":
+    "tUaU":
     /*!****************************************************************!*\
       !*** ./node_modules/@ionic/core/dist/esm/css-shim-8d8ae078.js ***!
       \****************************************************************/
@@ -9,7 +9,7 @@
     /*! no static exports found */
 
     /***/
-    function node_modulesIonicCoreDistEsmCssShim8d8ae078Js(module, exports) {
+    function tUaU(module, exports) {
       /*
        Stencil Client Patch v1.17.1 | MIT Licensed | https://stenciljs.com
        */

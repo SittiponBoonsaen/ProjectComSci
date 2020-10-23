@@ -1,6 +1,47 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["tabs-myhome-myhome-module"],{
 
-/***/ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dataview.js":
+/***/ "5hse":
+/*!******************************************************!*\
+  !*** ./src/app/tabs/myhome/myhome-routing.module.ts ***!
+  \******************************************************/
+/*! exports provided: MyhomePageRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyhomePageRoutingModule", function() { return MyhomePageRoutingModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _myhome_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./myhome.page */ "WfiY");
+
+
+
+
+const routes = [
+    {
+        path: '',
+        component: _myhome_page__WEBPACK_IMPORTED_MODULE_3__["MyhomePage"]
+    },
+    {
+        path: 'myhome-field',
+        loadChildren: () => __webpack_require__.e(/*! import() | partofpage-myhome-field-myhome-field-module */ "partofpage-myhome-field-myhome-field-module").then(__webpack_require__.bind(null, /*! ../../partofpage/myhome-field/myhome-field.module */ "h74Z")).then(m => m.MyhomeFieldPageModule)
+    },
+];
+let MyhomePageRoutingModule = class MyhomePageRoutingModule {
+};
+MyhomePageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]],
+    })
+], MyhomePageRoutingModule);
+
+
+
+/***/ }),
+
+/***/ "8CEF":
 /*!************************************************************************!*\
   !*** ./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dataview.js ***!
   \************************************************************************/
@@ -12,11 +53,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataView", function() { return DataView; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataViewLayoutOptions", function() { return DataViewLayoutOptions; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataViewModule", function() { return DataViewModule; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var primeng_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! primeng/utils */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-utils.js");
-/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/api */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-api.js");
-/* harmony import */ var primeng_paginator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/paginator */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-paginator.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var primeng_utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! primeng/utils */ "t2ka");
+/* harmony import */ var primeng_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! primeng/api */ "7zfz");
+/* harmony import */ var primeng_paginator__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! primeng/paginator */ "6t4m");
 
 
 
@@ -551,7 +592,174 @@ DataViewModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInj
 
 /***/ }),
 
-/***/ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-progressspinner.js":
+/***/ "8Ksk":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/tabs/myhome/myhome.page.html ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\r\n\r\n<ion-header>\r\n  <ion-toolbar>\r\n\r\n\r\n    <ion-title style=\"margin-left:  -130px\" >JongSnam</ion-title>\r\n\r\n      <ion-button class=\"button\" (click)=\"Gosearch()\">\r\n          <ion-icon name=\"search-outline\"></ion-icon>\r\n      </ion-button>\r\n      <ion-button class=\"button\" (click)=\"notifications()\">\r\n          <ion-icon name=\"notifications-outline\"></ion-icon>\r\n      </ion-button>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n\r\n    <div class=\"card\">\r\n        <p-dataView #dv [value]=\"getstore\" [paginator]=\"true\" [rows]=\"9\" filterBy=\"name\"\r\n                    [sortField]=\"sortField\" [sortOrder]=\"sortOrder\" >\r\n            <ng-template pTemplate=\"header\">\r\n                <div class=\"p-d-flex p-flex-column p-flex-md-row p-jc-md-between\">\r\n\r\n                </div>\r\n            </ng-template>\r\n            <ng-template let-getstore pTemplate=\"listItem\">\r\n                <div class=\"p-col-12\" (click)=\"clickstore(getstore.id_store)\">\r\n                    <div class=\"product-list-item\">\r\n                        <img src=\"data:image/png;base64,{{getstore.picture_store}}\" [alt]=\"getstore.name_store\"/>\r\n\r\n                        <div class=\"product-list-detail\">\r\n                            <div class=\"product-name\">{{getstore.name_store}}</div>\r\n                            <div class=\"product-description\">{{getstore.description}}</div>\r\n                            <p-rating [ngModel]=\"getstore.rating\" [readonly]=\"true\" [cancel]=\"false\"></p-rating>\r\n                            <i class=\"pi pi-tag product-category-icon\"></i><span class=\"product-category\">{{getstore.category}}</span>\r\n                        </div>\r\n                        <div class=\"product-list-action\">\r\n<!--                            <span class=\"product-price\">${{getstore.price}}</span>-->\r\n                            <p-button icon=\"pi pi-shopping-cart\" label=\"ดูรายละเอียด\" (onClick)=\"clickstore(getstore.id_store)\" [disabled]=\"getstore.inventoryStatus === 'OUTOFSTOCK'\"></p-button>\r\n<!--                            <span [class]=\"'product-badge status-' + getstore.inventoryStatus.toLowerCase()\">{{getstore.inventoryStatus}}</span>-->\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </ng-template>\r\n        </p-dataView>\r\n    </div>\r\n\r\n\r\n</ion-content>\r\n\r\n");
+
+/***/ }),
+
+/***/ "WfiY":
+/*!********************************************!*\
+  !*** ./src/app/tabs/myhome/myhome.page.ts ***!
+  \********************************************/
+/*! exports provided: MyhomePage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyhomePage", function() { return MyhomePage; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_myhome_page_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./myhome.page.html */ "8Ksk");
+/* harmony import */ var _myhome_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./myhome.page.scss */ "q5yK");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _datapass_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../datapass.service */ "woWk");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic/angular */ "TEn/");
+/* harmony import */ var _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/local-notifications/ngx */ "Bg0J");
+
+
+
+
+
+
+
+
+
+let MyhomePage = class MyhomePage {
+    constructor(Http, router, datapass, routerOutlet, localNotifications) {
+        this.Http = Http;
+        this.router = router;
+        this.datapass = datapass;
+        this.routerOutlet = routerOutlet;
+        this.localNotifications = localNotifications;
+    }
+    ngOnInit() {
+        this.getstore = this.datapass.datastore;
+        // this.routerOutlet.swipeGesture = false;
+    }
+    clickstore(idstore) {
+        console.log(idstore);
+        const dataJSON = {
+            id_store: idstore,
+        };
+        this.Http.post('http://localhost:5000/apiFinal/getingfield', JSON.stringify(dataJSON))
+            .subscribe(datafield => {
+            this.datapass.datafield = datafield;
+            this.Http.post('http://localhost:5000/apiFinal/getstoreformID', JSON.stringify(dataJSON))
+                .subscribe(datastore => {
+                this.datapass.getingfieldfromstore = datastore;
+                const navigate = this.router.navigate(['/home/tabs/myhome/myhome-field']);
+            });
+        });
+    }
+    Gosearch() {
+        // let navigate = this.router.navigate(['./search']);
+        const navigate = this.router.navigate(['/home/tabs/search']);
+    }
+    notifications() {
+    }
+};
+MyhomePage.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
+    { type: _datapass_service__WEBPACK_IMPORTED_MODULE_6__["DatapassService"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["IonRouterOutlet"] },
+    { type: _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_8__["LocalNotifications"] }
+];
+MyhomePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-myhome',
+        template: _raw_loader_myhome_page_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_myhome_page_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+    })
+], MyhomePage);
+
+
+
+/***/ }),
+
+/***/ "q5yK":
+/*!**********************************************!*\
+  !*** ./src/app/tabs/myhome/myhome.page.scss ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (".button {\n  display: inline-block;\n  vertical-align: top;\n  line-height: 30px;\n  margin: 0 2px;\n  text-align: center;\n  position: relative;\n  left: 240px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGFicy9teWhvbWUvbXlob21lLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFBO0VBQ0EsbUJBQUE7RUFDQSxpQkFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtFQUNBLGtCQUFBO0VBQ0EsV0FBQTtBQUNGIiwiZmlsZSI6InNyYy9hcHAvdGFicy9teWhvbWUvbXlob21lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idXR0b24ge1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICB2ZXJ0aWNhbC1hbGlnbjogdG9wO1xyXG4gIGxpbmUtaGVpZ2h0OiAzMHB4O1xyXG4gIG1hcmdpbjogMCAycHg7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBsZWZ0OiAyNDBweDtcclxufVxyXG4iXX0= */");
+
+/***/ }),
+
+/***/ "qcVP":
+/*!**********************************************!*\
+  !*** ./src/app/tabs/myhome/myhome.module.ts ***!
+  \**********************************************/
+/*! exports provided: MyhomePageModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyhomePageModule", function() { return MyhomePageModule; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "ofXK");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "3Pt+");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "TEn/");
+/* harmony import */ var _myhome_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./myhome-routing.module */ "5hse");
+/* harmony import */ var _myhome_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./myhome.page */ "WfiY");
+/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/table */ "rEr+");
+/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/button */ "jIHw");
+/* harmony import */ var primeng_progressspinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! primeng/progressspinner */ "vKg+");
+/* harmony import */ var primeng_dataview__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! primeng/dataview */ "8CEF");
+/* harmony import */ var primeng_dropdown__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! primeng/dropdown */ "arFO");
+/* harmony import */ var primeng_rating__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! primeng/rating */ "Js94");
+
+
+
+
+
+
+
+
+
+
+
+
+
+let MyhomePageModule = class MyhomePageModule {
+};
+MyhomePageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [
+            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
+            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
+            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
+            _myhome_routing_module__WEBPACK_IMPORTED_MODULE_5__["MyhomePageRoutingModule"],
+            primeng_table__WEBPACK_IMPORTED_MODULE_7__["TableModule"],
+            primeng_button__WEBPACK_IMPORTED_MODULE_8__["ButtonModule"],
+            primeng_progressspinner__WEBPACK_IMPORTED_MODULE_9__["ProgressSpinnerModule"],
+            primeng_dataview__WEBPACK_IMPORTED_MODULE_10__["DataViewModule"],
+            primeng_dropdown__WEBPACK_IMPORTED_MODULE_11__["DropdownModule"],
+            primeng_rating__WEBPACK_IMPORTED_MODULE_12__["RatingModule"]
+        ],
+        declarations: [_myhome_page__WEBPACK_IMPORTED_MODULE_6__["MyhomePage"]]
+    })
+], MyhomePageModule);
+
+
+
+/***/ }),
+
+/***/ "vKg+":
 /*!*******************************************************************************!*\
   !*** ./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-progressspinner.js ***!
   \*******************************************************************************/
@@ -562,8 +770,8 @@ DataViewModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInj
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProgressSpinner", function() { return ProgressSpinner; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProgressSpinnerModule", function() { return ProgressSpinnerModule; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common */ "ofXK");
 
 
 
@@ -645,210 +853,6 @@ ProgressSpinnerModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵde
 
 
 //# sourceMappingURL=primeng-progressspinner.js.map
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/tabs/myhome/myhome.page.html":
-/*!************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/tabs/myhome/myhome.page.html ***!
-  \************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n\r\n<ion-header>\r\n  <ion-toolbar>\r\n\r\n\r\n    <ion-title style=\"margin-left:  -130px\" >JongSnam</ion-title>\r\n\r\n      <ion-button class=\"button\" (click)=\"Gosearch()\">\r\n          <ion-icon name=\"search-outline\"></ion-icon>\r\n      </ion-button>\r\n      <ion-button class=\"button\" (click)=\"notifications()\">\r\n          <ion-icon name=\"notifications-outline\"></ion-icon>\r\n      </ion-button>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n\r\n    <div class=\"card\">\r\n        <p-dataView #dv [value]=\"getstore\" [paginator]=\"true\" [rows]=\"9\" filterBy=\"name\"\r\n                    [sortField]=\"sortField\" [sortOrder]=\"sortOrder\" >\r\n            <ng-template pTemplate=\"header\">\r\n                <div class=\"p-d-flex p-flex-column p-flex-md-row p-jc-md-between\">\r\n\r\n                </div>\r\n            </ng-template>\r\n            <ng-template let-getstore pTemplate=\"listItem\">\r\n                <div class=\"p-col-12\" (click)=\"clickstore(getstore.id_store)\">\r\n                    <div class=\"product-list-item\">\r\n                        <img src=\"data:image/png;base64,{{getstore.picture_store}}\" [alt]=\"getstore.name_store\"/>\r\n\r\n                        <div class=\"product-list-detail\">\r\n                            <div class=\"product-name\">{{getstore.name_store}}</div>\r\n                            <div class=\"product-description\">{{getstore.description}}</div>\r\n                            <p-rating [ngModel]=\"getstore.rating\" [readonly]=\"true\" [cancel]=\"false\"></p-rating>\r\n                            <i class=\"pi pi-tag product-category-icon\"></i><span class=\"product-category\">{{getstore.category}}</span>\r\n                        </div>\r\n                        <div class=\"product-list-action\">\r\n<!--                            <span class=\"product-price\">${{getstore.price}}</span>-->\r\n                            <p-button icon=\"pi pi-shopping-cart\" label=\"ดูรายละเอียด\" (onClick)=\"clickstore(getstore.id_store)\" [disabled]=\"getstore.inventoryStatus === 'OUTOFSTOCK'\"></p-button>\r\n<!--                            <span [class]=\"'product-badge status-' + getstore.inventoryStatus.toLowerCase()\">{{getstore.inventoryStatus}}</span>-->\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </ng-template>\r\n        </p-dataView>\r\n    </div>\r\n\r\n\r\n</ion-content>\r\n\r\n");
-
-/***/ }),
-
-/***/ "./src/app/tabs/myhome/myhome-routing.module.ts":
-/*!******************************************************!*\
-  !*** ./src/app/tabs/myhome/myhome-routing.module.ts ***!
-  \******************************************************/
-/*! exports provided: MyhomePageRoutingModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyhomePageRoutingModule", function() { return MyhomePageRoutingModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _myhome_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./myhome.page */ "./src/app/tabs/myhome/myhome.page.ts");
-
-
-
-
-const routes = [
-    {
-        path: '',
-        component: _myhome_page__WEBPACK_IMPORTED_MODULE_3__["MyhomePage"]
-    },
-    {
-        path: 'myhome-field',
-        loadChildren: () => __webpack_require__.e(/*! import() | partofpage-myhome-field-myhome-field-module */ "partofpage-myhome-field-myhome-field-module").then(__webpack_require__.bind(null, /*! ../../partofpage/myhome-field/myhome-field.module */ "./src/app/partofpage/myhome-field/myhome-field.module.ts")).then(m => m.MyhomeFieldPageModule)
-    },
-];
-let MyhomePageRoutingModule = class MyhomePageRoutingModule {
-};
-MyhomePageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
-        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]],
-    })
-], MyhomePageRoutingModule);
-
-
-
-/***/ }),
-
-/***/ "./src/app/tabs/myhome/myhome.module.ts":
-/*!**********************************************!*\
-  !*** ./src/app/tabs/myhome/myhome.module.ts ***!
-  \**********************************************/
-/*! exports provided: MyhomePageModule */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyhomePageModule", function() { return MyhomePageModule; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-/* harmony import */ var _myhome_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./myhome-routing.module */ "./src/app/tabs/myhome/myhome-routing.module.ts");
-/* harmony import */ var _myhome_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./myhome.page */ "./src/app/tabs/myhome/myhome.page.ts");
-/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/table */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-table.js");
-/* harmony import */ var primeng_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! primeng/button */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-button.js");
-/* harmony import */ var primeng_progressspinner__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! primeng/progressspinner */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-progressspinner.js");
-/* harmony import */ var primeng_dataview__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! primeng/dataview */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dataview.js");
-/* harmony import */ var primeng_dropdown__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! primeng/dropdown */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dropdown.js");
-/* harmony import */ var primeng_rating__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! primeng/rating */ "./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-rating.js");
-
-
-
-
-
-
-
-
-
-
-
-
-
-let MyhomePageModule = class MyhomePageModule {
-};
-MyhomePageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [
-            _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
-            _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
-            _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
-            _myhome_routing_module__WEBPACK_IMPORTED_MODULE_5__["MyhomePageRoutingModule"],
-            primeng_table__WEBPACK_IMPORTED_MODULE_7__["TableModule"],
-            primeng_button__WEBPACK_IMPORTED_MODULE_8__["ButtonModule"],
-            primeng_progressspinner__WEBPACK_IMPORTED_MODULE_9__["ProgressSpinnerModule"],
-            primeng_dataview__WEBPACK_IMPORTED_MODULE_10__["DataViewModule"],
-            primeng_dropdown__WEBPACK_IMPORTED_MODULE_11__["DropdownModule"],
-            primeng_rating__WEBPACK_IMPORTED_MODULE_12__["RatingModule"]
-        ],
-        declarations: [_myhome_page__WEBPACK_IMPORTED_MODULE_6__["MyhomePage"]]
-    })
-], MyhomePageModule);
-
-
-
-/***/ }),
-
-/***/ "./src/app/tabs/myhome/myhome.page.scss":
-/*!**********************************************!*\
-  !*** ./src/app/tabs/myhome/myhome.page.scss ***!
-  \**********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".button {\n  display: inline-block;\n  vertical-align: top;\n  line-height: 30px;\n  margin: 0 2px;\n  text-align: center;\n  position: relative;\n  left: 240px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGFicy9teWhvbWUvbXlob21lLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFBO0VBQ0EsbUJBQUE7RUFDQSxpQkFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtFQUNBLGtCQUFBO0VBQ0EsV0FBQTtBQUNGIiwiZmlsZSI6InNyYy9hcHAvdGFicy9teWhvbWUvbXlob21lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5idXR0b24ge1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICB2ZXJ0aWNhbC1hbGlnbjogdG9wO1xyXG4gIGxpbmUtaGVpZ2h0OiAzMHB4O1xyXG4gIG1hcmdpbjogMCAycHg7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcclxuICBsZWZ0OiAyNDBweDtcclxufVxyXG4iXX0= */");
-
-/***/ }),
-
-/***/ "./src/app/tabs/myhome/myhome.page.ts":
-/*!********************************************!*\
-  !*** ./src/app/tabs/myhome/myhome.page.ts ***!
-  \********************************************/
-/*! exports provided: MyhomePage */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyhomePage", function() { return MyhomePage; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _datapass_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../datapass.service */ "./src/app/datapass.service.ts");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-/* harmony import */ var _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/local-notifications/ngx */ "./node_modules/@ionic-native/local-notifications/__ivy_ngcc__/ngx/index.js");
-
-
-
-
-
-
-
-let MyhomePage = class MyhomePage {
-    constructor(Http, router, datapass, routerOutlet, localNotifications) {
-        this.Http = Http;
-        this.router = router;
-        this.datapass = datapass;
-        this.routerOutlet = routerOutlet;
-        this.localNotifications = localNotifications;
-    }
-    ngOnInit() {
-        this.getstore = this.datapass.datastore;
-        // this.routerOutlet.swipeGesture = false;
-    }
-    clickstore(idstore) {
-        console.log(idstore);
-        const dataJSON = {
-            id_store: idstore,
-        };
-        this.Http.post('http://localhost:5000/apiFinal/getingfield', JSON.stringify(dataJSON))
-            .subscribe(datafield => {
-            this.datapass.datafield = datafield;
-            this.Http.post('http://localhost:5000/apiFinal/getstoreformID', JSON.stringify(dataJSON))
-                .subscribe(datastore => {
-                this.datapass.getingfieldfromstore = datastore;
-                const navigate = this.router.navigate(['/home/tabs/myhome/myhome-field']);
-            });
-        });
-    }
-    Gosearch() {
-        // let navigate = this.router.navigate(['./search']);
-        const navigate = this.router.navigate(['/home/tabs/search']);
-    }
-    notifications() {
-    }
-};
-MyhomePage.ctorParameters = () => [
-    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: _datapass_service__WEBPACK_IMPORTED_MODULE_4__["DatapassService"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonRouterOutlet"] },
-    { type: _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_6__["LocalNotifications"] }
-];
-MyhomePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-myhome',
-        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! raw-loader!./myhome.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/tabs/myhome/myhome.page.html")).default,
-        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(/*! ./myhome.page.scss */ "./src/app/tabs/myhome/myhome.page.scss")).default]
-    })
-], MyhomePage);
-
-
 
 /***/ })
 

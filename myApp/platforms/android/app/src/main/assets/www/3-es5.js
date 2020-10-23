@@ -9,7 +9,7 @@
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3], {
     /***/
-    "./node_modules/@ionic/core/dist/esm/ion-avatar_3.entry.js":
+    "CfoV":
     /*!*****************************************************************!*\
       !*** ./node_modules/@ionic/core/dist/esm/ion-avatar_3.entry.js ***!
       \*****************************************************************/
@@ -17,7 +17,7 @@
     /*! exports provided: ion_avatar, ion_badge, ion_thumbnail */
 
     /***/
-    function node_modulesIonicCoreDistEsmIonAvatar_3EntryJs(module, __webpack_exports__, __webpack_require__) {
+    function CfoV(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -44,19 +44,19 @@
 
       var _index_44bf8136_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! ./index-44bf8136.js */
-      "./node_modules/@ionic/core/dist/esm/index-44bf8136.js");
+      "ePDZ");
       /* harmony import */
 
 
       var _ionic_global_837be8f3_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! ./ionic-global-837be8f3.js */
-      "./node_modules/@ionic/core/dist/esm/ionic-global-837be8f3.js");
+      "ws0j");
       /* harmony import */
 
 
       var _theme_3f0b0c04_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! ./theme-3f0b0c04.js */
-      "./node_modules/@ionic/core/dist/esm/theme-3f0b0c04.js");
+      "hcCc");
 
       var avatarIosCss = ":host{border-radius:var(--border-radius);display:block}::slotted(ion-img),::slotted(img){border-radius:var(--border-radius);width:100%;height:100%;-o-object-fit:cover;object-fit:cover;overflow:hidden}:host{--border-radius:50%;width:48px;height:48px}";
       var avatarMdCss = ":host{border-radius:var(--border-radius);display:block}::slotted(ion-img),::slotted(img){border-radius:var(--border-radius);width:100%;height:100%;-o-object-fit:cover;object-fit:cover;overflow:hidden}:host{--border-radius:50%;width:64px;height:64px}";

@@ -7,7 +7,106 @@
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["tabs-search-search-module"], {
     /***/
-    "./node_modules/raw-loader/dist/cjs.js!./src/app/tabs/search/search.page.html":
+    "57Nf":
+    /*!**********************************************!*\
+      !*** ./src/app/tabs/search/search.module.ts ***!
+      \**********************************************/
+
+    /*! exports provided: SearchPageModule */
+
+    /***/
+    function Nf(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "SearchPageModule", function () {
+        return SearchPageModule;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common */
+      "ofXK");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/forms */
+      "3Pt+");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @ionic/angular */
+      "TEn/");
+      /* harmony import */
+
+
+      var _search_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ./search-routing.module */
+      "epAm");
+      /* harmony import */
+
+
+      var _search_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ./search.page */
+      "sc+L");
+      /* harmony import */
+
+
+      var _pipes_pipes_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! ../../pipes/pipes.module */
+      "iTUp");
+
+      var SearchPageModule = function SearchPageModule() {
+        _classCallCheck(this, SearchPageModule);
+      };
+
+      SearchPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _search_routing_module__WEBPACK_IMPORTED_MODULE_5__["SearchPageRoutingModule"], _pipes_pipes_module__WEBPACK_IMPORTED_MODULE_7__["PipesModule"]],
+        declarations: [_search_page__WEBPACK_IMPORTED_MODULE_6__["SearchPage"]]
+      })], SearchPageModule);
+      /***/
+    },
+
+    /***/
+    "PuxA":
+    /*!**********************************************!*\
+      !*** ./src/app/tabs/search/search.page.scss ***!
+      \**********************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function PuxA(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RhYnMvc2VhcmNoL3NlYXJjaC5wYWdlLnNjc3MifQ== */";
+      /***/
+    },
+
+    /***/
+    "e575":
     /*!************************************************************************************!*\
       !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/tabs/search/search.page.html ***!
       \************************************************************************************/
@@ -15,7 +114,7 @@
     /*! exports provided: default */
 
     /***/
-    function node_modulesRawLoaderDistCjsJsSrcAppTabsSearchSearchPageHtml(module, __webpack_exports__, __webpack_require__) {
+    function e575(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -27,7 +126,7 @@
     },
 
     /***/
-    "./src/app/tabs/search/search-routing.module.ts":
+    "epAm":
     /*!******************************************************!*\
       !*** ./src/app/tabs/search/search-routing.module.ts ***!
       \******************************************************/
@@ -35,7 +134,7 @@
     /*! exports provided: SearchPageRoutingModule */
 
     /***/
-    function srcAppTabsSearchSearchRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
+    function epAm(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -50,25 +149,25 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "mrSG");
       /* harmony import */
 
 
       var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "fXoL");
       /* harmony import */
 
 
       var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
       /*! @angular/router */
-      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      "tyNb");
       /* harmony import */
 
 
       var _search_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! ./search.page */
-      "./src/app/tabs/search/search.page.ts");
+      "sc+L");
 
       var routes = [{
         path: '',
@@ -80,7 +179,7 @@
           /*! import() | partofpage-search-advanced-search-advanced-module */
           "partofpage-search-advanced-search-advanced-module").then(__webpack_require__.bind(null,
           /*! ../../partofpage/search-advanced/search-advanced.module */
-          "./src/app/partofpage/search-advanced/search-advanced.module.ts")).then(function (m) {
+          "pEFe")).then(function (m) {
             return m.SearchAdvancedPageModule;
           });
         }
@@ -98,106 +197,7 @@
     },
 
     /***/
-    "./src/app/tabs/search/search.module.ts":
-    /*!**********************************************!*\
-      !*** ./src/app/tabs/search/search.module.ts ***!
-      \**********************************************/
-
-    /*! exports provided: SearchPageModule */
-
-    /***/
-    function srcAppTabsSearchSearchModuleTs(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "SearchPageModule", function () {
-        return SearchPageModule;
-      });
-      /* harmony import */
-
-
-      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
-      /* harmony import */
-
-
-      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
-      /* harmony import */
-
-
-      var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! @angular/common */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
-      /* harmony import */
-
-
-      var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-      /*! @angular/forms */
-      "./node_modules/@angular/forms/__ivy_ngcc__/fesm2015/forms.js");
-      /* harmony import */
-
-
-      var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-      /*! @ionic/angular */
-      "./node_modules/@ionic/angular/__ivy_ngcc__/fesm2015/ionic-angular.js");
-      /* harmony import */
-
-
-      var _search_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! ./search-routing.module */
-      "./src/app/tabs/search/search-routing.module.ts");
-      /* harmony import */
-
-
-      var _search_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! ./search.page */
-      "./src/app/tabs/search/search.page.ts");
-      /* harmony import */
-
-
-      var _pipes_pipes_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-      /*! ../../pipes/pipes.module */
-      "./src/app/pipes/pipes.module.ts");
-
-      var SearchPageModule = function SearchPageModule() {
-        _classCallCheck(this, SearchPageModule);
-      };
-
-      SearchPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _search_routing_module__WEBPACK_IMPORTED_MODULE_5__["SearchPageRoutingModule"], _pipes_pipes_module__WEBPACK_IMPORTED_MODULE_7__["PipesModule"]],
-        declarations: [_search_page__WEBPACK_IMPORTED_MODULE_6__["SearchPage"]]
-      })], SearchPageModule);
-      /***/
-    },
-
-    /***/
-    "./src/app/tabs/search/search.page.scss":
-    /*!**********************************************!*\
-      !*** ./src/app/tabs/search/search.page.scss ***!
-      \**********************************************/
-
-    /*! exports provided: default */
-
-    /***/
-    function srcAppTabsSearchSearchPageScss(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony default export */
-
-
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RhYnMvc2VhcmNoL3NlYXJjaC5wYWdlLnNjc3MifQ== */";
-      /***/
-    },
-
-    /***/
-    "./src/app/tabs/search/search.page.ts":
+    "sc+L":
     /*!********************************************!*\
       !*** ./src/app/tabs/search/search.page.ts ***!
       \********************************************/
@@ -205,7 +205,7 @@
     /*! exports provided: SearchPage */
 
     /***/
-    function srcAppTabsSearchSearchPageTs(module, __webpack_exports__, __webpack_require__) {
+    function scL(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -220,31 +220,43 @@
 
       var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
       /*! tslib */
-      "./node_modules/tslib/tslib.es6.js");
+      "mrSG");
       /* harmony import */
 
 
-      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      var _raw_loader_search_page_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! raw-loader!./search.page.html */
+      "e575");
+      /* harmony import */
+
+
+      var _search_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./search.page.scss */
+      "PuxA");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
       /*! @angular/core */
-      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+      "fXoL");
       /* harmony import */
 
 
-      var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
       /*! @angular/router */
-      "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
+      "tyNb");
       /* harmony import */
 
 
-      var _datapass_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      var _datapass_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ../../datapass.service */
-      "./src/app/datapass.service.ts");
+      "woWk");
       /* harmony import */
 
 
-      var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common/http */
-      "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js");
+      "tk/3");
 
       var SearchPage = /*#__PURE__*/function () {
         function SearchPage(router, datapass, Http) {
@@ -303,22 +315,18 @@
 
       SearchPage.ctorParameters = function () {
         return [{
-          type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
         }, {
-          type: _datapass_service__WEBPACK_IMPORTED_MODULE_3__["DatapassService"]
+          type: _datapass_service__WEBPACK_IMPORTED_MODULE_5__["DatapassService"]
         }, {
-          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"]
         }];
       };
 
-      SearchPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      SearchPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-search',
-        template: Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
-        /*! raw-loader!./search.page.html */
-        "./node_modules/raw-loader/dist/cjs.js!./src/app/tabs/search/search.page.html"))["default"],
-        styles: [Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"])(__webpack_require__(
-        /*! ./search.page.scss */
-        "./src/app/tabs/search/search.page.scss"))["default"]]
+        template: _raw_loader_search_page_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_search_page_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
       })], SearchPage);
       /***/
     }
