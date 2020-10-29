@@ -23,12 +23,13 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 import { Camera } from '@ionic-native/camera/ngx';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [IonicModule.forRoot(), BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, BrowserAnimationsModule, InputTextModule,
-    TableModule, ButtonModule, RatingModule, PipesModule, ],
+    TableModule, ButtonModule, RatingModule, PipesModule],
   providers: [
     StatusBar,
     SplashScreen,
@@ -37,6 +38,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     NavController,
     LocalNotifications,
     Camera,
+    NgbModal,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
