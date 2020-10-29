@@ -158,7 +158,7 @@ let EditprofilePage = class EditprofilePage {
             mediaType: this.camera.MediaType.PICTURE
         };
         this.camera.getPicture(CAMERA_OPTIONS).then((imageData) => {
-            this.image = `data:image/jpeg;base64,${imageData}`;
+            this.captureDataUrl = `data:image/jpeg;base64,${imageData}`;
         }).catch(err => console.error(err));
     }
     selectImageInGallery() {
@@ -171,8 +171,46 @@ let EditprofilePage = class EditprofilePage {
             mediaType: this.camera.MediaType.PICTURE
         };
         this.camera.getPicture(CAMERA_OPTIONS).then((imageData) => {
-            this.image = `data:image/jpeg;base64,${imageData}`;
+            this.captureDataUrl = `data:image/jpeg;base64,${imageData}`;
         }).catch(err => console.error(err));
+    }
+    getPicture() {
+        const cameraOptions = {
+            quality: 50,
+            destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE,
+            sourceType: this.camera.PictureSourceType.CAMERA,
+        };
+        this.camera.getPicture(cameraOptions)
+            .then((captureDataUrl) => {
+            this.captureDataUrl = 'data:image/jpeg;base64,' + captureDataUrl;
+        }, (err) => {
+            console.log(err);
+        });
+    }
+    getImageInCamera() {
+        const CAMERA_OPTIONS1 = {
+            quality: 50,
+            destinationType: this.camera.DestinationType.DATA_URL,
+            encodingType: this.camera.EncodingType.JPEG,
+            mediaType: this.camera.MediaType.PICTURE,
+            sourceType: this.camera.PictureSourceType.CAMERA,
+        };
+        this.camera.getPicture(CAMERA_OPTIONS1).then((imageData) => {
+            this.captureDataUrl = `data:image/jpeg;base64,${imageData}`;
+        }).catch(err => console.error(err));
+    }
+    showSuccesfulUploadAlert() {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const alert = yield this.alertController.create({
+                header: 'Confirm!',
+                buttons: ['OK']
+            });
+            // clear the previous photo data in the variable
+            this.captureDataUrl = '';
+            yield alert.present();
+        });
     }
 };
 EditprofilePage.ctorParameters = () => [
@@ -200,7 +238,7 @@ EditprofilePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>editprofile</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <div class=\"profile-userpic\">\r\n    <img src=\"assets/img/default-avatar.png\">\r\n  </div>\r\n\r\n  <div class=\"\">\r\n    <input type=\"file\" name=\"myImage\" accept=\"image/png,image/jpeg\" #filebin (click)=\"presentAlertConfirm()\" />\r\n  </div>\r\n\r\n  <div>\r\n    <ion-button (click)=\"selectImage()\">SAVE</ion-button>\r\n  </div>\r\n\r\n</ion-content>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\r\n\r\n<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>editprofile</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<!--<ion-content>-->\r\n<!--  <div class=\"padding\">-->\r\n<!--    <img src=\"assets/img/default-avatar.png\">-->\r\n<!--  </div>-->\r\n\r\n<!--  <div>-->\r\n<!--    <ion-button (click)=\"selectImage()\">SAVE</ion-button>-->\r\n<!--  </div>-->\r\n<!--  <button type=\"button\" class=\"btn btn-secondary\">Secondary</button>-->\r\n<!--</ion-content>-->\r\n\r\n<ion-content padding>\r\n<ion-row class=\"center\">\r\n  <button ion-button (click)=\"selectImage()\">Show Album</button>\r\n</ion-row>\r\n<ion-card>\r\n  <img [src]=\"captureDataUrl\" *ngIf=\"captureDataUrl\"/>\r\n  <button ion-button (click)=\"upload()\" *ngIf=\"captureDataUrl\">Upload image!</button>\r\n\r\n</ion-card>\r\n</ion-content>\r\n");
 
 /***/ })
 

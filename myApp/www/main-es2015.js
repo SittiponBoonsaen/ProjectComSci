@@ -175,6 +175,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @ionic-native/camera/ngx */ "a/9d");
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @ngx-translate/core */ "sYmb");
 /* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ngx-translate/http-loader */ "mqiu");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "1kSV");
+
 
 
 
@@ -204,7 +206,7 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
         declarations: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]],
         entryComponents: [],
         imports: [_ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_9__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_10__["FormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_11__["BrowserAnimationsModule"], primeng_inputtext__WEBPACK_IMPORTED_MODULE_12__["InputTextModule"],
-            primeng_table__WEBPACK_IMPORTED_MODULE_13__["TableModule"], primeng_button__WEBPACK_IMPORTED_MODULE_14__["ButtonModule"], primeng_rating__WEBPACK_IMPORTED_MODULE_15__["RatingModule"], _pipes_pipes_module__WEBPACK_IMPORTED_MODULE_16__["PipesModule"],],
+            primeng_table__WEBPACK_IMPORTED_MODULE_13__["TableModule"], primeng_button__WEBPACK_IMPORTED_MODULE_14__["ButtonModule"], primeng_rating__WEBPACK_IMPORTED_MODULE_15__["RatingModule"], _pipes_pipes_module__WEBPACK_IMPORTED_MODULE_16__["PipesModule"]],
         providers: [
             _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
             _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
@@ -213,6 +215,7 @@ AppModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
             _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["NavController"],
             _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_17__["LocalNotifications"],
             _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_18__["Camera"],
+            _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_21__["NgbModal"],
             { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] }
         ],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_7__["AppComponent"]]
@@ -530,12 +533,8 @@ const routes = [
         loadChildren: () => __webpack_require__.e(/*! import() | home-home-module */ "home-home-module").then(__webpack_require__.bind(null, /*! ./home/home.module */ "ct+p")).then(m => m.HomePageModule)
     },
     {
-        path: 'editprofile',
-        loadChildren: () => __webpack_require__.e(/*! import() | app-partofpage-editprofile-editprofile-module */ "partofpage-editprofile-editprofile-module").then(__webpack_require__.bind(null, /*! ../app/partofpage/editprofile/editprofile.module */ "Xpx6")).then(m => m.EditprofilePageModule)
-    },
-    {
         path: '',
-        redirectTo: 'editprofile',
+        redirectTo: 'login',
         pathMatch: 'full'
     },
 ];

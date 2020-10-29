@@ -16,6 +16,7 @@ export class RegisterPage implements OnInit {
   telephone: any;
   address: any;
   status: any;
+  confirmpassword: any;
 
 
 

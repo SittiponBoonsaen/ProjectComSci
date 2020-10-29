@@ -15,12 +15,8 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'editprofile',
-    loadChildren: () => import('../app/partofpage/editprofile/editprofile.module').then( m => m.EditprofilePageModule)
-  },
-  {
     path: '',
-    redirectTo: 'editprofile',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
 

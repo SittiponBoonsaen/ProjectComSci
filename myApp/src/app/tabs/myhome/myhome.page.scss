@@ -7,3 +7,13 @@
   position: relative;
   left: 240px;
 }
+ .grid-container {
+   display: grid;
+   grid-template-columns: auto auto auto;
+   padding: 10px;
+ }
+.iconhome{
+  background-color: #bfbfbf;
+  border-radius: 50%;
+  color: #0d0d0d;
+}

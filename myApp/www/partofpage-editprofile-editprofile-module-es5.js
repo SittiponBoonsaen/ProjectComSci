@@ -283,7 +283,7 @@
               mediaType: this.camera.MediaType.PICTURE
             };
             this.camera.getPicture(CAMERA_OPTIONS).then(function (imageData) {
-              _this2.image = "data:image/jpeg;base64,".concat(imageData);
+              _this2.captureDataUrl = "data:image/jpeg;base64,".concat(imageData);
             })["catch"](function (err) {
               return console.error(err);
             });
@@ -302,10 +302,76 @@
               mediaType: this.camera.MediaType.PICTURE
             };
             this.camera.getPicture(CAMERA_OPTIONS).then(function (imageData) {
-              _this3.image = "data:image/jpeg;base64,".concat(imageData);
+              _this3.captureDataUrl = "data:image/jpeg;base64,".concat(imageData);
             })["catch"](function (err) {
               return console.error(err);
             });
+          }
+        }, {
+          key: "getPicture",
+          value: function getPicture() {
+            var _this4 = this;
+
+            var cameraOptions = {
+              quality: 50,
+              destinationType: this.camera.DestinationType.DATA_URL,
+              encodingType: this.camera.EncodingType.JPEG,
+              mediaType: this.camera.MediaType.PICTURE,
+              sourceType: this.camera.PictureSourceType.CAMERA
+            };
+            this.camera.getPicture(cameraOptions).then(function (captureDataUrl) {
+              _this4.captureDataUrl = 'data:image/jpeg;base64,' + captureDataUrl;
+            }, function (err) {
+              console.log(err);
+            });
+          }
+        }, {
+          key: "getImageInCamera",
+          value: function getImageInCamera() {
+            var _this5 = this;
+
+            var CAMERA_OPTIONS1 = {
+              quality: 50,
+              destinationType: this.camera.DestinationType.DATA_URL,
+              encodingType: this.camera.EncodingType.JPEG,
+              mediaType: this.camera.MediaType.PICTURE,
+              sourceType: this.camera.PictureSourceType.CAMERA
+            };
+            this.camera.getPicture(CAMERA_OPTIONS1).then(function (imageData) {
+              _this5.captureDataUrl = "data:image/jpeg;base64,".concat(imageData);
+            })["catch"](function (err) {
+              return console.error(err);
+            });
+          }
+        }, {
+          key: "showSuccesfulUploadAlert",
+          value: function showSuccesfulUploadAlert() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
+              var alert;
+              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+                while (1) {
+                  switch (_context2.prev = _context2.next) {
+                    case 0:
+                      _context2.next = 2;
+                      return this.alertController.create({
+                        header: 'Confirm!',
+                        buttons: ['OK']
+                      });
+
+                    case 2:
+                      alert = _context2.sent;
+                      // clear the previous photo data in the variable
+                      this.captureDataUrl = '';
+                      _context2.next = 6;
+                      return alert.present();
+
+                    case 6:
+                    case "end":
+                      return _context2.stop();
+                  }
+                }
+              }, _callee2, this);
+            }));
           }
         }]);
 
@@ -344,7 +410,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>editprofile</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <div class=\"profile-userpic\">\r\n    <img src=\"assets/img/default-avatar.png\">\r\n  </div>\r\n\r\n  <div class=\"\">\r\n    <input type=\"file\" name=\"myImage\" accept=\"image/png,image/jpeg\" #filebin (click)=\"presentAlertConfirm()\" />\r\n  </div>\r\n\r\n  <div>\r\n    <ion-button (click)=\"selectImage()\">SAVE</ion-button>\r\n  </div>\r\n\r\n</ion-content>\r\n\r\n";
+      __webpack_exports__["default"] = "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\r\n\r\n<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>editprofile</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<!--<ion-content>-->\r\n<!--  <div class=\"padding\">-->\r\n<!--    <img src=\"assets/img/default-avatar.png\">-->\r\n<!--  </div>-->\r\n\r\n<!--  <div>-->\r\n<!--    <ion-button (click)=\"selectImage()\">SAVE</ion-button>-->\r\n<!--  </div>-->\r\n<!--  <button type=\"button\" class=\"btn btn-secondary\">Secondary</button>-->\r\n<!--</ion-content>-->\r\n\r\n<ion-content padding>\r\n<ion-row class=\"center\">\r\n  <button ion-button (click)=\"selectImage()\">Show Album</button>\r\n</ion-row>\r\n<ion-card>\r\n  <img [src]=\"captureDataUrl\" *ngIf=\"captureDataUrl\"/>\r\n  <button ion-button (click)=\"upload()\" *ngIf=\"captureDataUrl\">Upload image!</button>\r\n\r\n</ion-card>\r\n</ion-content>\r\n";
       /***/
     }
   }]);
