@@ -25,6 +25,8 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

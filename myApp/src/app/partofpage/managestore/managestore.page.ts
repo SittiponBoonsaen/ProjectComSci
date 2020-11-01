@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DatapassService} from '../../datapass.service';
 import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-managestore',
@@ -10,11 +11,11 @@ import {HttpClient} from '@angular/common/http';
 export class ManagestorePage implements OnInit {
   dataUsername: any;
   dataStore: any;
-  constructor(public datapassService: DatapassService, private Http: HttpClient) { }
+  products: any;
+  constructor(public datapassService: DatapassService, private Http: HttpClient, private router: Router) { }
 
   ngOnInit() {
     this.dataUsername = this.datapassService.userIDLogin;
-    this.dataStore = this.datapassService.datastore;
     let ownerid;
     for (ownerid of this.dataUsername) {
       }
@@ -24,8 +25,12 @@ export class ManagestorePage implements OnInit {
     this.Http.post('http://localhost:5000/apiFinal/getOwnerstore', JSON.stringify(dataJSON))
         .subscribe(datastore => {
           this.datapassService.datastoreowner = datastore;
+          this.products = datastore;
           console.log(datastore);
         });
+  }
+  goToAddstore() {
+    const navigate = this.router.navigate(['/home/tabs/account/managestore/addstore']);
   }
 
 }

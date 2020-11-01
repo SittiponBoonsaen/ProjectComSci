@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <ion-header>
   <ion-toolbar>
     <ion-title>addstore</ion-title>
@@ -6,4 +7,56 @@
 
 <ion-content>
 
+  <div class="ion-padding sizeimage centeredit" style="">
+    <img src="assets/img/default-avatar.png" class="rounded" alt="...">
+  </div>
+
+  <div>
+    <ion-button class="centeredit"(click)="selectImage()">เพิ่มรูปภาพใหม่</ion-button>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">ชื่อร้าน</span>
+    </div>
+    <input type="text" class="form-control" placeholder="ชื่อร้าน" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon5">ที่อยู่</span>
+    </div>
+    <div>
+    <ion-item>
+      <ion-label>Select: province</ion-label>
+      <ion-select class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
+        <ion-select-option  *ngFor="let province of this.selectedprovince "
+                            value="{{province.id}}"> {{province.name_th}} </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label>Select: amphures</ion-label>
+      <ion-select class="custom-options" [(ngModel)]="mySelectamphures" (ionChange)="selectedamphuresmethod(mySelectamphures)">
+        <ion-select-option  *ngFor="let amphures of this.selectedamphures "
+                            value="{{amphures.id}}"> {{amphures.name_th}} </ion-select-option>
+      </ion-select>
+    </ion-item>
+    </div>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon6">เบอร์โทรศัพท์</span>
+    </div>
+    <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon5">ที่อยู่</span>
+    </div>
+    <input type="text" class="form-control" placeholder="ที่อยู่" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="centerbutton">
+    <button type="button" (click)="presentAlertConfirm()" class="btn btn-success ">เพิ่มสนาม</button>
+    <button type="button"  (click)="goAccount()" class="btn btn-danger">ยกเลิก</button>
+  </div>
 </ion-content>

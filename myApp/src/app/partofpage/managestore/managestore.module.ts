@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { ManagestorePageRoutingModule } from './managestore-routing.module';
 
 import { ManagestorePage } from './managestore.page';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ManagestorePageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        ManagestorePageRoutingModule,
+        TableModule
+    ],
   declarations: [ManagestorePage]
 })
 export class ManagestorePageModule {}
