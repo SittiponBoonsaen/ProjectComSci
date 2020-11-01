@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DatapassService} from '../../datapass.service';
 
 @Component({
   selector: 'app-addstore',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddstorePage implements OnInit {
 
-  constructor() { }
+  constructor(public datapassService: DatapassService) { }
 
   ngOnInit() {
   }

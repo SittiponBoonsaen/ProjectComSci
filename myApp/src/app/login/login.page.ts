@@ -22,6 +22,7 @@ export class LoginPage implements OnInit {
     this.Http.get('http://localhost:5000/apiFinal/getstore')
         .subscribe(data => {
           this.datapassService.datastore = data;
+          console.log(data);
         });
     this.Http.get<any[]>('http://localhost:5000/apiFinal/province')
         .subscribe(data => {

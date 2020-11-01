@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DatapassService} from '../../datapass.service';
 
 @Component({
   selector: 'app-addfield',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddfieldPage implements OnInit {
 
-  constructor() { }
+  constructor(public datapassService: DatapassService) { }
 
   ngOnInit() {
   }

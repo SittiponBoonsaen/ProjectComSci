@@ -9,5 +9,6 @@ export class DatapassService {
   getingfieldfromstore;
   datastore;
   selectedprovince;
+  datastoreowner;
   constructor() { }
 }

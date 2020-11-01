@@ -16,6 +16,8 @@
       <w>datapass</w>
       <w>datasearch</w>
       <w>datastore</w>
+      <w>datastoreowner</w>
+      <w>datausername</w>
       <w>editprofile</w>
       <w>filtro</w>
       <w>firstname</w>
@@ -34,6 +36,7 @@
       <w>myaccount</w>
       <w>mydata</w>
       <w>myhome</w>
+      <w>ownerid</w>
       <w>partofpage</w>
       <w>picturefield</w>
       <w>primeicons</w>

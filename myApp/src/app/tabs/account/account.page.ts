@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 })
 export class AccountPage implements OnInit {
   dataAccount;
-  constructor(private datapass: DatapassService, public alertController: AlertController, private router: Router) { }
+  constructor(public datapass: DatapassService, public alertController: AlertController, private router: Router) { }
 
   ngOnInit() {
     this.dataAccount = this.datapass.userIDLogin;
