@@ -4,7 +4,6 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 ini_set('display_errors',1);
 error_reporting(E_ALL);
 
-
 $app->post('/field/add', function (Request $request, Response $response, array $args) {
     //date_default_timezone_set('Asia/Bangkok');
     //$DATETIME = date_create()->format('Y-m-d h:i:s');
@@ -46,14 +45,26 @@ $app->post('/field/add/picturefield', function (Request $request, Response $resp
     $conn = $GLOBALS['dbconn'];
     $body = $request->getBody();
     $bodyArray = json_decode($body, true);
-    $stmt = $conn->prepare("insert into picturefield "."(id_field,name_picturefield,picture_picturefield) "." values (?,?,?)");
+    $stmt = $conn->prepare("insert into picturefield "."(id_fieldFromfield ,name_picturefield,picture_picturefield) "." values (?,?,?)");
     $stmt ->bind_param('sss', $bodyArray['id_field'], $bodyArray['name_picturefield'], $bodyArray['picture_picturefield']);
     $stmt->execute();
     $result = $stmt ->affected_rows;
     $response->getBody() ->write($result." ");
     return $response->withHeader('Content-Type', 'application/json');
 });
-
+$app->post('/field/edit', function (Request $request, Response $response, array $args) {
+    $conn = $GLOBALS['dbconn']; 
+    $body = $request->getBody();
+    $bodyArray = json_decode($body, true);
+    $stmt = $conn->prepare("UPDATE field SET name_field=?, service_field=?,size_field=?,price_field	=?,
+    status_field=? WHERE id_field = ? and id_store_field=? ");
+    $stmt ->bind_param('sssssss', $bodyArray['name_field'],$bodyArray['service_field'],$bodyArray['size_field']
+    ,$bodyArray['price_field'],$bodyArray['status_field'],$bodyArray['id_field'],$bodyArray['id_store_field']);
+    $stmt->execute();
+    $result = $stmt ->affected_rows;
+    $response->getBody() ->write($result." ");
+    return $response->withHeader('Content-Type', 'application/json');
+});
 
 
 ?>

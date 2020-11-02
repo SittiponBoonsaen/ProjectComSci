@@ -61,6 +61,24 @@ $app->post('/usermember/register', function (Request $request, Response $respons
     return $response->withHeader('Content-Type', 'application/json');
 });
 
+$app->post('/usermember/edit', function (Request $request, Response $response, array $args) {
+    date_default_timezone_set('Asia/Bangkok');
+    $DATETIME = date_create()->format('Y-m-d h:i:s');
+    ////////////////////////
+    $conn = $GLOBALS['dbconn']; 
+    $body = $request->getBody();
+    $bodyArray = json_decode($body, true);
+    $stmt = $conn->prepare("UPDATE usermember SET password_member=?, firstname_member=?,lasname_member=?,
+    address_member=?,telephone_member=? WHERE id_member = ?"); 
+    $stmt ->bind_param('ssssss', $bodyArray['password_member'],$bodyArray['firstname_member'],
+    $bodyArray['lasname_member'],$bodyArray['address_member'],
+    $bodyArray['telephone_member'],$bodyArray['id_member']);
+    $stmt->execute(); 
+    $result = $stmt ->affected_rows;
+    $response->getBody() ->write($result." ");
+    return $response->withHeader('Content-Type', 'application/json');
+});
+
 
 
 ?>

@@ -59,7 +59,7 @@ $app->post('/getingfield', function (Request $request, Response $response, array
     $body = $request->getBody();
     $bodyArray = json_decode($body,true);
     $conn = $GLOBALS['dbconn'];
-    $stmt = $conn->prepare("SELECT * FROM field LEFT JOIN picturefield ON picturefield.id_field=field.id_field WHERE id_store_field = ? ");
+    $stmt = $conn->prepare("SELECT * FROM field LEFT JOIN picturefield ON picturefield.id_fieldFromfield =field.id_field WHERE id_store_field = ? ");
     $stmt->bind_param("s",$bodyArray['id_store']);
     $stmt->execute();
     $result = $stmt->get_result();

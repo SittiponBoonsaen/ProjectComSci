@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2def3aa1-3b4d-45b9-b0e4-18be953b2389" name="Default Changelist" comment="ทำ edit register">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" afterDir="false" />
-    </list>
+    <list default="true" id="2def3aa1-3b4d-45b9-b0e4-18be953b2389" name="Default Changelist" comment="ทำ edit register" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -155,7 +147,7 @@
       <workItem from="1604244967339" duration="3324000" />
       <workItem from="1604248575361" duration="8572000" />
       <workItem from="1604257201413" duration="100000" />
-      <workItem from="1604322919404" duration="26449000" />
+      <workItem from="1604322919404" duration="26743000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2/9/63">
       <created>1599062190699</created>
@@ -325,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604343167399</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="ทำ แอดสนามได้ และ แก้ไขข้อมูล 02/11">
+      <created>1604352831079</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1604352831079</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +358,8 @@
     <MESSAGE value="ทำ edit register" />
     <MESSAGE value="02/11 #กำลังทำแอดสนาม ยังไม่ได้แก้สมัคร" />
     <MESSAGE value="ทำ แอดสนามได้ 02/11" />
-    <option name="LAST_COMMIT_MESSAGE" value="ทำ แอดสนามได้ 02/11" />
+    <MESSAGE value="ทำ แอดสนามได้ และ แก้ไขข้อมูล 02/11" />
+    <option name="LAST_COMMIT_MESSAGE" value="ทำ แอดสนามได้ และ แก้ไขข้อมูล 02/11" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1603409706445">
@@ -386,10 +386,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="598" y="286" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1602814197108" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1604343175277">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1604352845132">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604343175277" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604352845132" />
     <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601588585035">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
