@@ -28,14 +28,17 @@
       </ng-template>
       <ng-template pTemplate="body" let-datafield>
         <tr>
-          <td><img src="data:image/png;base64,{{datafield.picture_picturefield}}" [alt]="datafield.name_field" width="100" class="p-shadow-4"  /></td>
+          <td><img *ngIf="datafield.picture_picturefield == null" src="assets/img/noimage.png" [alt]="datafield.name_field" class="p-shadow-4"  />
+            <img *ngIf="datafield.picture_picturefield != null" src="data:image/png;base64,{{datafield.picture_picturefield}}" [alt]="datafield.name_field" width="100" class="p-shadow-4"  />
+
+          </td>
           <td>{{datafield.name_field}}</td>
           <td>{{datafield.status_field}}</td>
           <!--        <td>{{product.address_store}}</td>-->
 
           <td>
             <ion-icon name="construct-outline" style="width: 25px;height: 25px;" (click)="gotoEdit()"></ion-icon>
-            <ion-icon name="trash-outline" style="width: 25px;height: 25px;" (click)="presentAlertConfirm()"></ion-icon>
+            <ion-icon name="trash-outline" style="width: 25px;height: 25px;" (click)="presentAlertConfirm(datafield.id_field)"></ion-icon>
           </td>
           <!--        <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>-->
           <!--        <td><span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span></td>-->

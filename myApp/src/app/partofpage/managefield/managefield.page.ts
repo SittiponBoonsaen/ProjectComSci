@@ -11,7 +11,9 @@ import {AlertController} from '@ionic/angular';
 })
 export class ManagefieldPage implements OnInit {
   datafield: any;
-  idstore; any;
+  idstore: any;
+  id_Field: any;
+
   constructor(public datapassService: DatapassService, private Http: HttpClient, private router: Router, public alertController: AlertController) { }
 
   ngOnInit() {
@@ -35,10 +37,19 @@ export class ManagefieldPage implements OnInit {
   }
 
   gotoDelete() {
-
+    const dataJSON = {
+      "id_field": this.id_Field,
+    };
+    console.log(dataJSON);
+    this.Http.post('http://localhost:5000/apiFinal/field/delete', JSON.stringify(dataJSON))
+        .subscribe(data => {
+          console.log(data);
+        });
   }
 
-  async presentAlertConfirm() {
+  async presentAlertConfirm(idfield) {
+    console.log(idfield);
+    this.id_Field = idfield;
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Confirm!',

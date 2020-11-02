@@ -22,47 +22,47 @@
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon1">ชื่อ-สกุล</span>
     </div>
-    <input type="text" class="form-control" value="{{data.firstname_member}}" aria-label="Username" aria-describedby="basic-addon1">
-    <input type="text" class="form-control" value="{{data.lasname_member}}" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" value="{{data.firstname_member}}" id="firstname_member" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" value="{{data.lasname_member}}" id="lasname_member" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon2">Username</span>
     </div>
-    <input type="text" class="form-control" value="{{data.username_member}}" aria-label="Username" aria-describedby="basic-addon1" disabled>
+    <input type="text" class="form-control" value="{{data.username_member}}" id="username_member" aria-label="Username" aria-describedby="basic-addon1" disabled>
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon3">รหัสผ่าน</span>
     </div>
-    <input type="password" class="form-control" [(ngModel)] ="password" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="password" class="form-control" [(ngModel)] ="password_member" placeholder="กรุณาใส่passwordด้วย" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon4">ยืนยันรหัสผ่าน</span>
     </div>
-    <input type="password" [(ngModel)] ="confirmpassword" class="form-control" placeholder="confirmPassword" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="password" [(ngModel)] ="confirmpassword" class="form-control"  placeholder="confirmPassword" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon3">Email</span>
+      <span class="input-group-text" id="basic-addon9">Email</span>
     </div>
-    <input type="text" class="form-control" value="{{data.email_member}}" aria-label="Usernamegg" aria-describedby="basic-addon1" disabled>
+    <input type="text" class="form-control" value="{{data.email_member}}" id="email_member" aria-label="Username" aria-describedby="basic-addon1" disabled>
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon5">ที่อยู่</span>
     </div>
-    <input type="text" class="form-control" value="{{data.address_member}}" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" value="{{data.address_member}}"id="address_member"  aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon6">เบอร์โทรศัพท์</span>
     </div>
-    <input type="text" class="form-control" value="{{data.telephone_member}}" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" value="{{data.telephone_member}}" id="telephone_member"  aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div class="centerbutton">
-    <button type="button" (click)="presentAlertConfirm()" class="btn btn-success ">ยืนยันการแก้ไข</button>
+    <button type="button" (click)="presentAlertConfirm(data.id_member)" class="btn btn-success ">ยืนยันการแก้ไข</button>
     <button type="button"  (click)="goAccount()" class="btn btn-danger">ยกเลิก</button>
   </div>
 

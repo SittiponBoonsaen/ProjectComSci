@@ -3,6 +3,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import {AlertController} from '@ionic/angular';
 import {Router} from '@angular/router';
 import {DatapassService} from '../../datapass.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-editprofile',
@@ -13,14 +14,44 @@ export class EditprofilePage implements OnInit {
   public image: any;
   captureDataUrl: any;
   dataUser: any;
-  constructor(private camera: Camera, public alertController: AlertController, private router: Router,  private datapass: DatapassService) {
+  firstname_member: any;
+  lasname_member: any;
+  password_member: any;
+  confirmpassword: any;
+  address_member: any;
+  telephone_member: any;
+  id_member: any;
+
+  constructor(private camera: Camera, public alertController: AlertController, private router: Router,  private datapass: DatapassService, private Http: HttpClient) {
     this.dataUser = this.datapass.userIDLogin;
     console.log(this.dataUser);
   }
 
   ngOnInit() {
   }
-  async presentAlertConfirm() {
+
+  editprofile(){
+
+    const dataJSON = {
+      password_member: this.password_member,
+      firstname_member: document.getElementById('firstname_member').value,
+      lasname_member: document.getElementById('lasname_member').value,
+      address_member:  document.getElementById('address_member').value,
+      telephone_member: document.getElementById('telephone_member').value,
+      id_member: this.id_member
+    };
+    console.log(dataJSON);
+    this.Http.post('http://localhost:5000/apiFinal/usermember/edit', JSON.stringify(dataJSON))
+        .subscribe(data => {
+          console.log(data);
+          const navigate = this.router.navigate(['/login']);
+        });
+
+  }
+
+  async presentAlertConfirm(id_member) {
+    this.id_member = id_member;
+    console.log(this.id_member);
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Confirm!',
@@ -29,7 +60,7 @@ export class EditprofilePage implements OnInit {
         {
           text: 'ใช่',
           handler: () => {
-            const navigate = this.router.navigate(['/login']);
+            this.editprofile();
             console.log('Confirm Okay');
           }
         }, {
