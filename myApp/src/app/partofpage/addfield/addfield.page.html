@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <ion-header>
   <ion-toolbar>
     <ion-buttons>
@@ -8,33 +9,70 @@
 </ion-header>
 
 <ion-content>
-
-  <div class="ion-padding sizeimage centeredit" style="">
-    <img src="assets/img/default-avatar.png" class="rounded" alt="...">
-  </div>
-
-  <div>
-    <ion-button class="centeredit"(click)="selectImage()">เพิ่มรูปภาพใหม่</ion-button>
-  </div>
+  <form class="md-form">
+    <div class="file-field">
+      <div class="mb-4">
+        <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
+             class="rounded-circle z-depth-1-half avatar-pic" alt="example placeholder avatar">
+      </div>
+      <div class="d-flex justify-content-center avatar">
+        <div class="btn btn-mdb-color btn-rounded float-left avatar">
+          <span>Add photo</span>
+          <input type="file" class="avatar-pic" [(ngModel)]="file_image">
+        </div>
+      </div>
+    </div>
+  </form>
+  <br>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon1">ชื่อสนาม</span>
     </div>
-    <input type="text" class="form-control" placeholder="ชื่อสนาม" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" [(ngModel)]="name_field" placeholder="ชื่อสนาม" aria-label="Username" aria-describedby="basic-addon1">
   </div>
 
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon6">เบอร์โทรศัพท์</span>
+      <span class="input-group-text" id="basic-addon6">service</span>
     </div>
-    <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" [(ngModel)]="service_field" placeholder="service" aria-label="Username" aria-describedby="basic-addon1">
   </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">สถานะของสนาม</label>
+    <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="size_field">
+      <option>
+        5คน
+        22 x 42 เมตร
+      </option>
+      <option>
+        7คน
+        33 x 53 เมตร
+      </option>
+      <option>
+        9คน
+        43 x 63 เมตร
+      </option>
+      <option>
+        11คน
+        68 x 105 เมตร
+      </option>
+    </select>
+  </div>
+
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon5">ราคา</span>
     </div>
-    <input type="text" class="form-control" placeholder="ราคา" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" [(ngModel)]="price_field" placeholder="ราคา" aria-label="Username" aria-describedby="basic-addon1">
   </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">สถานะของสนาม</label>
+    <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="status_field">
+      <option>เปิดให้บริการ</option>
+      <option>ไม่เปิดให้บริการ</option>
+    </select>
+  </div>
+
   <div class="centerbutton">
     <button type="button" (click)="presentAlertConfirm()" class="btn btn-success ">เพิ่มสนาม</button>
     <button type="button"  (click)="goAccount()" class="btn btn-danger">ยกเลิก</button>

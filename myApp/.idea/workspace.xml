@@ -20,20 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2def3aa1-3b4d-45b9-b0e4-18be953b2389" name="Default Changelist" comment="ทำ edit register">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Ping_Sittipon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Ping_Sittipon.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/datapass.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/datapass.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +156,7 @@
       <workItem from="1604244967339" duration="3324000" />
       <workItem from="1604248575361" duration="8572000" />
       <workItem from="1604257201413" duration="100000" />
-      <workItem from="1604322919404" duration="11821000" />
+      <workItem from="1604322919404" duration="16826000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2/9/63">
       <created>1599062190699</created>

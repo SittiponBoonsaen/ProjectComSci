@@ -17,7 +17,7 @@ export class ManagefieldPage implements OnInit {
   ngOnInit() {
     this.idstore = this.datapassService.idstoreformmanagestore;
     const dataJSON = {
-      id_store: 2,
+      id_store: this.idstore,
     };
     this.Http.post('http://localhost:5000/apiFinal/getingfield', JSON.stringify(dataJSON))
         .subscribe(datastore => {

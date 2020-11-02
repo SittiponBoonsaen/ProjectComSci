@@ -27,7 +27,7 @@ export class RegisterPage implements OnInit {
 
 
   register() {
-    let dataJSON = {
+    const dataJSON = {
       'username_member': this.username,
       'password_member': this.password,
       "firstname_member": this.firstname,
