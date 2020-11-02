@@ -2,6 +2,9 @@
 
 <ion-header>
   <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
     <ion-title>managestore</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,20 +18,24 @@
     </ng-template>
     <ng-template pTemplate="header">
       <tr>
-        <th>Name</th>
         <th>Image</th>
-        <th>Telephone</th>
-        <th>Address</th>
+        <th>Name</th>
         <th>#</th>
+<!--        <th>Telephone</th>-->
+<!--        <th>Address</th>-->
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-product>
       <tr>
-        <td><img src="data:image/png;base64,{{product.picture_store}}" [alt]="product.name_store" width="100" class="p-shadow-4" /></td>
+        <td><img src="data:image/png;base64,{{product.picture_store}}" [alt]="product.name_store" width="100" class="p-shadow-4"  /></td>
         <td>{{product.name_store}}</td>
-        <td>{{product.telephone_store}}</td>
-        <td>{{product.address_store}}</td>
-        <ion-icon name="construct-outline"></ion-icon>
+<!--        <td>{{product.telephone_store}}</td>-->
+<!--        <td>{{product.address_store}}</td>-->
+
+        <td>
+            <ion-icon name="search-outline" style="width: 25px;height: 25px;" (click)="gotomanagefiled(product.id_store)"></ion-icon>
+            <ion-icon name="construct-outline" style="width: 25px;height: 25px;" (click)="gotoEdit()"></ion-icon>
+        </td>
 <!--        <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>-->
 <!--        <td><span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span></td>-->
       </tr>

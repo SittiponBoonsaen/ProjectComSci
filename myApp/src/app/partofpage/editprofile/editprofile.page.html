@@ -2,11 +2,14 @@
 
 <ion-header>
   <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
     <ion-title>editprofile</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content *ngFor="let data of this.dataUser" >
 
   <div class="ion-padding sizeimage centeredit" style="">
     <img src="assets/img/default-avatar.png" class="rounded" alt="...">
@@ -19,20 +22,20 @@
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon1">ชื่อ-สกุล</span>
     </div>
-    <input type="text" class="form-control" placeholder="ชื่อ" aria-label="Username" aria-describedby="basic-addon1">
-    <input type="text" class="form-control" placeholder="นามสกุล" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" value="{{data.firstname_member}}" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" value="{{data.lasname_member}}" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon2">Username</span>
     </div>
-    <input type="text" class="form-control" placeholder="username" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" value="{{data.username_member}}" aria-label="Username" aria-describedby="basic-addon1" disabled>
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon3">รหัสผ่าน</span>
     </div>
-    <input type="password" class="form-control" [(ngModel)] ="password"placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="password" class="form-control" [(ngModel)] ="password" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
@@ -44,19 +47,19 @@
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon3">Email</span>
     </div>
-    <input type="text" class="form-control" placeholder="email" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" value="{{data.email_member}}" aria-label="Usernamegg" aria-describedby="basic-addon1" disabled>
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon5">ที่อยู่</span>
     </div>
-    <input type="text" class="form-control" placeholder="ที่อยู่" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" value="{{data.address_member}}" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon6">เบอร์โทรศัพท์</span>
     </div>
-    <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" value="{{data.telephone_member}}" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div class="centerbutton">
     <button type="button" (click)="presentAlertConfirm()" class="btn btn-success ">ยืนยันการแก้ไข</button>

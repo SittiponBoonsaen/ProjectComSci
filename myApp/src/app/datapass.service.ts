@@ -10,5 +10,7 @@ export class DatapassService {
   datastore;
   selectedprovince;
   datastoreowner;
+  managedatastore;
+  idstoreformmanagestore;
   constructor() { }
 }

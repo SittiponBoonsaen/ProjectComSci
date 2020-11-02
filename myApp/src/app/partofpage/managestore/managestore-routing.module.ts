@@ -13,8 +13,12 @@ const routes: Routes = [
     loadChildren: () => import('../../partofpage/addstore/addstore.module').then( m => m.AddstorePageModule)
   },
   {
-    path: 'addfield',
-    loadChildren: () => import('../../partofpage/addfield/addfield.module').then( m => m.AddfieldPageModule)
+    path: 'editstore',
+    loadChildren: () => import('../../partofpage/editstore/editstore.module').then( m => m.EditstorePageModule)
+  },
+  {
+    path: 'managefield',
+    loadChildren: () => import('../../partofpage/managefield/managefield.module').then( m => m.ManagefieldPageModule)
   },
 ];
 

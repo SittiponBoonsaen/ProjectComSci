@@ -26,6 +26,7 @@ export class ManagestorePage implements OnInit {
         .subscribe(datastore => {
           this.datapassService.datastoreowner = datastore;
           this.products = datastore;
+          this.datapassService.managedatastore = this.products;
           console.log(datastore);
         });
   }
@@ -33,4 +34,13 @@ export class ManagestorePage implements OnInit {
     const navigate = this.router.navigate(['/home/tabs/account/managestore/addstore']);
   }
 
+  gotoEdit() {
+    const navigate = this.router.navigate(['/home/tabs/account/managestore/editstore']);
+  }
+
+  gotomanagefiled(idstore) {
+    this.datapassService.idstoreformmanagestore = idstore;
+    console.log(this.datapassService.idstoreformmanagestore);
+    const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
+  }
 }

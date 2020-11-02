@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import {AlertController} from '@ionic/angular';
 import {Router} from '@angular/router';
+import {DatapassService} from '../../datapass.service';
 
 @Component({
   selector: 'app-editprofile',
@@ -11,8 +12,11 @@ import {Router} from '@angular/router';
 export class EditprofilePage implements OnInit {
   public image: any;
   captureDataUrl: any;
-
-  constructor(private camera: Camera, public alertController: AlertController, private router: Router) { }
+  dataUser: any;
+  constructor(private camera: Camera, public alertController: AlertController, private router: Router,  private datapass: DatapassService) {
+    this.dataUser = this.datapass.userIDLogin;
+    console.log(this.dataUser);
+  }
 
   ngOnInit() {
   }
