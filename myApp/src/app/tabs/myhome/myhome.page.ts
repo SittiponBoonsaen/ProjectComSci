@@ -31,10 +31,10 @@ export class MyhomePage implements OnInit {
       const dataJSON = {
             id_store: idstore,
         };
-      this.Http.post('http://localhost:5000/apiFinal/getingfield', JSON.stringify(dataJSON))
+      this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON))
             .subscribe(datafield => {
                 this.datapass.datafield  = datafield;
-                this.Http.post('http://localhost:5000/apiFinal/getstoreformID', JSON.stringify(dataJSON))
+                this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getstoreformID', JSON.stringify(dataJSON))
                     .subscribe(datastore => {
                         this.datapass.getingfieldfromstore = datastore;
                         const navigate = this.router.navigate(['/home/tabs/myhome/myhome-field']);

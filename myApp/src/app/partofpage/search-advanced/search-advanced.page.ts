@@ -39,7 +39,7 @@ export class SearchAdvancedPage implements OnInit {
     let dataJSON = {
       'PATIENT_ID': select,
     };
-    this.Http.post('http://localhost:5000/apiFinal/amphures',JSON.stringify(dataJSON))
+    this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/amphures',JSON.stringify(dataJSON))
         .subscribe(data => {
           this.selectedamphures = data;
           console.log(this.selectedamphures);

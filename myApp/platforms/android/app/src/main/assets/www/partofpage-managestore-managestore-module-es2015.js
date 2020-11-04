@@ -28,8 +28,12 @@ const routes = [
         loadChildren: () => __webpack_require__.e(/*! import() | partofpage-addstore-addstore-module */ "partofpage-addstore-addstore-module").then(__webpack_require__.bind(null, /*! ../../partofpage/addstore/addstore.module */ "u/bj")).then(m => m.AddstorePageModule)
     },
     {
-        path: 'addfield',
-        loadChildren: () => __webpack_require__.e(/*! import() | partofpage-addfield-addfield-module */ "partofpage-addfield-addfield-module").then(__webpack_require__.bind(null, /*! ../../partofpage/addfield/addfield.module */ "IfaH")).then(m => m.AddfieldPageModule)
+        path: 'editstore',
+        loadChildren: () => __webpack_require__.e(/*! import() | partofpage-editstore-editstore-module */ "partofpage-editstore-editstore-module").then(__webpack_require__.bind(null, /*! ../../partofpage/editstore/editstore.module */ "UiBP")).then(m => m.EditstorePageModule)
+    },
+    {
+        path: 'managefield',
+        loadChildren: () => __webpack_require__.e(/*! import() | partofpage-managefield-managefield-module */ "partofpage-managefield-managefield-module").then(__webpack_require__.bind(null, /*! ../../partofpage/managefield/managefield.module */ "WpsQ")).then(m => m.ManagefieldPageModule)
     },
 ];
 let ManagestorePageRoutingModule = class ManagestorePageRoutingModule {
@@ -54,7 +58,7 @@ ManagestorePageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__deco
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>managestore</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n\r\n</ion-content>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\r\n\r\n<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons>\r\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\r\n    </ion-buttons>\r\n    <ion-title>managestore</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <p-table [value]=\"products\">\r\n    <ng-template pTemplate=\"caption\">\r\n      <div class=\"p-d-flex p-ai-center p-jc-between\">\r\n        Products\r\n      </div>\r\n    </ng-template>\r\n    <ng-template pTemplate=\"header\">\r\n      <tr>\r\n        <th>Image</th>\r\n        <th>Name</th>\r\n        <th>#</th>\r\n<!--        <th>Telephone</th>-->\r\n<!--        <th>Address</th>-->\r\n      </tr>\r\n    </ng-template>\r\n    <ng-template pTemplate=\"body\" let-product>\r\n      <tr>\r\n        <td><img src=\"data:image/png;base64,{{product.picture_store}}\" [alt]=\"product.name_store\" width=\"100\" class=\"p-shadow-4\"  /></td>\r\n        <td>{{product.name_store}}</td>\r\n<!--        <td>{{product.telephone_store}}</td>-->\r\n<!--        <td>{{product.address_store}}</td>-->\r\n\r\n        <td>\r\n            <ion-icon name=\"search-outline\" style=\"width: 25px;height: 25px;\" (click)=\"gotomanagefiled(product.id_store)\"></ion-icon>\r\n            <ion-icon name=\"construct-outline\" style=\"width: 25px;height: 25px;\" (click)=\"gotoEdit()\"></ion-icon>\r\n        </td>\r\n<!--        <td><p-rating [ngModel]=\"product.rating\" [readonly]=\"true\" [cancel]=\"false\"></p-rating></td>-->\r\n<!--        <td><span [class]=\"'product-badge status-' + product.inventoryStatus.toLowerCase()\">{{product.inventoryStatus}}</span></td>-->\r\n      </tr>\r\n    </ng-template>\r\n    <ng-template pTemplate=\"summary\">\r\n      <div class=\"p-d-flex p-ai-center p-jc-between\">\r\n        In total there are {{products ? products.length : 0 }} products.\r\n      </div>\r\n    </ng-template>\r\n  </p-table>\r\n\r\n  <ion-fab vertical=\"bottom\" horizontal=\"end\" slot=\"fixed\">\r\n    <ion-fab-button>\r\n      <ion-icon (click)=\"goToAddstore()\" name=\"add\"></ion-icon>\r\n    </ion-fab-button>\r\n  </ion-fab>\r\n\r\n</ion-content>\r\n");
 
 /***/ }),
 
@@ -72,16 +76,55 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _raw_loader_managestore_page_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./managestore.page.html */ "Two8");
 /* harmony import */ var _managestore_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./managestore.page.scss */ "hFVc");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _datapass_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../datapass.service */ "woWk");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
+
+
 
 
 
 
 let ManagestorePage = class ManagestorePage {
-    constructor() { }
+    constructor(datapassService, Http, router) {
+        this.datapassService = datapassService;
+        this.Http = Http;
+        this.router = router;
+    }
     ngOnInit() {
+        this.dataUsername = this.datapassService.userIDLogin;
+        let ownerid;
+        for (ownerid of this.dataUsername) {
+        }
+        const dataJSON = {
+            owner_store: ownerid.id_member,
+        };
+        this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getOwnerstore', JSON.stringify(dataJSON))
+            .subscribe(datastore => {
+            this.datapassService.datastoreowner = datastore;
+            this.products = datastore;
+            this.datapassService.managedatastore = this.products;
+            console.log(datastore);
+        });
+    }
+    goToAddstore() {
+        const navigate = this.router.navigate(['/home/tabs/account/managestore/addstore']);
+    }
+    gotoEdit() {
+        const navigate = this.router.navigate(['/home/tabs/account/managestore/editstore']);
+    }
+    gotomanagefiled(idstore) {
+        this.datapassService.idstoreformmanagestore = idstore;
+        console.log(this.datapassService.idstoreformmanagestore);
+        const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
     }
 };
-ManagestorePage.ctorParameters = () => [];
+ManagestorePage.ctorParameters = () => [
+    { type: _datapass_service__WEBPACK_IMPORTED_MODULE_4__["DatapassService"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"] }
+];
 ManagestorePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
         selector: 'app-managestore',
@@ -103,7 +146,7 @@ ManagestorePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhcnRvZnBhZ2UvbWFuYWdlc3RvcmUvbWFuYWdlc3RvcmUucGFnZS5zY3NzIn0= */");
+/* harmony default export */ __webpack_exports__["default"] = ("/* DOES NOT WORK - not specific enough */\n.popover-content {\n  background: #222;\n}\n/* Works - pass \"my-custom-class\" in cssClass to increase specificity */\n.my-custom-class .popover-content {\n  background: #222;\n}\n.my-custom-class {\n  --background: #222;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9tYW5hZ2VzdG9yZS9tYW5hZ2VzdG9yZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsd0NBQUE7QUFDQTtFQUNFLGdCQUFBO0FBQ0Y7QUFFQSx1RUFBQTtBQUNBO0VBQ0UsZ0JBQUE7QUFDRjtBQUNBO0VBQ0Usa0JBQUE7QUFFRiIsImZpbGUiOiJzcmMvYXBwL3BhcnRvZnBhZ2UvbWFuYWdlc3RvcmUvbWFuYWdlc3RvcmUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogRE9FUyBOT1QgV09SSyAtIG5vdCBzcGVjaWZpYyBlbm91Z2ggKi9cclxuLnBvcG92ZXItY29udGVudCB7XHJcbiAgYmFja2dyb3VuZDogIzIyMjtcclxufVxyXG5cclxuLyogV29ya3MgLSBwYXNzIFwibXktY3VzdG9tLWNsYXNzXCIgaW4gY3NzQ2xhc3MgdG8gaW5jcmVhc2Ugc3BlY2lmaWNpdHkgKi9cclxuLm15LWN1c3RvbS1jbGFzcyAucG9wb3Zlci1jb250ZW50IHtcclxuICBiYWNrZ3JvdW5kOiAjMjIyO1xyXG59XHJcbi5teS1jdXN0b20tY2xhc3Mge1xyXG4gIC0tYmFja2dyb3VuZDogIzIyMjtcclxufVxyXG4iXX0= */");
 
 /***/ }),
 
@@ -124,6 +167,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "TEn/");
 /* harmony import */ var _managestore_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./managestore-routing.module */ "3q6T");
 /* harmony import */ var _managestore_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./managestore.page */ "fSdC");
+/* harmony import */ var primeng_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! primeng/table */ "rEr+");
+
 
 
 
@@ -139,7 +184,8 @@ ManagestorePageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])
             _angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
             _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"],
-            _managestore_routing_module__WEBPACK_IMPORTED_MODULE_5__["ManagestorePageRoutingModule"]
+            _managestore_routing_module__WEBPACK_IMPORTED_MODULE_5__["ManagestorePageRoutingModule"],
+            primeng_table__WEBPACK_IMPORTED_MODULE_7__["TableModule"]
         ],
         declarations: [_managestore_page__WEBPACK_IMPORTED_MODULE_6__["ManagestorePage"]]
     })

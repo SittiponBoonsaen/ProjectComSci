@@ -34,14 +34,14 @@ export class EditprofilePage implements OnInit {
 
     const dataJSON = {
       password_member: this.password_member,
-      firstname_member: document.getElementById('firstname_member').value,
-      lasname_member: document.getElementById('lasname_member').value,
-      address_member:  document.getElementById('address_member').value,
-      telephone_member: document.getElementById('telephone_member').value,
+      firstname_member: document.getElementById('firstname_member'),
+      lasname_member: document.getElementById('lasname_member'),
+      address_member:  document.getElementById('address_member'),
+      telephone_member: document.getElementById('telephone_member'),
       id_member: this.id_member
     };
     console.log(dataJSON);
-    this.Http.post('http://localhost:5000/apiFinal/usermember/edit', JSON.stringify(dataJSON))
+    this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/usermember/edit', JSON.stringify(dataJSON))
         .subscribe(data => {
           console.log(data);
           const navigate = this.router.navigate(['/login']);

@@ -22,7 +22,7 @@ export class ManagestorePage implements OnInit {
     const dataJSON = {
       owner_store: ownerid.id_member,
     };
-    this.Http.post('http://localhost:5000/apiFinal/getOwnerstore', JSON.stringify(dataJSON))
+    this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getOwnerstore', JSON.stringify(dataJSON))
         .subscribe(datastore => {
           this.datapassService.datastoreowner = datastore;
           this.products = datastore;

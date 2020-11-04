@@ -35,11 +35,12 @@ let LoginPage = class LoginPage {
     }
     ngOnInit() {
         this.routerOutlet.swipeGesture = false;
-        this.Http.get('http://localhost:5000/apiFinal/getstore')
+        this.Http.get('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getstore')
             .subscribe(data => {
             this.datapassService.datastore = data;
+            console.log(data);
         });
-        this.Http.get('http://localhost:5000/apiFinal/province')
+        this.Http.get('https://jongsanamcsmsu.000webhostapp.com/apiFinal/province')
             .subscribe(data => {
             this.datapassService.selectedprovince = data;
         });
@@ -50,7 +51,7 @@ let LoginPage = class LoginPage {
             'password_member': this.password,
             'status_member': this.valuedegree
         };
-        this.Http.post('http://localhost:5000/apiFinal/usermember/login', JSON.stringify(dataJSON)).subscribe(data => {
+        this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/usermember/login', JSON.stringify(dataJSON)).subscribe(data => {
             console.log("login complete");
             this.router.setUpLocationChangeListener();
             let navigate = this.router.navigate(['/home']);

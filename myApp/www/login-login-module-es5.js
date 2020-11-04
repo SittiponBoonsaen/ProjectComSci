@@ -90,10 +90,11 @@
             var _this = this;
 
             this.routerOutlet.swipeGesture = false;
-            this.Http.get('http://localhost:5000/apiFinal/getstore').subscribe(function (data) {
+            this.Http.get('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getstore').subscribe(function (data) {
               _this.datapassService.datastore = data;
+              console.log(data);
             });
-            this.Http.get('http://localhost:5000/apiFinal/province').subscribe(function (data) {
+            this.Http.get('https://jongsanamcsmsu.000webhostapp.com/apiFinal/province').subscribe(function (data) {
               _this.datapassService.selectedprovince = data;
             });
           }
@@ -107,7 +108,7 @@
               'password_member': this.password,
               'status_member': this.valuedegree
             };
-            this.Http.post('http://localhost:5000/apiFinal/usermember/login', JSON.stringify(dataJSON)).subscribe(function (data) {
+            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/usermember/login', JSON.stringify(dataJSON)).subscribe(function (data) {
               console.log("login complete");
 
               _this2.router.setUpLocationChangeListener();

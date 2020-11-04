@@ -9,21 +9,16 @@
 </ion-header>
 
 <ion-content>
-  <form class="md-form">
-    <div class="file-field">
-      <div class="mb-4">
-        <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
-             class="rounded-circle z-depth-1-half avatar-pic" alt="example placeholder avatar">
-      </div>
-      <div class="d-flex justify-content-center avatar">
-        <div class="btn btn-mdb-color btn-rounded float-left avatar">
-          <span>Add photo</span>
-          <input type="file" class="avatar-pic">
-        </div>
-      </div>
-    </div>
-  </form>
-  <br>
+
+
+  <div class="ion-padding sizeimage centeredit" style="">
+    <img src="assets/img/default-avatar.png" class="rounded" alt="...">
+  </div>
+
+  <div>
+    <ion-button class="centeredit"(click)="selectImage()">เพิ่มรูปภาพใหม่</ion-button>
+  </div>
+
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <span class="input-group-text" id="basic-addon1">ชื่อสนาม</span>

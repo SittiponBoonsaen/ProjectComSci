@@ -95,7 +95,7 @@
             var dataJSON = {
               'PATIENT_ID': select
             };
-            this.Http.post('http://localhost:5000/apiFinal/amphures', JSON.stringify(dataJSON)).subscribe(function (data) {
+            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/amphures', JSON.stringify(dataJSON)).subscribe(function (data) {
               _this.selectedamphures = data;
               console.log(_this.selectedamphures);
             });

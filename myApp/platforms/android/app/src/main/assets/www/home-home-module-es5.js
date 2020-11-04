@@ -96,9 +96,9 @@
           children: [{
             path: '',
             loadChildren: function loadChildren() {
-              return __webpack_require__.e(
+              return Promise.all(
               /*! import() | partofpage-editprofile-editprofile-module */
-              "partofpage-editprofile-editprofile-module").then(__webpack_require__.bind(null,
+              [__webpack_require__.e("common"), __webpack_require__.e("partofpage-editprofile-editprofile-module")]).then(__webpack_require__.bind(null,
               /*! ../partofpage/editprofile/editprofile.module */
               "Xpx6")).then(function (m) {
                 return m.EditprofilePageModule;

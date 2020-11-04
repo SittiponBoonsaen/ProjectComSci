@@ -9,33 +9,65 @@
 </ion-header>
 
 <ion-content>
-  <div class="container">
-    <div class="row"  *ngFor="let data of datafield" (click)="clickfield(data.id_field)">
-      <div class="col-12">
-        <table class="table table-image">
-          <thead>
-          <tr>
-<!--            <th scope="col">Day</th>-->
-            <th scope="col">รูปภาพ</th>
-            <th scope="col">ชื่อสนาม</th>
+<!--  <div class="container">-->
+<!--    <div class="row"  *ngFor="let data of datafield" (click)="clickfield(data.id_field)">-->
+<!--      <div class="col-12">-->
+<!--        <table class="table table-image">-->
+<!--          <thead>-->
+<!--          <tr>-->
+<!--&lt;!&ndash;            <th scope="col">Day</th>&ndash;&gt;-->
+<!--            <th scope="col">รูปภาพ</th>-->
+<!--            <th scope="col">ชื่อสนาม</th>-->
 
-            <th scope="col">ราคา/ชม.</th>
-          </tr>
-          </thead>
+<!--            <th scope="col">ราคา/ชม.</th>-->
+<!--          </tr>-->
+<!--          </thead>-->
 
-          <tbody>
-          <tr>
-<!--            <th scope="row">1</th>-->
-            <td>
-              <img style="height: 200px;width: 300px" src="data:image/png;base64,{{data.picture_picturefield}}" [alt]="data.name_field">
-            </td>
-            <td>{{data.name_field}}</td>
-            <td>{{data.price_field}}</td>
-          </tr>
+<!--          <tbody>-->
+<!--          <tr>-->
+<!--&lt;!&ndash;            <th scope="row">1</th>&ndash;&gt;-->
+<!--            <td>-->
+<!--              <img style="height: 200px;width: 300px" src="data:image/png;base64,{{data.picture_picturefield}}" [alt]="data.name_field">-->
+<!--            </td>-->
+<!--            <td>{{data.name_field}}</td>-->
+<!--            <td>{{data.price_field}}</td>-->
+<!--          </tr>-->
 
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
+<!--          </tbody>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+    <p-table [value]="datafield">
+        <ng-template pTemplate="caption">
+            <div class="p-d-flex p-ai-center p-jc-between">
+                Field
+                <p-button icon="pi pi-refresh"></p-button>
+            </div>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Status</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-datafield>
+            <tr>
+                <td>{{datafield.name}}</td>
+                <td><img [src]="'assets/showcase/images/demo/product/' + datafield.image" [alt]="datafield.name" width="100" class="p-shadow-4" /></td>
+                <td>{{datafield.price | currency:'฿'}}</td>
+
+                <td><span [class]="'product-badge status-' + datafield.status_field.toLowerCase()">{{product.status_field}}</span></td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="summary">
+            <div class="p-d-flex p-ai-center p-jc-between">
+                In total there are {{datafield ? datafield.length : 0 }} products.
+            </div>
+        </ng-template>
+    </p-table>
 </ion-content>

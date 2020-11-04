@@ -10,6 +10,7 @@ import { MyhomeFieldPage } from './myhome-field.page';
 import {DataViewModule} from 'primeng/dataview';
 import {ButtonModule} from 'primeng/button';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
     imports: [
@@ -19,7 +20,8 @@ import {ScrollPanelModule} from 'primeng/scrollpanel';
         MyhomeFieldPageRoutingModule,
         DataViewModule,
         ButtonModule,
-        ScrollPanelModule
+        ScrollPanelModule,
+        TableModule
     ],
   declarations: [MyhomeFieldPage]
 })
