@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {DatapassService} from '../../datapass.service';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
+import {LoadingController} from '@ionic/angular';
 
 @Component({
   selector: 'app-managestore',
@@ -10,26 +11,36 @@ import {Router} from '@angular/router';
 })
 export class ManagestorePage implements OnInit {
   dataUsername: any;
-  dataStore: any;
+  loading: any;
   products: any;
-  constructor(public datapassService: DatapassService, private Http: HttpClient, private router: Router) { }
+
+  constructor(public datapassService: DatapassService, private Http: HttpClient, private router: Router,  private loadingController: LoadingController) { }
 
   ngOnInit() {
+
+  }
+  async ionViewWillEnter() {
+    this.loading = await this.loadingController.create({
+      message: 'รอสักครู่...',
+    });
     this.dataUsername = this.datapassService.userIDLogin;
     let ownerid;
     for (ownerid of this.dataUsername) {
-      }
+    }
     const dataJSON = {
       owner_store: ownerid.id_member,
     };
     this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getOwnerstore', JSON.stringify(dataJSON))
         .subscribe(datastore => {
+          this.loading.dismiss();
           this.datapassService.datastoreowner = datastore;
           this.products = datastore;
           this.datapassService.managedatastore = this.products;
           console.log(datastore);
         });
+    this.loading.present();
   }
+
   goToAddstore() {
     const navigate = this.router.navigate(['/home/tabs/account/managestore/addstore']);
   }

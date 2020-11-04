@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {DatapassService} from '../../datapass.service';
 import {HttpClient} from '@angular/common/http';
+import {LoadingController} from '@ionic/angular';
 
 @Component({
   selector: 'app-search',
@@ -13,7 +14,8 @@ export class SearchPage implements OnInit {
   datasearch: any[] = [];
   textsearch = '';
   isItemAvailable = false;
-  constructor(private router: Router, private datapass: DatapassService, private Http: HttpClient) { }
+    loading: any;
+  constructor(private router: Router, private datapass: DatapassService, private Http: HttpClient, private loadingController: LoadingController) { }
 
   ngOnInit() {
     this.datasearch = this.datapass.datastore;
@@ -33,19 +35,25 @@ export class SearchPage implements OnInit {
     }
   }
 
-  clickstore(id_store : any) {
-
+    async clickstore(id_store : any) {
+        this.loading = await this.loadingController.create({
+            message: 'กำลังโหลดข้อมูล...',
+        });
       let dataJSON = {
         'id_store': id_store,
       };
-      this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getingfield',JSON.stringify(dataJSON))
+      this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON))
           .subscribe(datafield => {
             this.datapass.datafield  = datafield;
-            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getstoreformID',JSON.stringify(dataJSON))
+            this.loading.dismiss();
+            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getstoreformID', JSON.stringify(dataJSON))
                 .subscribe(datastore => {
                   this.datapass.getingfieldfromstore = datastore;
-                  let navigate = this.router.navigate(['/home/tabs/myhome/myhome-field']);
+                    this.loading.dismiss();
+                  const navigate = this.router.navigate(['/home/tabs/myhome/myhome-field']);
                 });
+              this.loading.present();
           });
+        this.loading.present();
   }
 }

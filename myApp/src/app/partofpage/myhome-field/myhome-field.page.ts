@@ -21,9 +21,7 @@ export class MyhomeFieldPage implements OnInit {
   ngOnInit() {
       this.datastore = this.datapass.datastore;
       this.datafield = this.datapass.datafield;
-
   }
-
 
   clickfield(id_field: any) {
     console.log(id_field);

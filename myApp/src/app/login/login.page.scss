@@ -32,3 +32,12 @@
   margin-right: auto;
   width: 50%;
 }
+/* DOES NOT WORK - not specific enough */
+ion-loading {
+  color: green;
+}
+
+/* Works - pass "my-custom-class" in cssClass to increase specificity */
+.my-custom-class {
+  color: green;
+}

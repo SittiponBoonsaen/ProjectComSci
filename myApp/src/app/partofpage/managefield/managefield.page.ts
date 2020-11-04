@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {DatapassService} from '../../datapass.service';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
-import {AlertController} from '@ionic/angular';
+import {AlertController, LoadingController} from '@ionic/angular';
 
 @Component({
   selector: 'app-managefield',
@@ -13,10 +13,15 @@ export class ManagefieldPage implements OnInit {
   datafield: any;
   idstore: any;
   id_Field: any;
-
-  constructor(public datapassService: DatapassService, private Http: HttpClient, private router: Router, public alertController: AlertController) { }
+  loading: any;
+  constructor(public datapassService: DatapassService, private Http: HttpClient, private router: Router, public alertController: AlertController,  private loadingController: LoadingController) { }
 
   ngOnInit() {
+  }
+  async ionViewWillEnter() {
+    this.loading = await this.loadingController.create({
+      message: 'รอสักครู่...',
+    });
     this.idstore = this.datapassService.idstoreformmanagestore;
     const dataJSON = {
       id_store: this.idstore,
@@ -24,10 +29,11 @@ export class ManagefieldPage implements OnInit {
     this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON))
         .subscribe(datastore => {
           this.datafield = datastore;
+          this.loading.dismiss();
           console.log(this.datafield);
         });
+    this.loading.present();
   }
-
   goToAddfield() {
     const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield/addfield']);
   }

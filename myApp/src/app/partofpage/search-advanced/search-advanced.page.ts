@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {DatapassService} from '../../datapass.service';
+import {LoadingController} from '@ionic/angular';
 
 @Component({
   selector: 'app-search-advanced',
@@ -17,9 +18,9 @@ export class SearchAdvancedPage implements OnInit {
   mySelectprovince: any;
   selectedamphures: any;
   mySelectamphures: any;
+  loading:any;
 
-
-  constructor(private Http: HttpClient, private datapass: DatapassService) {
+  constructor(private Http: HttpClient, private datapass: DatapassService,  private loadingController: LoadingController) {
     this.timeMin2 = this.timeMin;
     this.timeMax2 = this.timeMax;
     this.selectedprovince = this.datapass.selectedprovince;
@@ -34,7 +35,10 @@ export class SearchAdvancedPage implements OnInit {
     console.log(this.timeMax2);
   }
 
-  selectedprovincemethod(select: any) {
+  async selectedprovincemethod(select: any) {
+    this.loading = await this.loadingController.create({
+      message: 'รอสักครู่...',
+    });
     console.log(select);
     let dataJSON = {
       'PATIENT_ID': select,
@@ -42,8 +46,10 @@ export class SearchAdvancedPage implements OnInit {
     this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/amphures',JSON.stringify(dataJSON))
         .subscribe(data => {
           this.selectedamphures = data;
+          this.loading.dismiss();
           console.log(this.selectedamphures);
         });
+    this.loading.present();
   }
 
   selectedamphuresmethod(mySelectamphures: any) {
