@@ -41,6 +41,19 @@ MyhomePageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"
 
 /***/ }),
 
+/***/ "81MB":
+/*!*************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/components/notifications/notifications.component.html ***!
+  \*************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<link href=\"https://fonts.googleapis.com/css2?family=Sriracha&display=swap\" rel=\"stylesheet\">\n<ion-list no-padding no-margin >\n  <ion-list-header color=\"white\">\n    <ion-label style=\"font-family: 'Sriracha', cursive;\" class=\"fw700\"><ion-icon name=\"notifications-circle-outline\"></ion-icon> การแจ้งเตือน </ion-label>\n  </ion-list-header>\n\n  <ion-item color=\"light\" class=\"text-10\" (click)=\"messages()\">\n    <ion-icon name=\"mail-outline\"></ion-icon>\n    <ion-label style=\"font-family: 'Sriracha', cursive;\" > ชำระเงินจากคุณ วราวุฒิ</ion-label>\n  </ion-item>\n\n  <ion-item color=\"light\" class=\"text-10\" (click)=\"messages()\">\n    <ion-icon name=\"mail-outline\"></ion-icon>\n    <ion-label style=\"font-family: 'Sriracha', cursive;\"> จองสนามจากคุณ วราวุฒิ</ion-label>\n  </ion-item>\n\n  <ion-item color=\"light\" class=\"text-10\" (click)=\"messages()\">\n    <ion-icon name=\"mail-open-outline\"></ion-icon>\n    <ion-label style=\"font-family: 'Sriracha', cursive;\"> จองสนามจากคุณ สุระชัย</ion-label>\n  </ion-item>\n\n  <ion-item color=\"light\" class=\"text-10\" (click)=\"messages()\">\n    <ion-icon name=\"mail-open-outline\"></ion-icon>\n    <ion-label style=\"font-family: 'Sriracha', cursive;\"> New Offer 35% OFF</ion-label>\n  </ion-item>\n</ion-list>\n");
+
+/***/ }),
+
 /***/ "8CEF":
 /*!************************************************************************!*\
   !*** ./node_modules/primeng/__ivy_ngcc__/fesm2015/primeng-dataview.js ***!
@@ -601,7 +614,42 @@ DataViewModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInj
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n\r\n<ion-header>\r\n  <ion-toolbar>\r\n      <table style=\"width:120%\">\r\n          <tr>\r\n              <td><h4 style=\"color: #0d0d0d;\">JongSnam</h4></td>\r\n              <td style=\"font-size:30px;\">\r\n                  <ion-icon class=\"iconhome\"  style=\"margin: 0 20px;\" (click)=\"Gosearch()\" name=\"search-outline\"></ion-icon>\r\n                  <ion-icon  class=\"iconhome\" style=\"margin: 0 -10px; color: #0d0d0d\" (click)=\"notifications()\" name=\"notifications-outline\"></ion-icon>\r\n              </td>\r\n          </tr>\r\n      </table>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n\r\n    <div class=\"card\">\r\n        <p-dataView #dv [value]=\"getstore\" [paginator]=\"true\" [rows]=\"9\" filterBy=\"name\"\r\n                    [sortField]=\"sortField\" [sortOrder]=\"sortOrder\" >\r\n            <ng-template pTemplate=\"header\">\r\n                <div class=\"p-d-flex p-flex-column p-flex-md-row p-jc-md-between\">\r\n\r\n                </div>\r\n            </ng-template>\r\n            <ng-template let-getstore pTemplate=\"listItem\">\r\n                <div class=\"p-col-12\" (click)=\"clickstore(getstore.id_store)\">\r\n                    <div class=\"product-list-item\">\r\n                        <img src=\"data:image/png;base64,{{getstore.picture_store}}\" [alt]=\"getstore.name_store\"/>\r\n\r\n                        <div class=\"product-list-detail\">\r\n                            <div class=\"product-name\">{{getstore.name_store}}</div>\r\n                            <div class=\"product-description\">{{getstore.description}}</div>\r\n                            <p-rating [ngModel]=\"getstore.rating\" [readonly]=\"true\" [cancel]=\"false\"></p-rating>\r\n                            <i class=\"pi pi-tag product-category-icon\"></i><span class=\"product-category\">{{getstore.category}}</span>\r\n                        </div>\r\n                        <div class=\"product-list-action\">\r\n<!--                            <span class=\"product-price\">${{getstore.price}}</span>-->\r\n                            <p-button icon=\"pi pi-shopping-cart\" label=\"ดูรายละเอียด\" (onClick)=\"clickstore(getstore.id_store)\" [disabled]=\"getstore.inventoryStatus === 'OUTOFSTOCK'\"></p-button>\r\n<!--                            <span [class]=\"'product-badge status-' + getstore.inventoryStatus.toLowerCase()\">{{getstore.inventoryStatus}}</span>-->\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </ng-template>\r\n        </p-dataView>\r\n    </div>\r\n\r\n\r\n</ion-content>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<link href=\"https://fonts.googleapis.com/css2?family=Sriracha&display=swap\" rel=\"stylesheet\">\r\n\r\n<ion-header class=\"background\">\r\n  <ion-toolbar class=\"background\">\r\n      <table style=\"width:120%\">\r\n          <tr>\r\n              <td><h4 style=\"font-family: 'Sriracha', cursive;\">JONGSNAM <ion-icon class=\"one\" style=\"width: 30px;height: 35px;\" name=\"football-outline\"></ion-icon></h4></td>\r\n              <td style=\"font-size:30px;\">\r\n                  <ion-icon class=\"iconhome\"  style=\"margin: 0 20px;\" (click)=\"Gosearch()\" name=\"search-outline\"></ion-icon>\r\n                  <ion-icon  class=\"iconhome\" style=\"margin: 0 -10px; color: #0d0d0d\"  (click)=\"notifications($event)\" name=\"notifications-outline\"></ion-icon>\r\n              </td>\r\n          </tr>\r\n      </table>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"background\">\r\n\r\n    <div class=\"card background\" >\r\n        <p-dataView #dv [value]=\"getstore\" [paginator]=\"true\" [rows]=\"9\" filterBy=\"name\"\r\n                    [sortField]=\"sortField\" [sortOrder]=\"sortOrder\" class=\"background\">\r\n            <ng-template pTemplate=\"header\"  class=\"background\">\r\n                <div class=\"p-d-flex p-flex-column p-flex-md-row p-jc-md-between\">\r\n\r\n                </div>\r\n            </ng-template>\r\n            <ng-template let-getstore pTemplate=\"listItem\"  class=\"background\">\r\n                <div class=\"p-col-12 background\" (click)=\"clickstore(getstore.id_store)\">\r\n                    <div class=\"product-list-item background\">\r\n                        <img src=\"data:image/png;base64,{{getstore.picture_store}}\" [alt]=\"getstore.name_store\"/>\r\n\r\n                        <div class=\"product-list-detail background\" style=\"font-family: 'Sriracha', cursive;\">\r\n                            <div class=\"product-name background\">{{getstore.name_store}}</div>\r\n                            <div class=\"product-description background\">{{getstore.description}}</div>\r\n                            <p-rating [ngModel]=\"getstore.rating\" [readonly]=\"true\" [cancel]=\"false\"></p-rating>\r\n\r\n                        </div>\r\n                        <div class=\"product-list-action\" style=\"font-family: 'Sriracha', cursive;\">\r\n<!--                            <span class=\"product-price\">${{getstore.price}}</span>-->\r\n                            <p-button icon=\"pi pi-shopping-cart\" label=\"ดูรายละเอียด\" (onClick)=\"clickstore(getstore.id_store)\" [disabled]=\"getstore.inventoryStatus === 'OUTOFSTOCK'\"></p-button>\r\n<!--                            <span [class]=\"'product-badge status-' + getstore.inventoryStatus.toLowerCase()\">{{getstore.inventoryStatus}}</span>-->\r\n                        </div>\r\n                    </div>\r\n                </div>\r\n            </ng-template>\r\n        </p-dataView>\r\n    </div>\r\n\r\n\r\n</ion-content>\r\n\r\n");
+
+/***/ }),
+
+/***/ "Rdf6":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/notifications/notifications.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: NotificationsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NotificationsComponent", function() { return NotificationsComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "mrSG");
+/* harmony import */ var _raw_loader_notifications_component_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! raw-loader!./notifications.component.html */ "81MB");
+/* harmony import */ var _notifications_component_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./notifications.component.scss */ "qWDL");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ "fXoL");
+
+
+
+
+let NotificationsComponent = class NotificationsComponent {
+    constructor() { }
+    ngOnInit() { }
+};
+NotificationsComponent.ctorParameters = () => [];
+NotificationsComponent = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-notifications',
+        template: _raw_loader_notifications_component_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_notifications_component_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+    })
+], NotificationsComponent);
+
+
 
 /***/ }),
 
@@ -624,6 +672,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _datapass_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../datapass.service */ "woWk");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic/angular */ "TEn/");
 /* harmony import */ var _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/local-notifications/ngx */ "Bg0J");
+/* harmony import */ var _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components/notifications/notifications.component */ "Rdf6");
+
 
 
 
@@ -634,45 +684,67 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let MyhomePage = class MyhomePage {
-    constructor(Http, router, datapass, routerOutlet, localNotifications) {
+    constructor(popoverCtrl, Http, router, datapass, routerOutlet, localNotifications, loadingController) {
+        this.popoverCtrl = popoverCtrl;
         this.Http = Http;
         this.router = router;
         this.datapass = datapass;
         this.routerOutlet = routerOutlet;
         this.localNotifications = localNotifications;
+        this.loadingController = loadingController;
     }
     ngOnInit() {
         this.getstore = this.datapass.datastore;
         // this.routerOutlet.swipeGesture = false;
     }
     clickstore(idstore) {
-        console.log(idstore);
-        const dataJSON = {
-            id_store: idstore,
-        };
-        this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON))
-            .subscribe(datafield => {
-            this.datapass.datafield = datafield;
-            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getstoreformID', JSON.stringify(dataJSON))
-                .subscribe(datastore => {
-                this.datapass.getingfieldfromstore = datastore;
-                const navigate = this.router.navigate(['/home/tabs/myhome/myhome-field']);
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            this.loading = yield this.loadingController.create({
+                message: 'กำลังโหลดข้อมูล...',
             });
+            console.log(idstore);
+            const dataJSON = {
+                id_store: idstore,
+            };
+            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON))
+                .subscribe(datafield => {
+                this.datapass.datafield = datafield;
+                this.loading.dismiss();
+                this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getstoreformID', JSON.stringify(dataJSON))
+                    .subscribe(datastore => {
+                    this.datapass.getingfieldfromstore = datastore;
+                    this.loading.dismiss();
+                    const navigate = this.router.navigate(['/home/tabs/myhome/myhome-field']);
+                });
+                this.loading.present();
+            });
+            this.loading.present();
         });
     }
     Gosearch() {
         // let navigate = this.router.navigate(['./search']);
         const navigate = this.router.navigate(['/home/tabs/search']);
     }
-    notifications() {
+    notifications(ev) {
+        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
+            const popover = yield this.popoverCtrl.create({
+                component: _components_notifications_notifications_component__WEBPACK_IMPORTED_MODULE_9__["NotificationsComponent"],
+                event: ev,
+                animated: true,
+                showBackdrop: true
+            });
+            return yield popover.present();
+        });
     }
 };
 MyhomePage.ctorParameters = () => [
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["PopoverController"] },
     { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
     { type: _datapass_service__WEBPACK_IMPORTED_MODULE_6__["DatapassService"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["IonRouterOutlet"] },
-    { type: _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_8__["LocalNotifications"] }
+    { type: _ionic_native_local_notifications_ngx__WEBPACK_IMPORTED_MODULE_8__["LocalNotifications"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["LoadingController"] }
 ];
 MyhomePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
@@ -695,7 +767,20 @@ MyhomePage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".button {\n  display: inline-block;\n  vertical-align: top;\n  line-height: 30px;\n  margin: 0 2px;\n  text-align: center;\n  position: relative;\n  left: 240px;\n}\n\n.grid-container {\n  display: grid;\n  grid-template-columns: auto auto auto;\n  padding: 10px;\n}\n\n.iconhome {\n  background-color: #bfbfbf;\n  border-radius: 50%;\n  color: #0d0d0d;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGFicy9teWhvbWUvbXlob21lLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFBO0VBQ0EsbUJBQUE7RUFDQSxpQkFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtFQUNBLGtCQUFBO0VBQ0EsV0FBQTtBQUNGOztBQUNDO0VBQ0UsYUFBQTtFQUNBLHFDQUFBO0VBQ0EsYUFBQTtBQUVIOztBQUFBO0VBQ0UseUJBQUE7RUFDQSxrQkFBQTtFQUNBLGNBQUE7QUFHRiIsImZpbGUiOiJzcmMvYXBwL3RhYnMvbXlob21lL215aG9tZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYnV0dG9uIHtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgdmVydGljYWwtYWxpZ246IHRvcDtcclxuICBsaW5lLWhlaWdodDogMzBweDtcclxuICBtYXJnaW46IDAgMnB4O1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgbGVmdDogMjQwcHg7XHJcbn1cclxuIC5ncmlkLWNvbnRhaW5lciB7XHJcbiAgIGRpc3BsYXk6IGdyaWQ7XHJcbiAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0byBhdXRvIGF1dG87XHJcbiAgIHBhZGRpbmc6IDEwcHg7XHJcbiB9XHJcbi5pY29uaG9tZXtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjYmZiZmJmO1xyXG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICBjb2xvcjogIzBkMGQwZDtcclxufVxyXG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".button {\n  display: inline-block;\n  vertical-align: top;\n  line-height: 30px;\n  margin: 0 2px;\n  text-align: center;\n  position: relative;\n  left: 240px;\n  font-family: \"Sriracha\", cursive;\n}\n\n.grid-container {\n  display: grid;\n  grid-template-columns: auto auto auto;\n  padding: 10px;\n}\n\n.iconhome {\n  background-color: #bfbfbf;\n  border-radius: 50%;\n  color: #0d0d0d;\n}\n\n.background {\n  --background: #f5f5f3;\n}\n\n.one {\n  position: absolute;\n  top: 12px;\n  right: -50;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGFicy9teWhvbWUvbXlob21lLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFBO0VBQ0EsbUJBQUE7RUFDQSxpQkFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtFQUNBLGtCQUFBO0VBQ0EsV0FBQTtFQUNBLGdDQUFBO0FBQ0Y7O0FBQ0M7RUFDRSxhQUFBO0VBQ0EscUNBQUE7RUFDQSxhQUFBO0FBRUg7O0FBQUE7RUFDRSx5QkFBQTtFQUNBLGtCQUFBO0VBQ0EsY0FBQTtBQUdGOztBQURBO0VBQ0UscUJBQUE7QUFJRjs7QUFGQTtFQUNFLGtCQUFBO0VBQ0EsU0FBQTtFQUNBLFVBQUE7QUFLRiIsImZpbGUiOiJzcmMvYXBwL3RhYnMvbXlob21lL215aG9tZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYnV0dG9uIHtcclxuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XHJcbiAgdmVydGljYWwtYWxpZ246IHRvcDtcclxuICBsaW5lLWhlaWdodDogMzBweDtcclxuICBtYXJnaW46IDAgMnB4O1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgbGVmdDogMjQwcHg7XHJcbiAgZm9udC1mYW1pbHk6ICdTcmlyYWNoYScsIGN1cnNpdmU7XHJcbn1cclxuIC5ncmlkLWNvbnRhaW5lciB7XHJcbiAgIGRpc3BsYXk6IGdyaWQ7XHJcbiAgIGdyaWQtdGVtcGxhdGUtY29sdW1uczogYXV0byBhdXRvIGF1dG87XHJcbiAgIHBhZGRpbmc6IDEwcHg7XHJcbiB9XHJcbi5pY29uaG9tZXtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjYmZiZmJmO1xyXG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcclxuICBjb2xvcjogIzBkMGQwZDtcclxufVxyXG4uYmFja2dyb3VuZCB7XHJcbiAgLS1iYWNrZ3JvdW5kOiAjZjVmNWYzO1xyXG59XHJcbi5vbmV7XHJcbiAgcG9zaXRpb246YWJzb2x1dGU7XHJcbiAgdG9wOjEycHg7XHJcbiAgcmlnaHQ6LTUwO1xyXG59XHJcbiJdfQ== */");
+
+/***/ }),
+
+/***/ "qWDL":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/notifications/notifications.component.scss ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("ion-list.list-ios {\n  margin-bottom: 0;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50cy9ub3RpZmljYXRpb25zL25vdGlmaWNhdGlvbnMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQ0U7RUFDRSxnQkFBQTtBQUFKIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50cy9ub3RpZmljYXRpb25zL25vdGlmaWNhdGlvbnMuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tbGlzdCB7XHJcbiAgJi5saXN0LWlvcyB7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAwO1xyXG4gIH1cclxufVxyXG4iXX0= */");
 
 /***/ }),
 

@@ -1,20 +1,21 @@
 <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
 <ion-header class="background" style="font-family: 'Sriracha', cursive;">
   <ion-toolbar class="background">
-    <ion-title>search</ion-title>
+    <ion-title style="font-family: 'Sriracha', cursive;">ค้นหา</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="background" style="font-family: 'Sriracha', cursive;">
+<ion-content class="background" >
   <ion-searchbar (ionChange)="searchmethod($event)" showCancelButton="focus" cancelButtonText="ยกเลิก"></ion-searchbar>
     <ion-item class="background">
       <div class="ion-text-wrap" style="margin-left: 200px" >
-        <ion-label><a (click)="searchAdvanced()">ค้นหาขั้นสูง</a></ion-label>
+        <ion-label><a style="font-family: 'Sriracha', cursive;" (click)="searchAdvanced()">ค้นหาขั้นสูง</a></ion-label>
       </div>
   </ion-item>
 
   <ion-list *ngIf="isItemAvailable" >
-    <ion-item (click)="clickstore(data.id_store)" *ngFor="let data of datasearch | filtro: textsearch: 'name_store'">
+    <ion-item style="font-family: 'Sriracha', cursive;" (click)="clickstore(data.id_store)" *ngFor="let data of datasearch | filtro: textsearch: 'name_store'">
       {{ data.name_store }}</ion-item>
   </ion-list>
 

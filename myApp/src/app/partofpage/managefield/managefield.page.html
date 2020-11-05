@@ -3,9 +3,9 @@
 <ion-header class="background" style="font-family: 'Sriracha', cursive;">
   <ion-toolbar>
     <ion-buttons>
-      <ion-back-button defaultHref="home"></ion-back-button>
+      <ion-back-button style="font-family: 'Sriracha', cursive;" defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title>managefield</ion-title>
+    <ion-title style="font-family: 'Sriracha', cursive;" >จัดการสนาม</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,12 +13,12 @@
 
     <p-table [value]="datafield">
       <ng-template pTemplate="caption">
-        <div class="p-d-flex p-ai-center p-jc-between">
-          Products
+        <div class="p-d-flex p-ai-center p-jc-between" style="font-family: 'Sriracha', cursive;">
+          ข้อมูลสนาม
         </div>
       </ng-template>
       <ng-template pTemplate="header">
-        <tr>
+        <tr style="font-family: 'Sriracha', cursive;">
           <th>Image</th>
           <th>Name</th>
           <th>statusField</th>
@@ -28,7 +28,7 @@
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-datafield>
-        <tr>
+        <tr style="font-family: 'Sriracha', cursive;">
           <td><img *ngIf="datafield.picture_picturefield == null" src="assets/img/noimage.png" [alt]="datafield.name_field" class="p-shadow-4"  />
             <img *ngIf="datafield.picture_picturefield != null" src="data:image/png;base64,{{datafield.picture_picturefield}}" [alt]="datafield.name_field" width="100" class="p-shadow-4"  />
 
@@ -47,7 +47,7 @@
         </tr>
       </ng-template>
       <ng-template pTemplate="summary">
-        <div class="p-d-flex p-ai-center p-jc-between">
+        <div class="p-d-flex p-ai-center p-jc-between" style="font-family: 'Sriracha', cursive;">
           In total there are {{datafield ? datafield.length : 0 }} products.
         </div>
       </ng-template>

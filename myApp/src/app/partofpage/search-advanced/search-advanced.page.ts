@@ -10,8 +10,8 @@ import {LoadingController} from '@ionic/angular';
 })
 export class SearchAdvancedPage implements OnInit {
   time: any;
-  timeMin: any = 100;
-  timeMax: any = 200;
+  timeMin: any = 300;
+  timeMax: any = 2000;
   timeMin2: any;
   timeMax2: any;
   selectedprovince: any;

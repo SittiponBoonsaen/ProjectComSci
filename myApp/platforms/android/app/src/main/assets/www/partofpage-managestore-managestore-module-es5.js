@@ -121,7 +121,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\r\n\r\n<ion-header>\r\n  <ion-toolbar>\r\n    <ion-buttons>\r\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\r\n    </ion-buttons>\r\n    <ion-title>managestore</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <p-table [value]=\"products\">\r\n    <ng-template pTemplate=\"caption\">\r\n      <div class=\"p-d-flex p-ai-center p-jc-between\">\r\n        Products\r\n      </div>\r\n    </ng-template>\r\n    <ng-template pTemplate=\"header\">\r\n      <tr>\r\n        <th>Image</th>\r\n        <th>Name</th>\r\n        <th>#</th>\r\n<!--        <th>Telephone</th>-->\r\n<!--        <th>Address</th>-->\r\n      </tr>\r\n    </ng-template>\r\n    <ng-template pTemplate=\"body\" let-product>\r\n      <tr>\r\n        <td><img src=\"data:image/png;base64,{{product.picture_store}}\" [alt]=\"product.name_store\" width=\"100\" class=\"p-shadow-4\"  /></td>\r\n        <td>{{product.name_store}}</td>\r\n<!--        <td>{{product.telephone_store}}</td>-->\r\n<!--        <td>{{product.address_store}}</td>-->\r\n\r\n        <td>\r\n            <ion-icon name=\"search-outline\" style=\"width: 25px;height: 25px;\" (click)=\"gotomanagefiled(product.id_store)\"></ion-icon>\r\n            <ion-icon name=\"construct-outline\" style=\"width: 25px;height: 25px;\" (click)=\"gotoEdit()\"></ion-icon>\r\n        </td>\r\n<!--        <td><p-rating [ngModel]=\"product.rating\" [readonly]=\"true\" [cancel]=\"false\"></p-rating></td>-->\r\n<!--        <td><span [class]=\"'product-badge status-' + product.inventoryStatus.toLowerCase()\">{{product.inventoryStatus}}</span></td>-->\r\n      </tr>\r\n    </ng-template>\r\n    <ng-template pTemplate=\"summary\">\r\n      <div class=\"p-d-flex p-ai-center p-jc-between\">\r\n        In total there are {{products ? products.length : 0 }} products.\r\n      </div>\r\n    </ng-template>\r\n  </p-table>\r\n\r\n  <ion-fab vertical=\"bottom\" horizontal=\"end\" slot=\"fixed\">\r\n    <ion-fab-button>\r\n      <ion-icon (click)=\"goToAddstore()\" name=\"add\"></ion-icon>\r\n    </ion-fab-button>\r\n  </ion-fab>\r\n\r\n</ion-content>\r\n";
+      __webpack_exports__["default"] = "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\r\n\r\n<link href=\"https://fonts.googleapis.com/css2?family=Sriracha&display=swap\" rel=\"stylesheet\">\r\n<ion-header class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\r\n  <ion-toolbar class=\"background\">\r\n    <ion-buttons>\r\n      <ion-back-button style=\"font-family: 'Sriracha', cursive;\" style=\"font-family: 'Sriracha', cursive;\" defaultHref=\"home\"></ion-back-button>\r\n    </ion-buttons>\r\n    <ion-title style=\"font-family: 'Sriracha', cursive;\">จัดการร้าน</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\r\n  <p-table [value]=\"products\">\r\n    <ng-template pTemplate=\"caption\">\r\n      <div class=\"p-d-flex p-ai-center p-jc-between\" style=\"font-family: 'Sriracha', cursive;\">\r\n        ข้อมูลร้าน\r\n      </div>\r\n    </ng-template>\r\n    <ng-template pTemplate=\"header\">\r\n      <tr style=\"font-family: 'Sriracha', cursive;\">\r\n        <th>Image</th>\r\n        <th>Name</th>\r\n        <th>#</th>\r\n<!--        <th>Telephone</th>-->\r\n<!--        <th>Address</th>-->\r\n      </tr>\r\n    </ng-template>\r\n    <ng-template pTemplate=\"body\" let-product>\r\n      <tr style=\"font-family: 'Sriracha', cursive;\">\r\n        <td><img src=\"data:image/png;base64,{{product.picture_store}}\" [alt]=\"product.name_store\" width=\"100\" class=\"p-shadow-4\"  /></td>\r\n        <td>{{product.name_store}}</td>\r\n<!--        <td>{{product.telephone_store}}</td>-->\r\n<!--        <td>{{product.address_store}}</td>-->\r\n\r\n        <td>\r\n            <ion-icon name=\"search-outline\" style=\"width: 25px;height: 25px;\" (click)=\"gotomanagefiled(product.id_store)\"></ion-icon>\r\n            <ion-icon name=\"construct-outline\" class=\"p-button-rounded p-button-warning\" style=\"width: 25px;height: 25px;\" (click)=\"gotoEdit()\"></ion-icon>\r\n        </td>\r\n\r\n<!--        <td><p-rating [ngModel]=\"product.rating\" [readonly]=\"true\" [cancel]=\"false\"></p-rating></td>-->\r\n<!--        <td><span [class]=\"'product-badge status-' + product.inventoryStatus.toLowerCase()\">{{product.inventoryStatus}}</span></td>-->\r\n      </tr>\r\n    </ng-template>\r\n    <ng-template pTemplate=\"summary\">\r\n      <div class=\"p-d-flex p-ai-center p-jc-between\" style=\"font-family: 'Sriracha', cursive;\">\r\n        In total there are {{products ? products.length : 0 }} products.\r\n      </div>\r\n    </ng-template>\r\n  </p-table>\r\n\r\n  <ion-fab vertical=\"bottom\" horizontal=\"end\" slot=\"fixed\">\r\n    <ion-fab-button>\r\n      <ion-icon (click)=\"goToAddstore()\" name=\"add\"></ion-icon>\r\n    </ion-fab-button>\r\n  </ion-fab>\r\n\r\n</ion-content>\r\n";
       /***/
     },
 
@@ -186,46 +186,78 @@
       var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/router */
       "tyNb");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @ionic/angular */
+      "TEn/");
 
       var ManagestorePage = /*#__PURE__*/function () {
-        function ManagestorePage(datapassService, Http, router) {
+        function ManagestorePage(datapassService, Http, router, loadingController) {
           _classCallCheck(this, ManagestorePage);
 
           this.datapassService = datapassService;
           this.Http = Http;
           this.router = router;
+          this.loadingController = loadingController;
         }
 
         _createClass(ManagestorePage, [{
           key: "ngOnInit",
-          value: function ngOnInit() {
-            var _this = this;
+          value: function ngOnInit() {}
+        }, {
+          key: "ionViewWillEnter",
+          value: function ionViewWillEnter() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+              var _this = this;
 
-            this.dataUsername = this.datapassService.userIDLogin;
-            var ownerid;
+              var ownerid, _iterator, _step, dataJSON;
 
-            var _iterator = _createForOfIteratorHelper(this.dataUsername),
-                _step;
+              return regeneratorRuntime.wrap(function _callee$(_context) {
+                while (1) {
+                  switch (_context.prev = _context.next) {
+                    case 0:
+                      _context.next = 2;
+                      return this.loadingController.create({
+                        message: 'รอสักครู่...'
+                      });
 
-            try {
-              for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                ownerid = _step.value;
-              }
-            } catch (err) {
-              _iterator.e(err);
-            } finally {
-              _iterator.f();
-            }
+                    case 2:
+                      this.loading = _context.sent;
+                      this.dataUsername = this.datapassService.userIDLogin;
+                      _iterator = _createForOfIteratorHelper(this.dataUsername);
 
-            var dataJSON = {
-              owner_store: ownerid.id_member
-            };
-            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getOwnerstore', JSON.stringify(dataJSON)).subscribe(function (datastore) {
-              _this.datapassService.datastoreowner = datastore;
-              _this.products = datastore;
-              _this.datapassService.managedatastore = _this.products;
-              console.log(datastore);
-            });
+                      try {
+                        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                          ownerid = _step.value;
+                        }
+                      } catch (err) {
+                        _iterator.e(err);
+                      } finally {
+                        _iterator.f();
+                      }
+
+                      dataJSON = {
+                        owner_store: ownerid.id_member
+                      };
+                      this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getOwnerstore', JSON.stringify(dataJSON)).subscribe(function (datastore) {
+                        _this.loading.dismiss();
+
+                        _this.datapassService.datastoreowner = datastore;
+                        _this.products = datastore;
+                        _this.datapassService.managedatastore = _this.products;
+                        console.log(datastore);
+                      });
+                      this.loading.present();
+
+                    case 9:
+                    case "end":
+                      return _context.stop();
+                  }
+                }
+              }, _callee, this);
+            }));
           }
         }, {
           key: "goToAddstore",
@@ -256,6 +288,8 @@
           type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"]
         }, {
           type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["LoadingController"]
         }];
       };
 
@@ -283,7 +317,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "/* DOES NOT WORK - not specific enough */\n.popover-content {\n  background: #222;\n}\n/* Works - pass \"my-custom-class\" in cssClass to increase specificity */\n.my-custom-class .popover-content {\n  background: #222;\n}\n.my-custom-class {\n  --background: #222;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9tYW5hZ2VzdG9yZS9tYW5hZ2VzdG9yZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsd0NBQUE7QUFDQTtFQUNFLGdCQUFBO0FBQ0Y7QUFFQSx1RUFBQTtBQUNBO0VBQ0UsZ0JBQUE7QUFDRjtBQUNBO0VBQ0Usa0JBQUE7QUFFRiIsImZpbGUiOiJzcmMvYXBwL3BhcnRvZnBhZ2UvbWFuYWdlc3RvcmUvbWFuYWdlc3RvcmUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogRE9FUyBOT1QgV09SSyAtIG5vdCBzcGVjaWZpYyBlbm91Z2ggKi9cclxuLnBvcG92ZXItY29udGVudCB7XHJcbiAgYmFja2dyb3VuZDogIzIyMjtcclxufVxyXG5cclxuLyogV29ya3MgLSBwYXNzIFwibXktY3VzdG9tLWNsYXNzXCIgaW4gY3NzQ2xhc3MgdG8gaW5jcmVhc2Ugc3BlY2lmaWNpdHkgKi9cclxuLm15LWN1c3RvbS1jbGFzcyAucG9wb3Zlci1jb250ZW50IHtcclxuICBiYWNrZ3JvdW5kOiAjMjIyO1xyXG59XHJcbi5teS1jdXN0b20tY2xhc3Mge1xyXG4gIC0tYmFja2dyb3VuZDogIzIyMjtcclxufVxyXG4iXX0= */";
+      __webpack_exports__["default"] = "/* DOES NOT WORK - not specific enough */\n.popover-content {\n  background: #222;\n}\n/* Works - pass \"my-custom-class\" in cssClass to increase specificity */\n.my-custom-class .popover-content {\n  background: #222;\n}\n.my-custom-class {\n  --background: #222;\n}\n.background {\n  --background: #f5f5f3;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9tYW5hZ2VzdG9yZS9tYW5hZ2VzdG9yZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsd0NBQUE7QUFDQTtFQUNFLGdCQUFBO0FBQ0Y7QUFFQSx1RUFBQTtBQUNBO0VBQ0UsZ0JBQUE7QUFDRjtBQUNBO0VBQ0Usa0JBQUE7QUFFRjtBQUFBO0VBQ0UscUJBQUE7QUFHRiIsImZpbGUiOiJzcmMvYXBwL3BhcnRvZnBhZ2UvbWFuYWdlc3RvcmUvbWFuYWdlc3RvcmUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogRE9FUyBOT1QgV09SSyAtIG5vdCBzcGVjaWZpYyBlbm91Z2ggKi9cclxuLnBvcG92ZXItY29udGVudCB7XHJcbiAgYmFja2dyb3VuZDogIzIyMjtcclxufVxyXG5cclxuLyogV29ya3MgLSBwYXNzIFwibXktY3VzdG9tLWNsYXNzXCIgaW4gY3NzQ2xhc3MgdG8gaW5jcmVhc2Ugc3BlY2lmaWNpdHkgKi9cclxuLm15LWN1c3RvbS1jbGFzcyAucG9wb3Zlci1jb250ZW50IHtcclxuICBiYWNrZ3JvdW5kOiAjMjIyO1xyXG59XHJcbi5teS1jdXN0b20tY2xhc3Mge1xyXG4gIC0tYmFja2dyb3VuZDogIzIyMjtcclxufVxyXG4uYmFja2dyb3VuZCB7XHJcbiAgLS1iYWNrZ3JvdW5kOiAjZjVmNWYzO1xyXG59XHJcbiJdfQ== */";
       /***/
     },
 
@@ -354,13 +388,25 @@
       var primeng_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
       /*! primeng/table */
       "rEr+");
+      /* harmony import */
+
+
+      var primeng_button__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+      /*! primeng/button */
+      "jIHw");
+      /* harmony import */
+
+
+      var primeng_ripple__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+      /*! primeng/ripple */
+      "Q4Mo");
 
       var ManagestorePageModule = function ManagestorePageModule() {
         _classCallCheck(this, ManagestorePageModule);
       };
 
       ManagestorePageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _managestore_routing_module__WEBPACK_IMPORTED_MODULE_5__["ManagestorePageRoutingModule"], primeng_table__WEBPACK_IMPORTED_MODULE_7__["TableModule"]],
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _managestore_routing_module__WEBPACK_IMPORTED_MODULE_5__["ManagestorePageRoutingModule"], primeng_table__WEBPACK_IMPORTED_MODULE_7__["TableModule"], primeng_button__WEBPACK_IMPORTED_MODULE_8__["ButtonModule"], primeng_ripple__WEBPACK_IMPORTED_MODULE_9__["RippleModule"]],
         declarations: [_managestore_page__WEBPACK_IMPORTED_MODULE_6__["ManagestorePage"]]
       })], ManagestorePageModule);
       /***/

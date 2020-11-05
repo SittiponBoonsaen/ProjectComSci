@@ -4,21 +4,21 @@
 <ion-header class="background" style="font-family: 'Sriracha', cursive;">
   <ion-toolbar class="background">
     <ion-buttons>
-      <ion-back-button defaultHref="home"></ion-back-button>
+      <ion-back-button style="font-family: 'Sriracha', cursive;" style="font-family: 'Sriracha', cursive;" defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title>managestore</ion-title>
+    <ion-title style="font-family: 'Sriracha', cursive;">จัดการร้าน</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="background" style="font-family: 'Sriracha', cursive;">
   <p-table [value]="products">
     <ng-template pTemplate="caption">
-      <div class="p-d-flex p-ai-center p-jc-between">
-        Products
+      <div class="p-d-flex p-ai-center p-jc-between" style="font-family: 'Sriracha', cursive;">
+        ข้อมูลร้าน
       </div>
     </ng-template>
     <ng-template pTemplate="header">
-      <tr>
+      <tr style="font-family: 'Sriracha', cursive;">
         <th>Image</th>
         <th>Name</th>
         <th>#</th>
@@ -27,7 +27,7 @@
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-product>
-      <tr>
+      <tr style="font-family: 'Sriracha', cursive;">
         <td><img src="data:image/png;base64,{{product.picture_store}}" [alt]="product.name_store" width="100" class="p-shadow-4"  /></td>
         <td>{{product.name_store}}</td>
 <!--        <td>{{product.telephone_store}}</td>-->
@@ -43,7 +43,7 @@
       </tr>
     </ng-template>
     <ng-template pTemplate="summary">
-      <div class="p-d-flex p-ai-center p-jc-between">
+      <div class="p-d-flex p-ai-center p-jc-between" style="font-family: 'Sriracha', cursive;">
         In total there are {{products ? products.length : 0 }} products.
       </div>
     </ng-template>
