@@ -1,13 +1,13 @@
 <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-<ion-header>
-  <ion-toolbar>
+<ion-header class="background">
+  <ion-toolbar class="background">
     <ion-title>search</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="background">
   <ion-searchbar (ionChange)="searchmethod($event)" showCancelButton="focus" cancelButtonText="ยกเลิก"></ion-searchbar>
-    <ion-item>
+    <ion-item class="background">
       <div class="ion-text-wrap" style="margin-left: 200px" >
         <ion-label><a (click)="searchAdvanced()">ค้นหาขั้นสูง</a></ion-label>
       </div>

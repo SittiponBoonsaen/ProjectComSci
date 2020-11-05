@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="background">
+  <ion-toolbar class="background">
         <ion-buttons>
           <ion-back-button defaultHref="home"></ion-back-button>
         </ion-buttons>
@@ -13,19 +13,19 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="background">
 
 
   <ion-range dualKnobs="true" [min]=timeMin [max]=timeMax step="3"
               [(ngModel)]="time" (ionChange)="setBadge(time)" ></ion-range>
   <div >
-    <ion-item>
+    <ion-item  class="background">
       <ion-text color="primary">{{this.timeMin2}} - </ion-text>
       <ion-text color="primary">{{this.timeMax2}}บาท</ion-text>
     </ion-item>
   </div>
 
-  <ion-item>
+  <ion-item  class="background">
     <ion-label>Select: province</ion-label>
     <ion-select class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
       <ion-select-option  *ngFor="let province of this.selectedprovince "
@@ -33,7 +33,7 @@
     </ion-select>
   </ion-item>
 
-  <ion-item>
+  <ion-item  class="background">
     <ion-label>Select: amphures</ion-label>
     <ion-select class="custom-options" [(ngModel)]="mySelectamphures" (ionChange)="selectedamphuresmethod(mySelectamphures)">
       <ion-select-option  *ngFor="let amphures of this.selectedamphures "

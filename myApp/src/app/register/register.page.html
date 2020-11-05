@@ -1,74 +1,13 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-<ion-header [translucent]="true">
-  <ion-toolbar>
-      <ion-title size="large">Register</ion-title>
-  </ion-toolbar>
+
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons>
+            <ion-back-button defaultHref="login"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
 </ion-header>
-
-
-<!--<ion-content [fullscreen]="true">-->
-
-<!--  <ion-item>-->
-<!--    <ion-label position="floating">username</ion-label>-->
-<!--    <ion-input [(ngModel)] ="username" ></ion-input>-->
-<!--  </ion-item>-->
-
-<!--  <ion-item>-->
-<!--    <ion-label position="floating">password</ion-label>-->
-<!--    <ion-input [(ngModel)] ="password" type="password" ></ion-input>-->
-<!--  </ion-item>-->
-
-<!--  <ion-item>-->
-<!--    <ion-label position="floating">email</ion-label>-->
-<!--    <ion-input [(ngModel)] ="email" type="email" ></ion-input>-->
-<!--  </ion-item>-->
-
-<!--  <ion-item>-->
-<!--    <ion-label position="floating">firstname</ion-label>-->
-<!--    <ion-input [(ngModel)] ="firstname" ></ion-input>-->
-<!--  </ion-item>-->
-
-<!--  <ion-item>-->
-<!--    <ion-label position="floating">lastname</ion-label>-->
-<!--    <ion-input [(ngModel)] ="lastname" ></ion-input>-->
-<!--  </ion-item>-->
-
-<!--  <ion-item>-->
-<!--    <ion-label position="floating">Address</ion-label>-->
-<!--    <ion-textarea [(ngModel)] ="address" ></ion-textarea>-->
-<!--  </ion-item>-->
-
-<!--  <ion-item>-->
-<!--    <ion-label position="floating">telephone</ion-label>-->
-<!--    <ion-input [(ngModel)] ="telephone" type="tel" ></ion-input>-->
-<!--  </ion-item>-->
-
-
-<!--  <ion-list>-->
-<!--    <ion-radio-group [(ngModel)] ="status" value="status">-->
-<!--      <ion-list-header>-->
-<!--        <ion-label>status</ion-label>-->
-<!--      </ion-list-header>-->
-
-<!--      <ion-item>-->
-<!--        <ion-label>ลูกค้า</ion-label>-->
-<!--        <ion-radio slot="start" value="1"></ion-radio>-->
-<!--      </ion-item>-->
-
-<!--      <ion-item>-->
-<!--        <ion-label>เจ้าของสนาม</ion-label>-->
-<!--        <ion-radio slot="start" value="2"></ion-radio>-->
-<!--      </ion-item>-->
-
-<!--    </ion-radio-group>-->
-<!--  </ion-list>-->
-
-<!--  <ion-button expand="block" color="secondary"(click)="register()" >register</ion-button>-->
-
-<!--  <ion-button expand="block" fill="outline"  color="danger" [routerLink]="'/login'" >Cancel</ion-button>-->
-
-
 
 <!--</ion-content>-->
 <ion-content>
@@ -76,7 +15,7 @@
     <div class="ion-padding sizeimage centeredit" style="">
       <img src="assets/img/jongsanam-logo.png" class="rounded" alt="...">
     </div>
-
+    <ion-item123>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
         <span class="input-group-text" id="basic-addon1">ชื่อ-สกุล</span>
@@ -121,9 +60,7 @@
       </div>
       <input type="" class="form-control"  [(ngModel)] ="telephone" placeholder="เบอร์โทรศัพท์" aria-label="Username" aria-describedby="basic-addon1">
     </div>
-
-    <ion-button class="centeredit" expand="block" color="secondary"(click)="register()" >register</ion-button>
-
-    <ion-button class="centeredit" expand="block" fill="outline"  color="danger" [routerLink]="'/login'" >Cancel</ion-button>
+    </ion-item123>
+    <ion-button class="ion-button123" expand="block" color="secondary"(click)="register()" >register</ion-button>
 
 </ion-content>

@@ -8,6 +8,8 @@ import { ManagefieldPageRoutingModule } from './managefield-routing.module';
 
 import { ManagefieldPage } from './managefield.page';
 import {TableModule} from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
+import {RippleModule} from 'primeng/ripple';
 
 @NgModule({
     imports: [
@@ -15,7 +17,9 @@ import {TableModule} from 'primeng/table';
         FormsModule,
         IonicModule,
         ManagefieldPageRoutingModule,
-        TableModule
+        TableModule,
+        ButtonModule,
+        RippleModule
     ],
   declarations: [ManagefieldPage]
 })

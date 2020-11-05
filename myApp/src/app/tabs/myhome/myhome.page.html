@@ -1,7 +1,7 @@
 
 
-<ion-header>
-  <ion-toolbar>
+<ion-header class="background">
+  <ion-toolbar class="background">
       <table style="width:120%">
           <tr>
               <td><h4 style="color: #0d0d0d;">JongSnam</h4></td>
@@ -14,26 +14,26 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="background">
 
-    <div class="card">
+    <div class="card background" >
         <p-dataView #dv [value]="getstore" [paginator]="true" [rows]="9" filterBy="name"
-                    [sortField]="sortField" [sortOrder]="sortOrder" >
-            <ng-template pTemplate="header">
+                    [sortField]="sortField" [sortOrder]="sortOrder" class="background">
+            <ng-template pTemplate="header"  class="background">
                 <div class="p-d-flex p-flex-column p-flex-md-row p-jc-md-between">
 
                 </div>
             </ng-template>
-            <ng-template let-getstore pTemplate="listItem">
-                <div class="p-col-12" (click)="clickstore(getstore.id_store)">
-                    <div class="product-list-item">
+            <ng-template let-getstore pTemplate="listItem"  class="background">
+                <div class="p-col-12 background" (click)="clickstore(getstore.id_store)">
+                    <div class="product-list-item background">
                         <img src="data:image/png;base64,{{getstore.picture_store}}" [alt]="getstore.name_store"/>
 
-                        <div class="product-list-detail">
-                            <div class="product-name">{{getstore.name_store}}</div>
-                            <div class="product-description">{{getstore.description}}</div>
+                        <div class="product-list-detail background">
+                            <div class="product-name background">{{getstore.name_store}}</div>
+                            <div class="product-description background">{{getstore.description}}</div>
                             <p-rating [ngModel]="getstore.rating" [readonly]="true" [cancel]="false"></p-rating>
-                            <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{getstore.category}}</span>
+                            <i class="pi pi-tag product-category-icon background"></i><span class="product-category">{{getstore.category}}</span>
                         </div>
                         <div class="product-list-action">
 <!--                            <span class="product-price">${{getstore.price}}</span>-->

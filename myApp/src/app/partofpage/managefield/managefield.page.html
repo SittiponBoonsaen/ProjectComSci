@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<ion-header>
+<ion-header class="background">
   <ion-toolbar>
     <ion-buttons>
       <ion-back-button defaultHref="home"></ion-back-button>
@@ -8,7 +8,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="background">
 
     <p-table [value]="datafield">
       <ng-template pTemplate="caption">
@@ -40,6 +40,7 @@
             <ion-icon name="construct-outline" style="width: 25px;height: 25px;" (click)="gotoEdit()"></ion-icon>
             <ion-icon name="trash-outline" style="width: 25px;height: 25px;" (click)="presentAlertConfirm(datafield.id_field)"></ion-icon>
           </td>
+
           <!--        <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>-->
           <!--        <td><span [class]="'product-badge status-' + product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span></td>-->
         </tr>

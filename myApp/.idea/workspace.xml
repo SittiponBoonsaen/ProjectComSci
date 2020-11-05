@@ -20,17 +20,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef4ed01e-6efc-4d8b-9122-30ac39ba1586" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/login/login.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tabs/search/search.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/search/search.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/account/account.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/account/account.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/account/account.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/account/account.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/search/search.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/search/search.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/search/search.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/search/search.page.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,6 +187,7 @@
       <workItem from="1604499765417" duration="4670000" />
       <workItem from="1604505116127" duration="2331000" />
       <workItem from="1604516054497" duration="6064000" />
+      <workItem from="1604587063232" duration="4783000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2/9/63">
       <created>1599062190699</created>

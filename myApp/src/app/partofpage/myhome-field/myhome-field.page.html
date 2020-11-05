@@ -1,6 +1,6 @@
 
-<ion-header>
-    <ion-toolbar>
+<ion-header class="background">
+    <ion-toolbar class="background">
         <ion-buttons>
             <ion-back-button defaultHref="home"></ion-back-button>
         </ion-buttons>
@@ -8,7 +8,7 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="background">
   <div class="container">
     <div class="row"  *ngFor="let data of datafield" (click)="clickfield(data.id_field)">
       <div class="col-12">

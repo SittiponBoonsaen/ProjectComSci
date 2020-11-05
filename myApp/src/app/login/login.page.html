@@ -1,31 +1,35 @@
 
-<ion-header>
-    <ion-toolbar class="center">
-<!--        <ion-title style="margin-left:  -160px" >JongSnam</ion-title>-->
-        <img src="assets/img/jongsanam-logo.png" >
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+
+        <ion-buttons slot="end">
+            <ion-button [routerLink]="'/register'">Sign up</ion-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
+<ion-content >
+    <div id="header">
+        <h1>Login</h1>
+        <img src="assets/img/jongsanam-logo.png" />
+    </div>
 
-<ion-content>
-
-<ion-list >
 <!--    <ion-item >-->
 <!--      <img style="text-align: center" src="assets/img/jongsanam-logo.png">-->
 <!--    </ion-item>-->
+    <div class="form123">
+
 
     <ion-item>
-      <ion-label position="floating">username</ion-label>
-      <ion-input [(ngModel)] ="username" ></ion-input>
+      <ion-input [(ngModel)] ="username" placeholder="ชื่อผู้ใช้" ></ion-input>
     </ion-item>
     <br>
     <ion-item>
-      <ion-label position="floating">password</ion-label>
-      <ion-input [(ngModel)] ="password" type="password" ></ion-input>
+      <ion-input [(ngModel)] ="password" type="password" placeholder="รหัสผู้ใช้" ></ion-input>
     </ion-item>
     <br>
     <br>
-</ion-list>
+
 
 
     <ion-segment [(ngModel)]="valuedegree" (ionChange)="segmentChanged(valuedegree)">
@@ -38,8 +42,8 @@
     </ion-segment>
     <br>
     <br>
-    <ion-button expand="block" color="secondary"(click)="login()">Login</ion-button>
-    <ion-button expand="block" fill="outline" [routerLink]="'/register'">Register</ion-button>
+    <ion-button  class="ion-button123" expand="block" color="secondary"(click)="login()">Login</ion-button>
+    </div>
 
 </ion-content>
 

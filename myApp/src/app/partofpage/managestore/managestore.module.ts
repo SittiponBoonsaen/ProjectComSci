@@ -8,6 +8,8 @@ import { ManagestorePageRoutingModule } from './managestore-routing.module';
 
 import { ManagestorePage } from './managestore.page';
 import {TableModule} from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
+import {RippleModule} from 'primeng/ripple';
 
 @NgModule({
     imports: [
@@ -15,7 +17,9 @@ import {TableModule} from 'primeng/table';
         FormsModule,
         IonicModule,
         ManagestorePageRoutingModule,
-        TableModule
+        TableModule,
+        ButtonModule,
+        RippleModule
     ],
   declarations: [ManagestorePage]
 })
