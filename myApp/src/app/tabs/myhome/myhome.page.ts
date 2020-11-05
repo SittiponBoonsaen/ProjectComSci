@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {DatapassService} from '../../datapass.service';
-import {IonRouterOutlet, LoadingController} from '@ionic/angular';
+import {IonRouterOutlet, LoadingController, PopoverController} from '@ionic/angular';
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
+
+import {NotificationsComponent} from '../../components/notifications/notifications.component';
+
 
 @Component({
   selector: 'app-myhome',
@@ -15,7 +18,7 @@ export class MyhomePage implements OnInit {
     loading: any;
 
 
-  constructor(private Http: HttpClient, private router: Router, private datapass: DatapassService, private routerOutlet: IonRouterOutlet, private localNotifications: LocalNotifications, private loadingController: LoadingController) {
+  constructor(private popoverCtrl: PopoverController, private Http: HttpClient, private router: Router, private datapass: DatapassService, private routerOutlet: IonRouterOutlet, private localNotifications: LocalNotifications, private loadingController: LoadingController) {
 
 
   }
@@ -55,7 +58,14 @@ export class MyhomePage implements OnInit {
 
     }
 
-    notifications() {
-
+    async notifications(ev: any) {
+        const popover = await this.popoverCtrl.create({
+            component: NotificationsComponent,
+            event: ev,
+            animated: true,
+            showBackdrop: true
+        });
+        return await popover.present();
     }
+
 }

@@ -1,5 +1,6 @@
+<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
 
-<ion-header class="background">
+<ion-header class="background" style="font-family: 'Sriracha', cursive;">
     <ion-toolbar class="background">
         <ion-buttons>
             <ion-back-button defaultHref="home"></ion-back-button>
@@ -8,7 +9,7 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content class="background">
+<ion-content class="background" style="font-family: 'Sriracha', cursive;">
   <div class="container">
     <div class="row"  *ngFor="let data of datafield" (click)="clickfield(data.id_field)">
       <div class="col-12">
@@ -16,7 +17,7 @@
           <thead>
           <tr>
 <!--            <th scope="col">Day</th>-->
-            <th scope="col">รูปภาพ</th>
+            <th style="font-family: 'Sriracha', cursive;" scope="col">รูปภาพ</th>
             <th scope="col">ชื่อสนาม</th>
             <th scope="col">ราคา/ชม.</th>
           </tr>

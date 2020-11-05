@@ -24,8 +24,7 @@ import { Camera } from '@ionic-native/camera/ngx';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-
-
+import {PopoverController} from '@ionic/angular';
 
 @NgModule({
   declarations: [AppComponent],
@@ -41,6 +40,7 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
     LocalNotifications,
     Camera,
     NgbModal,
+    PopoverController,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

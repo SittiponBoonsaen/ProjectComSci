@@ -6,6 +6,7 @@
   text-align: center;
   position: relative;
   left: 240px;
+  font-family: 'Sriracha', cursive;
 }
  .grid-container {
    display: grid;
@@ -19,4 +20,9 @@
 }
 .background {
   --background: #f5f5f3;
+}
+.one{
+  position:absolute;
+  top:12px;
+  right:-50;
 }

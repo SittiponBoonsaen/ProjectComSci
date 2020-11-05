@@ -101,7 +101,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3RhYnMvc2VhcmNoL3NlYXJjaC5wYWdlLnNjc3MifQ== */";
+      __webpack_exports__["default"] = ".background {\n  --background: #f5f5f3;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvdGFicy9zZWFyY2gvc2VhcmNoLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFHQTtFQUNFLHFCQUFBO0FBRkYiLCJmaWxlIjoic3JjL2FwcC90YWJzL3NlYXJjaC9zZWFyY2gucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiI2xhYmVsLXJpZ2h0IHtcclxuXHJcbn1cclxuLmJhY2tncm91bmQge1xyXG4gIC0tYmFja2dyb3VuZDogI2Y1ZjVmMztcclxufVxyXG4iXX0= */";
       /***/
     },
 
@@ -121,7 +121,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<script src=\"https://unpkg.com/ionicons@5.1.2/dist/ionicons.js\"></script>\r\n<ion-header>\r\n  <ion-toolbar>\r\n    <ion-title>search</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n  <ion-searchbar (ionChange)=\"searchmethod($event)\" showCancelButton=\"focus\" cancelButtonText=\"ยกเลิก\"></ion-searchbar>\r\n    <ion-item>\r\n      <div class=\"ion-text-wrap\" style=\"margin-left: 200px\" >\r\n        <ion-label><a (click)=\"searchAdvanced()\">ค้นหาขั้นสูง</a></ion-label>\r\n      </div>\r\n  </ion-item>\r\n\r\n  <ion-list *ngIf=\"isItemAvailable\" >\r\n    <ion-item (click)=\"clickstore(data.id_store)\" *ngFor=\"let data of datasearch | filtro: textsearch: 'name_store'\">\r\n      {{ data.name_store }}</ion-item>\r\n  </ion-list>\r\n\r\n</ion-content>\r\n";
+      __webpack_exports__["default"] = "<script src=\"https://unpkg.com/ionicons@5.1.2/dist/ionicons.js\"></script>\r\n<ion-header class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\r\n  <ion-toolbar class=\"background\">\r\n    <ion-title>search</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\r\n  <ion-searchbar (ionChange)=\"searchmethod($event)\" showCancelButton=\"focus\" cancelButtonText=\"ยกเลิก\"></ion-searchbar>\r\n    <ion-item class=\"background\">\r\n      <div class=\"ion-text-wrap\" style=\"margin-left: 200px\" >\r\n        <ion-label><a (click)=\"searchAdvanced()\">ค้นหาขั้นสูง</a></ion-label>\r\n      </div>\r\n  </ion-item>\r\n\r\n  <ion-list *ngIf=\"isItemAvailable\" >\r\n    <ion-item (click)=\"clickstore(data.id_store)\" *ngFor=\"let data of datasearch | filtro: textsearch: 'name_store'\">\r\n      {{ data.name_store }}</ion-item>\r\n  </ion-list>\r\n\r\n</ion-content>\r\n";
       /***/
     },
 
@@ -257,14 +257,21 @@
       var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
       /*! @angular/common/http */
       "tk/3");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @ionic/angular */
+      "TEn/");
 
       var SearchPage = /*#__PURE__*/function () {
-        function SearchPage(router, datapass, Http) {
+        function SearchPage(router, datapass, Http, loadingController) {
           _classCallCheck(this, SearchPage);
 
           this.router = router;
           this.datapass = datapass;
           this.Http = Http;
+          this.loadingController = loadingController;
           this.datasearch = [];
           this.textsearch = '';
           this.isItemAvailable = false;
@@ -293,20 +300,48 @@
         }, {
           key: "clickstore",
           value: function clickstore(id_store) {
-            var _this = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+              var _this = this;
 
-            var dataJSON = {
-              'id_store': id_store
-            };
-            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON)).subscribe(function (datafield) {
-              _this.datapass.datafield = datafield;
+              var dataJSON;
+              return regeneratorRuntime.wrap(function _callee$(_context) {
+                while (1) {
+                  switch (_context.prev = _context.next) {
+                    case 0:
+                      _context.next = 2;
+                      return this.loadingController.create({
+                        message: 'กำลังโหลดข้อมูล...'
+                      });
 
-              _this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getstoreformID', JSON.stringify(dataJSON)).subscribe(function (datastore) {
-                _this.datapass.getingfieldfromstore = datastore;
+                    case 2:
+                      this.loading = _context.sent;
+                      dataJSON = {
+                        'id_store': id_store
+                      };
+                      this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON)).subscribe(function (datafield) {
+                        _this.datapass.datafield = datafield;
 
-                var navigate = _this.router.navigate(['/home/tabs/myhome/myhome-field']);
-              });
-            });
+                        _this.loading.dismiss();
+
+                        _this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getstoreformID', JSON.stringify(dataJSON)).subscribe(function (datastore) {
+                          _this.datapass.getingfieldfromstore = datastore;
+
+                          _this.loading.dismiss();
+
+                          var navigate = _this.router.navigate(['/home/tabs/myhome/myhome-field']);
+                        });
+
+                        _this.loading.present();
+                      });
+                      this.loading.present();
+
+                    case 6:
+                    case "end":
+                      return _context.stop();
+                  }
+                }
+              }, _callee, this);
+            }));
           }
         }]);
 
@@ -320,6 +355,8 @@
           type: _datapass_service__WEBPACK_IMPORTED_MODULE_5__["DatapassService"]
         }, {
           type: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["LoadingController"]
         }];
       };
 

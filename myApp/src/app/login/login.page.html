@@ -1,14 +1,14 @@
-
-<ion-header class="ion-no-border">
+<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+<ion-header class="ion-no-border" style="font-family: 'Sriracha', cursive;">
     <ion-toolbar>
 
         <ion-buttons slot="end">
-            <ion-button [routerLink]="'/register'">Sign up</ion-button>
+            <ion-button style="font-family: 'Sriracha', cursive;" [routerLink]="'/register'">สมัครสมาชิก</ion-button>
         </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content style="font-family: 'Sriracha', cursive;">
     <div id="header">
         <h1>Login</h1>
         <img src="assets/img/jongsanam-logo.png" />
@@ -21,11 +21,11 @@
 
 
     <ion-item>
-      <ion-input [(ngModel)] ="username" placeholder="ชื่อผู้ใช้" ></ion-input>
+      <ion-input style="font-family: 'Sriracha', cursive;" [(ngModel)] ="username" placeholder="ชื่อผู้ใช้" ></ion-input>
     </ion-item>
     <br>
     <ion-item>
-      <ion-input [(ngModel)] ="password" type="password" placeholder="รหัสผู้ใช้" ></ion-input>
+      <ion-input style="font-family: 'Sriracha', cursive;" [(ngModel)] ="password" type="password" placeholder="รหัสผู้ใช้" ></ion-input>
     </ion-item>
     <br>
     <br>
@@ -34,15 +34,13 @@
 
     <ion-segment [(ngModel)]="valuedegree" (ionChange)="segmentChanged(valuedegree)">
       <ion-segment-button value="1">
-        <ion-label>ลูกค้า</ion-label>
+        <ion-label style="font-family: 'Sriracha', cursive;">ลูกค้า</ion-label>
       </ion-segment-button>
       <ion-segment-button value="2">
-        <ion-label>เจ้าของสนาม</ion-label>
+        <ion-label style="font-family: 'Sriracha', cursive;">เจ้าของสนาม</ion-label>
       </ion-segment-button>
     </ion-segment>
-    <br>
-    <br>
-    <ion-button  class="ion-button123" expand="block" color="secondary"(click)="login()">Login</ion-button>
+    <ion-button style="font-family: 'Sriracha', cursive;" class="ion-button123" expand="block" color="secondary"(click)="login()">เข้าสู่ระบบ</ion-button>
     </div>
 
 </ion-content>

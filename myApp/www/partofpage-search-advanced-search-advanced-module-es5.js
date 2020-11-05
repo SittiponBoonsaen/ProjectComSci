@@ -61,13 +61,20 @@
       var _datapass_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
       /*! ../../datapass.service */
       "woWk");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @ionic/angular */
+      "TEn/");
 
       var SearchAdvancedPage = /*#__PURE__*/function () {
-        function SearchAdvancedPage(Http, datapass) {
+        function SearchAdvancedPage(Http, datapass, loadingController) {
           _classCallCheck(this, SearchAdvancedPage);
 
           this.Http = Http;
           this.datapass = datapass;
+          this.loadingController = loadingController;
           this.timeMin = 100;
           this.timeMax = 200;
           this.timeMin2 = this.timeMin;
@@ -89,16 +96,41 @@
         }, {
           key: "selectedprovincemethod",
           value: function selectedprovincemethod(select) {
-            var _this = this;
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+              var _this = this;
 
-            console.log(select);
-            var dataJSON = {
-              'PATIENT_ID': select
-            };
-            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/amphures', JSON.stringify(dataJSON)).subscribe(function (data) {
-              _this.selectedamphures = data;
-              console.log(_this.selectedamphures);
-            });
+              var dataJSON;
+              return regeneratorRuntime.wrap(function _callee$(_context) {
+                while (1) {
+                  switch (_context.prev = _context.next) {
+                    case 0:
+                      _context.next = 2;
+                      return this.loadingController.create({
+                        message: 'รอสักครู่...'
+                      });
+
+                    case 2:
+                      this.loading = _context.sent;
+                      console.log(select);
+                      dataJSON = {
+                        'PATIENT_ID': select
+                      };
+                      this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/amphures', JSON.stringify(dataJSON)).subscribe(function (data) {
+                        _this.selectedamphures = data;
+
+                        _this.loading.dismiss();
+
+                        console.log(_this.selectedamphures);
+                      });
+                      this.loading.present();
+
+                    case 7:
+                    case "end":
+                      return _context.stop();
+                  }
+                }
+              }, _callee, this);
+            }));
           }
         }, {
           key: "selectedamphuresmethod",
@@ -115,6 +147,8 @@
           type: _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClient"]
         }, {
           type: _datapass_service__WEBPACK_IMPORTED_MODULE_5__["DatapassService"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["LoadingController"]
         }];
       };
 
@@ -142,7 +176,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhcnRvZnBhZ2Uvc2VhcmNoLWFkdmFuY2VkL3NlYXJjaC1hZHZhbmNlZC5wYWdlLnNjc3MifQ== */";
+      __webpack_exports__["default"] = ".background {\n  --background: #f5f5f3;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9zZWFyY2gtYWR2YW5jZWQvc2VhcmNoLWFkdmFuY2VkLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFBO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9wYXJ0b2ZwYWdlL3NlYXJjaC1hZHZhbmNlZC9zZWFyY2gtYWR2YW5jZWQucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJhY2tncm91bmQge1xyXG4gIC0tYmFja2dyb3VuZDogI2Y1ZjVmMztcclxufVxyXG4iXX0= */";
       /***/
     },
 
@@ -162,7 +196,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-header>\r\n  <ion-toolbar>\r\n        <ion-buttons>\r\n          <ion-back-button defaultHref=\"home\"></ion-back-button>\r\n        </ion-buttons>\r\n        <ion-buttons slot=\"primary\" >\r\n          <ion-button color=\"secondary\">\r\n            Done\r\n          </ion-button>\r\n        </ion-buttons>\r\n        <ion-title>ค้นหาขั้นสูง</ion-title>\r\n\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content>\r\n\r\n\r\n  <ion-range dualKnobs=\"true\" [min]=timeMin [max]=timeMax step=\"3\"\r\n              [(ngModel)]=\"time\" (ionChange)=\"setBadge(time)\" ></ion-range>\r\n  <div >\r\n    <ion-item>\r\n      <ion-text color=\"primary\">{{this.timeMin2}} - </ion-text>\r\n      <ion-text color=\"primary\">{{this.timeMax2}}บาท</ion-text>\r\n    </ion-item>\r\n  </div>\r\n\r\n  <ion-item>\r\n    <ion-label>Select: province</ion-label>\r\n    <ion-select class=\"custom-options\" [(ngModel)]=\"mySelectprovince\" (ionChange)=\"selectedprovincemethod(mySelectprovince)\">\r\n      <ion-select-option  *ngFor=\"let province of this.selectedprovince \"\r\n                          value=\"{{province.id}}\"> {{province.name_th}} </ion-select-option>\r\n    </ion-select>\r\n  </ion-item>\r\n\r\n  <ion-item>\r\n    <ion-label>Select: amphures</ion-label>\r\n    <ion-select class=\"custom-options\" [(ngModel)]=\"mySelectamphures\" (ionChange)=\"selectedamphuresmethod(mySelectamphures)\">\r\n      <ion-select-option  *ngFor=\"let amphures of this.selectedamphures \"\r\n                          value=\"{{amphures.id}}\"> {{amphures.name_th}} </ion-select-option>\r\n    </ion-select>\r\n  </ion-item>\r\n\r\n<!--  <ion-item>-->\r\n<!--    <ion-label>Time</ion-label>-->\r\n<!--    <ion-datetime cancelText=\"cancel\" doneText=\"done\" displayFormat=\"DD : MMMM\"></ion-datetime>-->\r\n<!--  </ion-item>-->\r\n\r\n\r\n\r\n</ion-content>\r\n\r\n\r\n";
+      __webpack_exports__["default"] = "<link href=\"https://fonts.googleapis.com/css2?family=Sriracha&display=swap\" rel=\"stylesheet\">\r\n<ion-header class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\r\n  <ion-toolbar class=\"background\">\r\n        <ion-buttons>\r\n          <ion-back-button defaultHref=\"home\"></ion-back-button>\r\n        </ion-buttons>\r\n        <ion-buttons slot=\"primary\" >\r\n          <ion-button color=\"secondary\">\r\n            Done\r\n          </ion-button>\r\n        </ion-buttons>\r\n        <ion-title>ค้นหาขั้นสูง</ion-title>\r\n\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\r\n\r\n\r\n  <ion-range dualKnobs=\"true\" [min]=timeMin [max]=timeMax step=\"3\"\r\n              [(ngModel)]=\"time\" (ionChange)=\"setBadge(time)\" ></ion-range>\r\n  <div >\r\n    <ion-item  class=\"background\">\r\n      <ion-text color=\"primary\">{{this.timeMin2}} - </ion-text>\r\n      <ion-text color=\"primary\">{{this.timeMax2}}บาท</ion-text>\r\n    </ion-item>\r\n  </div>\r\n\r\n  <ion-item  class=\"background\">\r\n    <ion-label>Select: province</ion-label>\r\n    <ion-select class=\"custom-options\" [(ngModel)]=\"mySelectprovince\" (ionChange)=\"selectedprovincemethod(mySelectprovince)\">\r\n      <ion-select-option  *ngFor=\"let province of this.selectedprovince \"\r\n                          value=\"{{province.id}}\"> {{province.name_th}} </ion-select-option>\r\n    </ion-select>\r\n  </ion-item>\r\n\r\n  <ion-item  class=\"background\">\r\n    <ion-label>Select: amphures</ion-label>\r\n    <ion-select class=\"custom-options\" [(ngModel)]=\"mySelectamphures\" (ionChange)=\"selectedamphuresmethod(mySelectamphures)\">\r\n      <ion-select-option  *ngFor=\"let amphures of this.selectedamphures \"\r\n                          value=\"{{amphures.id}}\"> {{amphures.name_th}} </ion-select-option>\r\n    </ion-select>\r\n  </ion-item>\r\n\r\n<!--  <ion-item>-->\r\n<!--    <ion-label>Time</ion-label>-->\r\n<!--    <ion-datetime cancelText=\"cancel\" doneText=\"done\" displayFormat=\"DD : MMMM\"></ion-datetime>-->\r\n<!--  </ion-item>-->\r\n\r\n\r\n\r\n</ion-content>\r\n\r\n\r\n";
       /***/
     },
 
