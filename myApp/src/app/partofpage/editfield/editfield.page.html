@@ -1,13 +1,67 @@
 <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
 <ion-header class="background" style="font-family: 'Sriracha', cursive;">
-  <ion-toolbar class="background">
+  <ion-toolbar>
     <ion-buttons>
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title>editfield</ion-title>
+    <ion-title  style="font-family: 'Sriracha', cursive;">แก้ไขข้อมูลสนาม</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="background" style="font-family: 'Sriracha', cursive;">
+  <div class="ion-padding sizeimage centeredit" style="">
+    <img src="assets/img/noimage.png" class="rounded" alt="...">
+  </div>
+
+  <div>
+    <ion-button class="centeredit"(click)="selectImage()">แก้รูปภาพใหม่</ion-button>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">ชื่อสนาม</span>
+    </div>
+    <input type="text" class="form-control" value="สนามที่ 1  " aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">สถานะของสนาม</label>
+    <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="size_field">
+      <option>
+        5คน
+        22 x 42 เมตร
+      </option>
+      <option>
+        7คน
+        33 x 53 เมตร
+      </option>
+      <option>
+        9คน
+        43 x 63 เมตร
+      </option>
+      <option>
+        11คน
+        68 x 105 เมตร
+      </option>
+    </select>
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon5">ราคาสนาม</span>
+    </div>
+    <input type="text" class="form-control" value="600" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">สถานะของสนาม</label>
+    <select class="form-control" id="exampleFormControlSelect2" [(ngModel)]="status_field">
+      <option>เปิดให้บริการ</option>
+      <option>ไม่เปิดให้บริการ</option>
+    </select>
+  </div>
+
+  <div class="centerbutton">
+    <button type="button" (click)="presentAlertConfirm()" class="btn btn-success ">แก้ไขข้อมูลสนาม</button>
+    <button type="button"  (click)="goAccount()" class="btn btn-danger">ยกเลิก</button>
+  </div>
 
 </ion-content>

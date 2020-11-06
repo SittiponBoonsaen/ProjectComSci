@@ -4,10 +4,75 @@
     <ion-buttons>
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title>editstore</ion-title>
+    <ion-title  style="font-family: 'Sriracha', cursive;">แก้ไขข้อมูลร้าน</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="background" style="font-family: 'Sriracha', cursive;">
+  <div class="ion-padding sizeimage centeredit" style="">
+    <img src="assets/img/noimage.png" class="rounded" alt="...">
+  </div>
+
+  <div>
+    <ion-button class="centeredit"(click)="selectImage()">แก้รูปภาพใหม่</ion-button>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">ชื่อร้าน</span>
+    </div>
+    <input type="text" class="form-control" value="ร้าน ฟุตบอลหญ้าเทียมFootball" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon5">ที่อยู่</span>
+    </div>
+    <div>
+      <ion-item>
+        <ion-label>Select: province</ion-label>
+        <ion-select class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
+          <ion-select-option  *ngFor="let province of this.selectedprovince "
+                              value="{{province.id}}"> {{province.name_th}} </ion-select-option>
+        </ion-select>
+      </ion-item>
+      <br>
+      <ion-item>
+        <ion-label>Select: amphures</ion-label>
+        <ion-select class="custom-options" [(ngModel)]="mySelectamphures" (ionChange)="selectedamphuresmethod(mySelectamphures)">
+          <ion-select-option  *ngFor="let amphures of this.selectedamphures "
+                              value="{{amphures.id}}"> {{amphures.name_th}} </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon6">เบอร์โทรศัพท์</span>
+    </div>
+    <input type="text" class="form-control" value="0951685495" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon5">latitude</span>
+    </div>
+    <input type="text" class="form-control" value="0.1561895151" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon5">longitude</span>
+    </div>
+    <input type="text" class="form-control" value="0.15489548" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon5">กฏของร้าน</span>
+    </div>
+    <input type="text" class="form-control" value="-" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+
+  <div class="centerbutton">
+    <button type="button" (click)="presentAlertConfirm()" class="btn btn-success ">แก้ไขข้อมูลร้าน</button>
+    <button type="button"  (click)="goAccount()" class="btn btn-danger">ยกเลิก</button>
+  </div>
 
 </ion-content>
