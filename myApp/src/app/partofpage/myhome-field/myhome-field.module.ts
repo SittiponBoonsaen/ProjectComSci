@@ -11,6 +11,7 @@ import {DataViewModule} from 'primeng/dataview';
 import {ButtonModule} from 'primeng/button';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
 import {TableModule} from 'primeng/table';
+import {RatingModule} from 'primeng/rating';
 
 @NgModule({
     imports: [
@@ -21,7 +22,8 @@ import {TableModule} from 'primeng/table';
         DataViewModule,
         ButtonModule,
         ScrollPanelModule,
-        TableModule
+        TableModule,
+        RatingModule
     ],
   declarations: [MyhomeFieldPage]
 })

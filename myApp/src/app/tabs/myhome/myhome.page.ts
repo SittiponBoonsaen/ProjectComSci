@@ -33,15 +33,15 @@ export class MyhomePage implements OnInit {
           message: 'กำลังโหลดข้อมูล...',
       });
       console.log(idstore);
+      this.datapass.idstoreformmyhome = idstore;
 
       const dataJSON = {
             id_store: idstore,
         };
-      this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON))
+      this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON))
             .subscribe(datafield => {
                 this.datapass.datafield  = datafield;
-                this.loading.dismiss();
-                this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getstoreformID', JSON.stringify(dataJSON))
+                this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/getstoreformID', JSON.stringify(dataJSON))
                     .subscribe(datastore => {
                         this.datapass.getingfieldfromstore = datastore;
                         this.loading.dismiss();

@@ -20,7 +20,8 @@
       <a class="list-group-item list-group-item-action" (click)="goTosettingprofile()" ><ion-icon name="create-outline"></ion-icon> แก้ไขข้อมูลส่วนตัว</a>
       <a  *ngIf=" data.status_member == '2'"  class="list-group-item list-group-item-action" (click)="goTomanageStore()"><ion-icon name="file-tray-full-outline"></ion-icon> จัดการข้อมูลร้าน</a>
       <a class="list-group-item list-group-item-action"  ><ion-icon name="list-outline"></ion-icon> จัดการข้อมูลการจองสนาม</a>
-      <ion-button  (click)="presentAlertConfirm()" color="danger"  style="height: 40px">Logout</ion-button>
+      <a class="list-group-item list-group-item-action"  ><ion-icon name="warning-outline"></ion-icon> ติดต่อเรา</a>
+      <ion-button  (click)="presentAlertConfirm()" color="danger"  style="height: 40px">ออกจากระบบ</ion-button>
     </div>
 
   </div>

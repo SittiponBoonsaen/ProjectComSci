@@ -20,27 +20,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2def3aa1-3b4d-45b9-b0e4-18be953b2389" name="Default Changelist" comment="16/10/63 part1">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Ping_Sittipon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Ping_Sittipon.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es2015.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es2015.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es5.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es2015.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es2015.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es5.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es2015.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es2015.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es5.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/tabs-search-search-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-search-search-module-es2015.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/tabs-search-search-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-search-search-module-es2015.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/tabs-search-search-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-search-search-module-es5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/tabs-search-search-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-search-search-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/datapass.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/datapass.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/account/account.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/account/account.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/search/search.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/search/search.page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +169,8 @@
       <workItem from="1603434224415" duration="897000" />
       <workItem from="1604604451141" duration="1858000" />
       <workItem from="1604642696579" duration="3257000" />
+      <workItem from="1604646751365" duration="110000" />
+      <workItem from="1604845300040" duration="12905000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2/9/63">
       <created>1599062190699</created>
@@ -291,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604606255319</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="project 1">
+      <created>1604646788968</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1604646788968</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +336,8 @@
     <MESSAGE value="16/10/63" />
     <MESSAGE value="16/10/63 part1" />
     <MESSAGE value="ตกแต่งเสร็จเลย แก้ไขข้อมูลร้านและสนามแล้วก็แสดงข้อมูลสนาม" />
-    <option name="LAST_COMMIT_MESSAGE" value="ตกแต่งเสร็จเลย แก้ไขข้อมูลร้านและสนามแล้วก็แสดงข้อมูลสนาม" />
+    <MESSAGE value="project 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="project 1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1603409706445">
@@ -349,14 +364,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="598" y="286" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1602814197108" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1604606284669">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1604646820114">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604606284669" />
-    <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601588585035">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604646820114" />
+    <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604849302748">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1601588585035" />
+    <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604849302748" />
     <state x="724" y="238" key="git4idea.branch.GitSmartOperationDialog" timestamp="1603315926212">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

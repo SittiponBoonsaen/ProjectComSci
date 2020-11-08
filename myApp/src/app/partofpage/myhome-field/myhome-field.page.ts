@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DatapassService} from '../../datapass.service';
+import {HttpClient} from '@angular/common/http';
 
 
 @Component({
@@ -11,16 +12,25 @@ export class MyhomeFieldPage implements OnInit {
 
   datastore;
   datafield;
-  constructor(private datapass: DatapassService) {
+  showdatastore;
+  constructor(private datapass: DatapassService, private Http: HttpClient) {
     console.log("--");
     console.log(datapass.datastore);
     console.log("--");
     console.log(datapass.datafield);
+    const dataJSON = {
+      id_store:  this.datapass.idstoreformmyhome,
+    };
+    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/getstoreformID', JSON.stringify(dataJSON))
+        .subscribe(datastore => {
+          this.showdatastore = datastore;
+        });
   }
 
   ngOnInit() {
       this.datastore = this.datapass.datastore;
       this.datafield = this.datapass.datafield;
+    
   }
 
   clickfield(id_field: any) {

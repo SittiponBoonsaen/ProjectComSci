@@ -41,7 +41,7 @@ export class EditprofilePage implements OnInit {
       id_member: this.id_member
     };
     console.log(dataJSON);
-    this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/usermember/edit', JSON.stringify(dataJSON))
+    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/usermember/edit', JSON.stringify(dataJSON))
         .subscribe(data => {
           console.log(data);
           const navigate = this.router.navigate(['/login']);
@@ -77,6 +77,6 @@ export class EditprofilePage implements OnInit {
   }
 
   goAccount() {
-    const navigate = this.router.navigate(['']);
+    const navigate = this.router.navigate(['/home/tabs/account']);
   }
 }

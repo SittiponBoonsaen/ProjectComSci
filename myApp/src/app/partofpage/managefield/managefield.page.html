@@ -19,19 +19,16 @@
       </ng-template>
       <ng-template pTemplate="header">
         <tr style="font-family: 'Sriracha', cursive;">
-          <th>Image</th>
-          <th>Name</th>
-          <th>statusField</th>
-          <th>#</th>
-          <!--        <th>Telephone</th>-->
-          <!--        <th>Address</th>-->
+          <th>รูปภาพ</th>
+          <th>ชื่อสนาม</th>
+          <th>สถานะ</th>
+          <th>การจัดการ</th>
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-datafield>
         <tr style="font-family: 'Sriracha', cursive;">
           <td><img *ngIf="datafield.picture_picturefield == null" src="assets/img/noimage.png" [alt]="datafield.name_field" class="p-shadow-4"  />
             <img *ngIf="datafield.picture_picturefield != null" src="data:image/png;base64,{{datafield.picture_picturefield}}" [alt]="datafield.name_field" width="100" class="p-shadow-4"  />
-
           </td>
           <td>{{datafield.name_field}}</td>
           <td>{{datafield.status_field}}</td>

@@ -13,4 +13,5 @@ export class DatapassService {
   managedatastore;
   idstoreformmanagestore;
   constructor() { }
+  idstoreformmyhome;
 }
