@@ -27,7 +27,9 @@
             <ng-template let-getstore pTemplate="listItem"  class="background">
                 <div class="p-col-12 background" (click)="clickstore(getstore.id_store)">
                     <div class="product-list-item background">
-                        <img src="data:image/png;base64,{{getstore.picture_store}}" [alt]="getstore.name_store"/>
+                        <img *ngIf="getstore.picture_store == null"  src="assets/img/noimage.png"  [alt]="getstore.name_store"/>
+                        <img *ngIf="getstore.picture_store != null"  src="data:image/png;base64,{{getstore.picture_store}}" [alt]="getstore.name_store"/>
+
 
                         <div class="product-list-detail background" style="font-family: 'Sarabun', sans-serif;">
                             <div class="product-name background">{{getstore.name_store}}</div>
