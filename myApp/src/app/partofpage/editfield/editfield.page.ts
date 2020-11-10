@@ -10,17 +10,17 @@ import {AlertController, LoadingController} from '@ionic/angular';
   styleUrls: ['./editfield.page.scss'],
 })
 export class EditfieldPage implements OnInit {
-  idstore: any;
+  idfield: any;
   datafield: any;
 
   constructor(public datapassService: DatapassService, private Http: HttpClient, private router: Router,  private loadingController: LoadingController,public alertController: AlertController) {
-    this.idstore = this.datapassService.idstoreformmanagestore;
+    this.idfield = this.datapassService.idfieldformmanagefield;
     const dataJSON = {
-      id_store: this.idstore,
+      'id_field': this.idfield,
     };
-    this.Http.post('http://localhost:5000/apiFinal/getingfield', JSON.stringify(dataJSON))
-        .subscribe(datastore => {
-          this.datafield = datastore;
+    this.Http.post('http://localhost:5000/apiFinal/getfieldformID', JSON.stringify(dataJSON))
+        .subscribe(datafield => {
+          this.datafield = datafield;
           console.log(this.datafield);
         });
   }
@@ -56,11 +56,10 @@ export class EditfieldPage implements OnInit {
     let iddatafield;
     for (iddatafield of this.datafield) {
     }
-    let inputname_field = (<HTMLInputElement>document.getElementById('name_field')).value;
-    let inputsize_field = (<HTMLInputElement>document.getElementById('size_field')).value;
-    let inputprice_field = (<HTMLInputElement>document.getElementById('price_field')).value;
-    let inputstatus_field = (<HTMLInputElement>document.getElementById('status_field')).value;
-
+    let inputname_field = (<HTMLInputElement>document.getElementById('namefield')).value;
+    let inputsize_field = (<HTMLInputElement>document.getElementById('sizefield')).value;
+    let inputprice_field = (<HTMLInputElement>document.getElementById('pricefield')).value;
+    let inputstatus_field = (<HTMLInputElement>document.getElementById('statusfield')).value;
     const dataJSON = {
       'name_field': inputname_field,
       'size_field': inputsize_field,

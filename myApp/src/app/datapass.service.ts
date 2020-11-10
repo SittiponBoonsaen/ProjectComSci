@@ -12,6 +12,8 @@ export class DatapassService {
   datastoreowner;
   managedatastore;
   idstoreformmanagestore;
-  constructor() { }
+  idfieldformmanagefield;
   idstoreformmyhome;
+  constructor() { }
+
 }

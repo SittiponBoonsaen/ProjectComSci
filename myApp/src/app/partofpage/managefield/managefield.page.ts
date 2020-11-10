@@ -38,7 +38,9 @@ export class ManagefieldPage implements OnInit {
     const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield/addfield']);
   }
 
-  gotoEdit() {
+  gotoEdit(idfield) {
+    this.datapassService.idfieldformmanagefield = idfield
+    console.log(idfield);
     const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield/editfield']);
   }
 

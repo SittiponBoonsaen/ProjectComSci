@@ -19,28 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2def3aa1-3b4d-45b9-b0e4-18be953b2389" name="Default Changelist" comment="16/10/63 part1">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Ping_Sittipon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Ping_Sittipon.xml" afterDir="false" />
+    <list default="true" id="2def3aa1-3b4d-45b9-b0e4-18be953b2389" name="Default Changelist" comment="11/11/63">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/datapass.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/datapass.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/register/register.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/register/register.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tabs/account/account.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/account/account.page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

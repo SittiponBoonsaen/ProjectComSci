@@ -18,7 +18,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'
+  },  {
+    path: 'changepassword',
+    loadChildren: () => import('./partofpage/changepassword/changepassword.module').then( m => m.ChangepasswordPageModule)
   },
+
 
 
 
