@@ -34,7 +34,7 @@ export class AddfieldPage implements OnInit {
       status_field: this.status_field
     };
     console.log(dataJSON);
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/field/add', JSON.stringify(dataJSON))
+    this.Http.post('http://localhost:5000/apiFinal/field/add', JSON.stringify(dataJSON))
         .subscribe(data => {
           console.log(data);
         });
@@ -50,7 +50,7 @@ export class AddfieldPage implements OnInit {
           text: 'ใช่',
           handler: () => {
             this.addfield();
-            window.alert("addfield complete");
+            window.alert("เพิ่มข้อมูลสำเร็จ");
             const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
           }
         }, {

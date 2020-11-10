@@ -1,16 +1,16 @@
-<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
 
-<ion-header class="background" style="font-family: 'Sriracha', cursive;" >
+<ion-header class="background" style="font-family: 'Sarabun', sans-serif;" >
     <ion-toolbar class="background">
         <ion-buttons>
-            <ion-back-button style="font-family: 'Sriracha', cursive;" defaultHref="home"> </ion-back-button>
+            <ion-back-button style="font-family: 'Sarabun', sans-serif;" defaultHref="home"> </ion-back-button>
         </ion-buttons>
         <ion-title>สนามฟุตบอล</ion-title>
     </ion-toolbar>
 
 </ion-header>
 
-<ion-content class="background" style="font-family: 'Sriracha', cursive;">
+<ion-content class="background" style="font-family: 'Sarabun', sans-serif;">
     <div *ngFor="let datastore of showdatastore">
         <img *ngIf="datastore.picture_store != null" src="data:image/png;base64,{{datastore.picture_store}}" [alt]="datastore.name_store">
         <ion-label>ชื่อร้าน: {{datastore.name_store}}</ion-label>
@@ -20,7 +20,7 @@
 
       <p-table [value]="datafield">
             <ng-template pTemplate="header">
-                <tr style="font-family: 'Sriracha', cursive;">
+                <tr style="font-family: 'Sarabun', sans-serif;">
                     <th>รูปภาพ</th>
                     <th>ชื่อสนาม</th>
                     <th>ราคา/ชม.</th>
@@ -28,7 +28,7 @@
                 </tr>
             </ng-template>
             <ng-template pTemplate="body" let-datafield>
-                <tr style="font-family: 'Sriracha', cursive;">
+                <tr style="font-family: 'Sarabun', sans-serif;">
                     <td>
                         <img *ngIf="datafield.picture_picturefield == null" style="height: 100px;width: 200px" src="assets/img/noimage.png" [alt]="datafield.name_field">
                         <img *ngIf="datafield.picture_picturefield != null" style="height: 100px;width: 200px" src="data:image/png;base64,{{datafield.picture_picturefield}}" [alt]="datafield.name_field">

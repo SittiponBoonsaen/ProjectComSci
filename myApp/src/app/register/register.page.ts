@@ -38,7 +38,7 @@ export class RegisterPage implements OnInit {
       "status_member": this.status
     };
     console.log(dataJSON);
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/usermember/register',JSON.stringify(dataJSON)).subscribe(data =>{
+    this.Http.post('http://localhost:5000/apiFinal/usermember/register',JSON.stringify(dataJSON)).subscribe(data =>{
       console.log("register complete");
       const navigate = this.router.navigate(['/login']);
       console.log(data);

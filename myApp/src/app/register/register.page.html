@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
 
-<ion-header class="ion-no-border" style="font-family: 'Sriracha', cursive;">
+<ion-header class="ion-no-border" style="font-family: 'Sarabun', sans-serif;">
     <ion-toolbar>
         <ion-buttons>
             <ion-back-button defaultHref="login"></ion-back-button>
@@ -10,57 +10,49 @@
 </ion-header>
 
 <!--</ion-content>-->
-<ion-content style="font-family: 'Sriracha', cursive;">
+<ion-content style="font-family: 'Sarabun', sans-serif;">
 
     <div class="ion-padding sizeimage centeredit" style="">
       <img src="assets/img/jongsanam-logo.png" class="rounded" alt="...">
     </div>
-    <ion-item123>
+    <div class="padding">
+    <label>ชื่อ-สกุล</label>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">ชื่อ-สกุล</span>
       </div>
       <input type="text" class="form-control"[(ngModel)] ="firstname" placeholder="ชื่อ" aria-label="Username" aria-describedby="basic-addon1">
       <input type="text" class="form-control" [(ngModel)] ="lastname" placeholder="นามสกุล" aria-label="Username" aria-describedby="basic-addon1">
     </div>
+    <label>Username</label>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon2">Username</span>
       </div>
       <input type="text" class="form-control"[(ngModel)] ="username" placeholder="username" aria-label="Username" aria-describedby="basic-addon1">
     </div>
+    <label>รหัสผ่าน</label>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon3">รหัสผ่าน</span>
       </div>
       <input type="password" class="form-control" [(ngModel)] ="password"placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
     </div>
+    <label>Email</label>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon4">ยืนยันรหัสผ่าน</span>
-      </div>
-      <input type="password" [(ngModel)] ="confirmpassword" class="form-control" placeholder="confirmPassword" aria-label="Username" aria-describedby="basic-addon1">
-    </div>
-
-    <div class="input-group mb-3">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon5">Email</span>
       </div>
       <input type="email" class="form-control"[(ngModel)] ="email" placeholder="email" aria-label="Username" aria-describedby="basic-addon1">
     </div>
+    <label>ที่อยู่</label>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon6">ที่อยู่</span>
       </div>
       <input type="text" class="form-control" [(ngModel)] ="address" placeholder="ที่อยู่" aria-label="Username" aria-describedby="basic-addon1">
     </div>
+    <label>เบอร์โทรศัพท์</label>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon7">เบอร์โทรศัพท์</span>
       </div>
       <input type="" class="form-control"  [(ngModel)] ="telephone" placeholder="เบอร์โทรศัพท์" aria-label="Username" aria-describedby="basic-addon1">
     </div>
-    </ion-item123>
     <ion-button class="ion-button123" expand="block" color="secondary"(click)="register()" >สมัครสมาชิก</ion-button>
-
+    </div>
 </ion-content>

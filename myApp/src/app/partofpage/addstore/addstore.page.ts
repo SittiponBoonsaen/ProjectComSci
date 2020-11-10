@@ -26,7 +26,7 @@ export class AddstorePage implements OnInit {
     const dataJSON = {
       'PATIENT_ID': select,
     };
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/amphures', JSON.stringify(dataJSON))
+    this.Http.post('http://localhost:5000/apiFinal/amphures', JSON.stringify(dataJSON))
         .subscribe(data => {
           this.selectedamphures = data;
           console.log(this.selectedamphures);

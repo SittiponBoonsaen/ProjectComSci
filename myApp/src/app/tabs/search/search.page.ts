@@ -42,10 +42,10 @@ export class SearchPage implements OnInit {
       let dataJSON = {
         'id_store': id_store,
       };
-      this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON))
+      this.Http.post('http://localhost:5000/apiFinal/getingfield', JSON.stringify(dataJSON))
           .subscribe(datafield => {
             this.datapass.datafield  = datafield;
-            this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/getstoreformID', JSON.stringify(dataJSON))
+            this.Http.post('http://localhost:5000/apiFinal/getstoreformID', JSON.stringify(dataJSON))
                 .subscribe(datastore => {
                   this.datapass.getingfieldfromstore = datastore;
                     this.loading.dismiss();

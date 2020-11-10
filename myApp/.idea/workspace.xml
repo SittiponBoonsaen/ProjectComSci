@@ -23,28 +23,41 @@
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Ping_Sittipon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Ping_Sittipon.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/datapass.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/datapass.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/notifications/notifications.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/notifications/notifications.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/register/register.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.page.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/register/register.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/tabs/account/account.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/account/account.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/search/search.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/search/search.page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/tabs/search/search.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/search/search.page.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +183,9 @@
       <workItem from="1604604451141" duration="1858000" />
       <workItem from="1604642696579" duration="3257000" />
       <workItem from="1604646751365" duration="110000" />
-      <workItem from="1604845300040" duration="12905000" />
+      <workItem from="1604845300040" duration="18083000" />
+      <workItem from="1604891219005" duration="299000" />
+      <workItem from="1604992776255" duration="6900000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2/9/63">
       <created>1599062190699</created>
@@ -305,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604646788968</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="project 1 edited">
+      <created>1604859495480</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1604859495480</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +359,8 @@
     <MESSAGE value="16/10/63 part1" />
     <MESSAGE value="ตกแต่งเสร็จเลย แก้ไขข้อมูลร้านและสนามแล้วก็แสดงข้อมูลสนาม" />
     <MESSAGE value="project 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="project 1" />
+    <MESSAGE value="project 1 edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="project 1 edited" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1603409706445">
@@ -364,14 +387,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="598" y="286" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1602814197108" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1604646820114">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1604872872414">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604646820114" />
-    <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604849302748">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604872872414" />
+    <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605008554470">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1604849302748" />
+    <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1605008554470" />
     <state x="724" y="238" key="git4idea.branch.GitSmartOperationDialog" timestamp="1603315926212">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -388,10 +411,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1096" y="247" key="run.anything.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1602098762111" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1602808632821">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1605006676769">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1602808632821" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1605006676769" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

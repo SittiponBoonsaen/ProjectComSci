@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: EditprofilePage
-  }
+  },
+  {
+    path: 'changepassword',
+    loadChildren: () => import('../changepassword/changepassword.module').then( m => m.ChangepasswordPageModule)
+  },
 ];
 
 @NgModule({

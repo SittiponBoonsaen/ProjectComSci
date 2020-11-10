@@ -1,24 +1,24 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
-<ion-header class="background" style="font-family: 'Sriracha', cursive;">
+<ion-header class="background" style="font-family: 'Sarabun', sans-serif;">
   <ion-toolbar class="background">
     <ion-buttons>
-      <ion-back-button style="font-family: 'Sriracha', cursive;" style="font-family: 'Sriracha', cursive;" defaultHref="home"></ion-back-button>
+      <ion-back-button style="font-family: 'Sarabun', sans-serif;" defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title style="font-family: 'Sriracha', cursive;">จัดการร้าน</ion-title>
+    <ion-title style="font-family: 'Sarabun', sans-serif;">จัดการร้าน</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="background" style="font-family: 'Sriracha', cursive;">
+<ion-content class="background" style="font-family: 'Sarabun', sans-serif;">
   <p-table [value]="products">
     <ng-template pTemplate="caption">
-      <div class="p-d-flex p-ai-center p-jc-between" style="font-family: 'Sriracha', cursive;">
+      <div class="p-d-flex p-ai-center p-jc-between" style="font-family: 'Sarabun', sans-serif;">
         ข้อมูลร้าน
       </div>
     </ng-template>
     <ng-template pTemplate="header">
-      <tr style="font-family: 'Sriracha', cursive;">
+      <tr style="font-family: 'Sarabun', sans-serif;">
         <th>รูปภาพ</th>
         <th>ชื่อร้าน</th>
         <th>การจัดการ</th>
@@ -27,7 +27,7 @@
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-product>
-      <tr style="font-family: 'Sriracha', cursive;">
+      <tr style="font-family: 'Sarabun', sans-serif;">
         <td><img src="data:image/png;base64,{{product.picture_store}}" [alt]="product.name_store" width="100" class="p-shadow-4"  /></td>
         <td>{{product.name_store}}</td>
 <!--        <td>{{product.telephone_store}}</td>-->
@@ -43,7 +43,7 @@
       </tr>
     </ng-template>
     <ng-template pTemplate="summary">
-      <div class="p-d-flex p-ai-center p-jc-between" style="font-family: 'Sriracha', cursive;">
+      <div class="p-d-flex p-ai-center p-jc-between" style="font-family: 'Sarabun', sans-serif;">
         In total there are {{products ? products.length : 0 }} products.
       </div>
     </ng-template>

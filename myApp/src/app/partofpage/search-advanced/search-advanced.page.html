@@ -1,43 +1,43 @@
-<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
-<ion-header class="background" style="font-family: 'Sriracha', cursive;">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
+<ion-header class="background" style="font-family: 'Sarabun', sans-serif;">
   <ion-toolbar class="background">
         <ion-buttons >
-          <ion-back-button style="font-family: 'Sriracha', cursive;" defaultHref="home"></ion-back-button>
+          <ion-back-button style="font-family: 'Sarabun', sans-serif;" defaultHref="home"></ion-back-button>
         </ion-buttons>
         <ion-buttons slot="primary" >
-          <ion-button color="secondary" style="font-family: 'Sriracha', cursive;">
+          <ion-button color="secondary" style="font-family: 'Sarabun', sans-serif;">
             Done
           </ion-button>
         </ion-buttons>
-        <ion-title style="font-family: 'Sriracha', cursive;">ค้นหาขั้นสูง</ion-title>
+        <ion-title style="font-family: 'Sarabun', sans-serif;">ค้นหาขั้นสูง</ion-title>
 
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="background" style="font-family: 'Sriracha', cursive;">
+<ion-content class="background" style="font-family: 'Sarabun', sans-serif;">
 
 
   <ion-range dualKnobs="true" [min]=timeMin [max]=timeMax step="3"
               [(ngModel)]="time" (ionChange)="setBadge(time)" ></ion-range>
   <div >
     <ion-item  class="background">
-      <ion-text style="font-family: 'Sriracha', cursive;" color="primary">{{this.timeMin2}} - </ion-text>
-      <ion-text style="font-family: 'Sriracha', cursive;" color="primary">{{ this.timeMax2}} บาท /ชั่วโมง</ion-text>
+      <ion-text style="font-family: 'Sarabun', sans-serif;" color="primary">{{this.timeMin2}} - </ion-text>
+      <ion-text style="font-family: 'Sarabun', sans-serif;" color="primary">{{ this.timeMax2}} บาท /ชั่วโมง</ion-text>
     </ion-item>
   </div>
 
   <ion-item  class="background">
-    <ion-label style="font-family: 'Sriracha', cursive;">Select: province</ion-label>
-    <ion-select style="font-family: 'Sriracha', cursive;"  class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
+    <ion-label style="font-family: 'Sarabun', sans-serif;">Select: province</ion-label>
+    <ion-select style="font-family: 'Sarabun', sans-serif;"  class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
       <ion-select-option  *ngFor="let province of this.selectedprovince " style="font-family: 'Sriracha', cursive;"
                           value="{{province.id}}"> {{province.name_th}} </ion-select-option>
     </ion-select>
   </ion-item>
 
   <ion-item  class="background">
-    <ion-label style="font-family: 'Sriracha', cursive;" >Select: amphures</ion-label>
-    <ion-select style="font-family: 'Sriracha', cursive;" class="custom-options" [(ngModel)]="mySelectamphures" (ionChange)="selectedamphuresmethod(mySelectamphures)">
-      <ion-select-option  *ngFor="let amphures of this.selectedamphures " style="font-family: 'Sriracha', cursive;"
+    <ion-label style="font-family: 'Sarabun', sans-serif;" >Select: amphures</ion-label>
+    <ion-select style="font-family: 'Sarabun', sans-serif;"class="custom-options" [(ngModel)]="mySelectamphures" (ionChange)="selectedamphuresmethod(mySelectamphures)">
+      <ion-select-option  *ngFor="let amphures of this.selectedamphures " style="font-family: 'Sarabun', sans-serif;"
                           value="{{amphures.id}}"> {{amphures.name_th}} </ion-select-option>
     </ion-select>
   </ion-item>

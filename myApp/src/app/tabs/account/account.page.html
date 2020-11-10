@@ -1,20 +1,17 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
 <ion-header class="background" >
   <ion-toolbar class="background">
-    <ion-title style="font-family: 'Sriracha', cursive;">ข้อมูลส่วนตัว</ion-title>
+    <ion-title style="font-family: 'Sarabun', sans-serif;">ข้อมูลส่วนตัว</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content *ngFor="let data of dataAccount" style="font-family: 'Sriracha', cursive;">
+<ion-content *ngFor="let data of dataAccount" style="font-family: 'Sarabun', sans-serif;">
   <div id="header">
     <img src="assets/img/default-avatar.png" />
   </div>
 
-  <!--    <ion-item >-->
-  <!--      <img style="text-align: center" src="assets/img/jongsanam-logo.png">-->
-  <!--    </ion-item>-->
   <div class="form123">
     <div id="list-example" class="list-group">
       <a class="list-group-item list-group-item-action" (click)="goTosettingprofile()" ><ion-icon name="create-outline"></ion-icon> แก้ไขข้อมูลส่วนตัว</a>

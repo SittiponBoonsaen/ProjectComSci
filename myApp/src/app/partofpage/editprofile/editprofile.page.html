@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
-<ion-header class="background" style="font-family: 'Sriracha', cursive;">
+<ion-header class="background" style="font-family: 'Sarabun', sans-serif;">
   <ion-toolbar class="background">
     <ion-buttons>
       <ion-back-button defaultHref="home"></ion-back-button>
@@ -10,61 +10,56 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content *ngFor="let data of this.dataUser" class="background" style="font-family: 'Sriracha', cursive;">
+<ion-content *ngFor="let data of this.dataUser" class="background" style="font-family: 'Sarabun', sans-serif;">
 
-  <div class="ion-padding sizeimage centeredit" style="">
-    <img src="assets/img/default-avatar.png" class="rounded" alt="...">
+  <div id="header">
+    <img src="assets/img/default-avatar.png" />
   </div>
 
-  <div>
-    <ion-button class="centeredit"(click)="selectImage()">เพิ่มรูปภาพใหม่</ion-button>
+  <div  class="centerbutton">
+    <button type="button" (click)="selectImage()" class="btn btn-link"><ion-icon name="camera-outline"></ion-icon>เพิ่มรูปภาพ</button>
   </div>
+
+<div class="padding">
+  <label>ชื่อ-สกุล</label>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon1">ชื่อ-สกุล</span>
     </div>
     <input type="text" class="form-control" value="{{data.firstname_member}}" id="firstname_member" aria-label="Username" aria-describedby="basic-addon1">
     <input type="text" class="form-control" value="{{data.lasname_member}}" id="lasname_member" aria-label="Username" aria-describedby="basic-addon1">
   </div>
+  <label>Username</label>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon2">Username</span>
     </div>
     <input type="text" class="form-control" value="{{data.username_member}}" id="username_member" aria-label="Username" aria-describedby="basic-addon1" disabled>
   </div>
+  <label>Email</label>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon3">รหัสผ่าน</span>
-    </div>
-    <input type="password" class="form-control" [(ngModel)] ="password_member" placeholder="กรุณาใส่passwordด้วย" aria-label="Username" aria-describedby="basic-addon1">
-  </div>
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon4">ยืนยันรหัสผ่าน</span>
-    </div>
-    <input type="password" [(ngModel)] ="confirmpassword" class="form-control"  placeholder="confirmPassword" aria-label="Username" aria-describedby="basic-addon1">
-  </div>
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon9">Email</span>
     </div>
     <input type="text" class="form-control" value="{{data.email_member}}" id="email_member" aria-label="Username" aria-describedby="basic-addon1" disabled>
   </div>
+  <label>ที่อยู่</label>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon5">ที่อยู่</span>
     </div>
     <input type="text" class="form-control" value="{{data.address_member}}"id="address_member"  aria-label="Username" aria-describedby="basic-addon1">
   </div>
+  <label>เบอร์โทรศัพท์</label>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
-      <span class="input-group-text" id="basic-addon6">เบอร์โทรศัพท์</span>
     </div>
     <input type="text" class="form-control" value="{{data.telephone_member}}" id="telephone_member"  aria-label="Username" aria-describedby="basic-addon1">
   </div>
+  <div class="input-group mb-3" (click)="gochangepassword()">
+    <div class="input-group-prepend">
+  <br>
+    </div>
+    <span class="input-group-text form-control" id="basic-addon3"><ion-icon name="key-outline"> </ion-icon> เปลี่ยนรหัสผ่าน</span>
+  </div>
   <div class="centerbutton">
     <button type="button" (click)="presentAlertConfirm(data.id_member)" class="btn btn-success ">ยืนยันการแก้ไข</button>
-    <button type="button"  (click)="goAccount()" class="btn btn-danger">ยกเลิก</button>
   </div>
-
+</div>
 </ion-content>

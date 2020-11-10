@@ -1,10 +1,10 @@
-<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
 
 <ion-header class="background">
   <ion-toolbar class="background">
       <table style="width:120%">
           <tr>
-              <td><h4 style="font-family: 'Sriracha', cursive;">JONGSNAM <ion-icon class="one" style="width: 30px;height: 35px;" name="football-outline"></ion-icon></h4></td>
+              <td><h4 style="font-family: 'Sarabun', sans-serif;">JONGSNAM <ion-icon class="one" style="width: 30px;height: 35px;" name="football-outline"></ion-icon></h4></td>
               <td style="font-size:30px;">
                   <ion-icon class="iconhome"  style="margin: 0 20px;" (click)="Gosearch()" name="search-outline"></ion-icon>
                   <ion-icon  class="iconhome" style="margin: 0 -10px; color: #0d0d0d"  (click)="notifications($event)" name="notifications-outline"></ion-icon>
@@ -29,13 +29,13 @@
                     <div class="product-list-item background">
                         <img src="data:image/png;base64,{{getstore.picture_store}}" [alt]="getstore.name_store"/>
 
-                        <div class="product-list-detail background" style="font-family: 'Sriracha', cursive;">
+                        <div class="product-list-detail background" style="font-family: 'Sarabun', sans-serif;">
                             <div class="product-name background">{{getstore.name_store}}</div>
                             <div class="product-description background">{{getstore.description}}</div>
                             <p-rating [ngModel]="getstore.rating" [readonly]="true" [cancel]="false"></p-rating>
 
                         </div>
-                        <div class="product-list-action" style="font-family: 'Sriracha', cursive;">
+                        <div class="product-list-action" style="font-family: 'Sarabun', sans-serif;">
 <!--                            <span class="product-price">${{getstore.price}}</span>-->
                             <p-button icon="pi pi-shopping-cart" label="ดูรายละเอียด" (onClick)="clickstore(getstore.id_store)" [disabled]="getstore.inventoryStatus === 'OUTOFSTOCK'"></p-button>
 <!--                            <span [class]="'product-badge status-' + getstore.inventoryStatus.toLowerCase()">{{getstore.inventoryStatus}}</span>-->

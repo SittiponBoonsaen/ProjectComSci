@@ -1,8 +1,8 @@
 <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-
-<ion-header class="background" style="font-family: 'Sriracha', cursive;">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
+<ion-header class="background" style="font-family: 'Sarabun', sans-serif;">
   <ion-toolbar class="background">
-    <ion-title style="font-family: 'Sriracha', cursive;">ค้นหา</ion-title>
+    <ion-title style="font-family: 'Sarabun', sans-serif;">ค้นหา</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,12 +10,12 @@
   <ion-searchbar (ionChange)="searchmethod($event)" showCancelButton="focus" cancelButtonText="ยกเลิก"></ion-searchbar>
     <ion-item class="background">
       <div class="ion-text-wrap" style="margin-left: 200px" >
-        <ion-label><a style="font-family: 'Sriracha', cursive;" (click)="searchAdvanced()">ค้นหาขั้นสูง</a></ion-label>
+        <ion-label><a style="font-family: 'Sarabun', sans-serif;" (click)="searchAdvanced()">ค้นหาขั้นสูง</a></ion-label>
       </div>
   </ion-item>
 
   <ion-list *ngIf="isItemAvailable" >
-    <ion-item style="font-family: 'Sriracha', cursive;" (click)="clickstore(data.id_store)" *ngFor="let data of datasearch | filtro: textsearch: 'name_store'">
+    <ion-item style="font-family: 'Sarabun', sans-serif;" (click)="clickstore(data.id_store)" *ngFor="let data of datasearch | filtro: textsearch: 'name_store'">
       {{ data.name_store }}</ion-item>
   </ion-list>
 

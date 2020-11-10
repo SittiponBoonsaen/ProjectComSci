@@ -41,7 +41,7 @@ export class EditprofilePage implements OnInit {
       id_member: this.id_member
     };
     console.log(dataJSON);
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/usermember/edit', JSON.stringify(dataJSON))
+    this.Http.post('http://localhost:5000/apiFinal/usermember/edit', JSON.stringify(dataJSON))
         .subscribe(data => {
           console.log(data);
           const navigate = this.router.navigate(['/login']);
@@ -76,7 +76,8 @@ export class EditprofilePage implements OnInit {
     await alert.present();
   }
 
-  goAccount() {
-    const navigate = this.router.navigate(['/home/tabs/account']);
-  }
+
+    gochangepassword() {
+      const navigate = this.router.navigate(['/home/tabs/account/editprofile/changepassword']);
+    }
 }
