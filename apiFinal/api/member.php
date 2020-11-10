@@ -37,12 +37,9 @@ $app->post('/usermember/login', function (Request $request, Response $response, 
             }
             $json = json_encode($data);
             $response->getBody()->write($json);
-        
     }else{
-        echo "Login failed!!!";
-    }
 
-    // $response->getBody()->write("Number rows, $num");
+    }
     return $response->withHeader('Content-Type','application/json');
 });
 
@@ -53,8 +50,11 @@ $app->post('/usermember/register', function (Request $request, Response $respons
     $conn = $GLOBALS['dbconn']; 
     $body = $request->getBody();
     $bodyArray = json_decode($body, true);
-    $stmt = $conn->prepare("insert into usermember"."(username_member,password_member,firstname_member,lasname__member,email_member,address_member,telephone_member,status_member) "." values (?,?,?,?,?,?,?,?)"); 
-    $stmt ->bind_param('ssssssss', $bodyArray['username_member'],$bodyArray['password_member'],$bodyArray['firstname_member'],$bodyArray['lasname__member'],$bodyArray['email_member'],$bodyArray['address_member'],$bodyArray['telephone_member'],$bodyArray['status_member']);
+    $stmt = $conn->prepare("insert into usermember"."(username_member,password_member,firstname_member
+    ,lasname_member,email_member,address_member,telephone_member,status_member) "." values (?,?,?,?,?,?,?,?)"); 
+    $stmt ->bind_param('ssssssss', $bodyArray['username_member'],$bodyArray['password_member']
+    ,$bodyArray['firstname_member'],$bodyArray['lasname_member'],$bodyArray['email_member'],$bodyArray['address_member']
+    ,$bodyArray['telephone_member'],$bodyArray['status_member']);
     $stmt->execute(); 
     $result = $stmt ->affected_rows;
     $response->getBody() ->write($result." ");
@@ -62,15 +62,12 @@ $app->post('/usermember/register', function (Request $request, Response $respons
 });
 
 $app->post('/usermember/edit', function (Request $request, Response $response, array $args) {
-    date_default_timezone_set('Asia/Bangkok');
-    $DATETIME = date_create()->format('Y-m-d h:i:s');
-    ////////////////////////
     $conn = $GLOBALS['dbconn']; 
     $body = $request->getBody();
     $bodyArray = json_decode($body, true);
-    $stmt = $conn->prepare("UPDATE usermember SET password_member=?, firstname_member=?,lasname_member=?,
+    $stmt = $conn->prepare("UPDATE usermember SET firstname_member=?,lasname_member=?,
     address_member=?,telephone_member=? WHERE id_member = ?"); 
-    $stmt ->bind_param('ssssss', $bodyArray['password_member'],$bodyArray['firstname_member'],
+    $stmt ->bind_param('sssss',$bodyArray['firstname_member'],
     $bodyArray['lasname_member'],$bodyArray['address_member'],
     $bodyArray['telephone_member'],$bodyArray['id_member']);
     $stmt->execute(); 
@@ -79,6 +76,16 @@ $app->post('/usermember/edit', function (Request $request, Response $response, a
     return $response->withHeader('Content-Type', 'application/json');
 });
 
-
+$app->post('/usermember/changepassword', function (Request $request, Response $response, array $args) {
+    $conn = $GLOBALS['dbconn']; 
+    $body = $request->getBody();
+    $bodyArray = json_decode($body, true);
+    $stmt = $conn->prepare("UPDATE usermember SET password_member=? WHERE id_member = ?"); 
+    $stmt ->bind_param('ss',$bodyArray['password_member'],$bodyArray['id_member']);
+    $stmt->execute(); 
+    $result = $stmt ->affected_rows;
+    $response->getBody() ->write($result." ");
+    return $response->withHeader('Content-Type', 'application/json');
+});
 
 ?>

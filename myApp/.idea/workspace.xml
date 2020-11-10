@@ -21,12 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2def3aa1-3b4d-45b9-b0e4-18be953b2389" name="Default Changelist" comment="11/11/63">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/datapass.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/datapass.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -303,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605009150456</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="11/11/63">
+      <created>1605042376036</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1605042376036</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +339,8 @@
     <MESSAGE value="project 1" />
     <MESSAGE value="project 1 edited" />
     <MESSAGE value="commit ตกแต่ง" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit ตกแต่ง" />
+    <MESSAGE value="11/11/63" />
+    <option name="LAST_COMMIT_MESSAGE" value="11/11/63" />
   </component>
   <component name="WindowStateProjectService">
     <state x="740" y="280" key="FileChooserDialogImpl" timestamp="1603409706445">
@@ -364,10 +367,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="598" y="286" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1602814197108" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605009159362">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605042383912">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1605009159362" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1605042383912" />
     <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605008554470">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

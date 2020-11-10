@@ -53,7 +53,22 @@ $app->post('/getstoreformID', function (Request $request, Response $response, ar
     $response->getBody()->write($json);
     return $response->withHeader('Content-Type', 'application/json');
 });
-
+$app->post('/getfieldformID', function (Request $request, Response $response, array $args) {
+    $body = $request->getBody();
+    $bodyArray = json_decode($body,true);
+    $conn = $GLOBALS['dbconn'];
+    $stmt = $conn->prepare("SELECT * FROM field LEFT JOIN picturefield ON picturefield.id_fieldFromfield = field.id_field WHERE id_field = ? ");
+    $stmt->bind_param("s",$bodyArray['id_field']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $data = array();
+    while($row = $result ->fetch_assoc()){
+        array_push($data,$row);
+    }
+    $json = json_encode($data);
+    $response->getBody()->write($json);
+    return $response->withHeader('Content-Type', 'application/json');
+});
 
 $app->post('/getingfield', function (Request $request, Response $response, array $args) {
     $body = $request->getBody();

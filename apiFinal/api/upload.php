@@ -17,7 +17,7 @@ $app->post('/uploadimg', function (Request $request, Response $response, array $
     $result = $stmt ->affected_rows;
     $response->getBody() ->write($result." ");
     return $response->withHeader('Content-Type', 'application/json');
-    
+
     
 });
 

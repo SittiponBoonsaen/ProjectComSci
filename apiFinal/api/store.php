@@ -5,21 +5,32 @@ ini_set('display_errors',1);
 error_reporting(E_ALL);
 
 $app->post('/store/add', function (Request $request, Response $response, array $args) {
-    //date_default_timezone_set('Asia/Bangkok');
-    //$DATETIME = date_create()->format('Y-m-d h:i:s');
-    ////////////////////////
     $conn = $GLOBALS['dbconn'];
     $body = $request->getBody();
     $bodyArray = json_decode($body, true);
-    //$stmt = $conn->prepare("insert into store"."(name_store,address_store,telephone_store) "." values (?,?,?)");
-    $stmt = $conn->prepare("INSERT INTO addressstore (district_addressStore, amphures_addressStore,province_addressStore )
-                                VALUES(?,?,?)");
-    $stmt ->bind_param('sss', $bodyArray['selectedprovinceaddstore'],$bodyArray['selectedamphuresaddstore'],$bodyArray['selectedistrictssaddstore']);
+    $stmt = $conn->prepare("INSERT INTO store (name_store,address_store,telephone_store,rules_store,status_store,owner_store) values(?,?,?,?,?,?)");
+    $stmt ->bind_param('ssssss', $bodyArray['name_store'],$bodyArray['address_store'],$bodyArray['telephone_store']
+    ,$bodyArray['rules_store'],$bodyArray['status_store'],$bodyArray['owner_store']);
     $stmt->execute();
     $result = $stmt ->affected_rows;
     $response->getBody() ->write($result." ");
     return $response->withHeader('Content-Type', 'application/json');
 });
+
+$app->post('/store/edit', function (Request $request, Response $response, array $args) {
+    $conn = $GLOBALS['dbconn']; 
+    $body = $request->getBody();
+    $bodyArray = json_decode($body, true);
+    $stmt = $conn->prepare("UPDATE store SET name_store=?, address_store=?,telephone_store=?,rules_store=?,status_store=? WHERE id_store= ?");
+    $stmt ->bind_param('ssssss', $bodyArray['name_store'],$bodyArray['address_store'],$bodyArray['telephone_store']
+    ,$bodyArray['rules_store'],$bodyArray['status_store'],$bodyArray['id_store']);
+    $stmt->execute();
+    $result = $stmt ->affected_rows;
+    $response->getBody() ->write($result." ");
+    return $response->withHeader('Content-Type', 'application/json');
+});
+
+
 
 $app->post('/getOwnerstore', function (Request $request, Response $response, array $args) {
     $body = $request->getBody();

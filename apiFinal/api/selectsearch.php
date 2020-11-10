@@ -39,5 +39,21 @@ $app->post('/amphures', function (Request $request, Response $response, array $a
     $response->getBody()->write($json);
     return $response->withHeader('Content-Type', 'application/json');
 });
+$app->post('/districts', function (Request $request, Response $response, array $args) {
+    $body = $request->getBody();
+    $bodyArray = json_decode($body,true);
+    $conn = $GLOBALS['dbconn'];
+    $stmt = $conn->prepare("select * from districts where amphure_id = ?");
+    $stmt->bind_param("s",$bodyArray['PATIENT_ID']);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $data = array();
+    while($row = $result ->fetch_assoc()){
+        array_push($data,$row);
+    }
+    $json = json_encode($data);
+    $response->getBody()->write($json);
+    return $response->withHeader('Content-Type', 'application/json');
+});
 
 ?>
