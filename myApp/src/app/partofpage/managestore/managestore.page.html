@@ -28,14 +28,16 @@
     </ng-template>
     <ng-template pTemplate="body" let-product>
       <tr style="font-family: 'Sarabun', sans-serif;">
-        <td><img src="data:image/png;base64,{{product.picture_store}}" [alt]="product.name_store" width="100" class="p-shadow-4"  /></td>
+        <td><img *ngIf="product.picture_store == null" src="assets/img/noimage.png" [alt]="product.name_store"   width="100" class="p-shadow-4"  />
+          <img *ngIf="product.picture_store != null" src="data:image/png;base64,{{product.picture_store}}" [alt]="product.name_store" width="100" class="p-shadow-4"  />
+        </td>
         <td>{{product.name_store}}</td>
 <!--        <td>{{product.telephone_store}}</td>-->
 <!--        <td>{{product.address_store}}</td>-->
 
         <td>
             <ion-icon name="search-outline" style="width: 25px;height: 25px;" (click)="gotomanagefiled(product.id_store)"></ion-icon>
-            <ion-icon name="construct-outline" class="p-button-rounded p-button-warning" style="width: 25px;height: 25px;" (click)="gotoEdit()"></ion-icon>
+            <ion-icon name="construct-outline" class="p-button-rounded p-button-warning" style="width: 25px;height: 25px;" (click)="gotoEdit(product.id_store)"></ion-icon>
         </td>
 
 <!--        <td><p-rating [ngModel]="product.rating" [readonly]="true" [cancel]="false"></p-rating></td>-->

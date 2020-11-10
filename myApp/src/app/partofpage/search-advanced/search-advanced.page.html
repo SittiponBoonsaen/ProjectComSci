@@ -16,6 +16,7 @@
 
 <ion-content class="background" style="font-family: 'Sarabun', sans-serif;">
 
+  <div class="padding">
 
   <ion-range dualKnobs="true" [min]=timeMin [max]=timeMax step="3"
               [(ngModel)]="time" (ionChange)="setBadge(time)" ></ion-range>
@@ -25,28 +26,34 @@
       <ion-text style="font-family: 'Sarabun', sans-serif;" color="primary">{{ this.timeMax2}} บาท /ชั่วโมง</ion-text>
     </ion-item>
   </div>
+    <br>
 
-  <ion-item  class="background">
-    <ion-label style="font-family: 'Sarabun', sans-serif;">Select: province</ion-label>
-    <ion-select style="font-family: 'Sarabun', sans-serif;"  class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
-      <ion-select-option  *ngFor="let province of this.selectedprovince " style="font-family: 'Sriracha', cursive;"
-                          value="{{province.id}}"> {{province.name_th}} </ion-select-option>
+    <label>ที่อยู่</label>
+    <br>
+    <br>
+    <ion-label>จังหวัด</ion-label>
+    <ion-select class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
+      <ion-item>
+        <ion-select-option  *ngFor="let province of this.selectedprovince "
+                            [value]="{value: province.id, name: province.name_th}"> {{province.name_th}} </ion-select-option>
+      </ion-item>
     </ion-select>
-  </ion-item>
+    <ion-label>อำเภอ</ion-label>
 
-  <ion-item  class="background">
-    <ion-label style="font-family: 'Sarabun', sans-serif;" >Select: amphures</ion-label>
-    <ion-select style="font-family: 'Sarabun', sans-serif;"class="custom-options" [(ngModel)]="mySelectamphures" (ionChange)="selectedamphuresmethod(mySelectamphures)">
-      <ion-select-option  *ngFor="let amphures of this.selectedamphures " style="font-family: 'Sarabun', sans-serif;"
-                          value="{{amphures.id}}"> {{amphures.name_th}} </ion-select-option>
+    <ion-select class="custom-options" [(ngModel)]="mySelectamphures" (ionChange)="selectedamphuresmethod(mySelectamphures)">
+      <ion-item>
+        <ion-select-option  *ngFor="let amphures of this.selectedamphures "
+                            [value]="{value: amphures.id, name: amphures.name_th}"> {{amphures.name_th}} </ion-select-option>
+      </ion-item>
     </ion-select>
-  </ion-item>
-
-<!--  <ion-item>-->
-<!--    <ion-label>Time</ion-label>-->
-<!--    <ion-datetime cancelText="cancel" doneText="done" displayFormat="DD : MMMM"></ion-datetime>-->
-<!--  </ion-item>-->
-
+    <ion-label>ตำบล</ion-label>
+    <ion-select class="custom-options" [(ngModel)]="mySelectdistricts" (ionChange)="selecteddistrictsmethod(mySelectdistricts)">
+      <ion-item>
+        <ion-select-option  *ngFor="let districts of this.selecteddistricts "
+                            value="{{districts.name_th}}"> {{districts.name_th}} </ion-select-option>
+      </ion-item>
+    </ion-select>
+  </div>
 
 
 </ion-content>

@@ -24,23 +24,23 @@ export class EditprofilePage implements OnInit {
 
   constructor(private camera: Camera, public alertController: AlertController, private router: Router,  private datapass: DatapassService, private Http: HttpClient) {
     this.dataUser = this.datapass.userIDLogin;
-    console.log(this.dataUser);
   }
 
   ngOnInit() {
   }
 
   editprofile(){
-
+    let inputfirstname = (<HTMLInputElement>document.getElementById('firstname_member')).value;
+    let inputlasname = (<HTMLInputElement>document.getElementById('lasname_member')).value;
+    let inputaddress = (<HTMLInputElement>document.getElementById('address_member')).value;
+    let inputtelephone = (<HTMLInputElement>document.getElementById('telephone_member')).value;
     const dataJSON = {
-      password_member: this.password_member,
-      firstname_member: document.getElementById('firstname_member'),
-      lasname_member: document.getElementById('lasname_member'),
-      address_member:  document.getElementById('address_member'),
-      telephone_member: document.getElementById('telephone_member'),
-      id_member: this.id_member
+      'firstname_member': inputfirstname,
+      'lasname_member': inputlasname,
+      'address_member':  inputaddress,
+      'telephone_member': inputtelephone,
+      'id_member': this.id_member
     };
-    console.log(dataJSON);
     this.Http.post('http://localhost:5000/apiFinal/usermember/edit', JSON.stringify(dataJSON))
         .subscribe(data => {
           console.log(data);
@@ -55,13 +55,14 @@ export class EditprofilePage implements OnInit {
     const alert = await this.alertController.create({
       cssClass: 'my-custom-class',
       header: 'Confirm!',
-      message: 'คุณต้องการที่จะแก้ไขหรือไม่ ?',
+      message: 'คุณต้องการที่จะแก้ไขระบบจะเด้งไปหน้าLogin ?',
       buttons: [
         {
           text: 'ใช่',
           handler: () => {
             this.editprofile();
             console.log('Confirm Okay');
+            const navigate = this.router.navigate(['/home/tabs/account']);
           }
         }, {
           text: 'ไม่',

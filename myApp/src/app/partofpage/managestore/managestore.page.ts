@@ -45,7 +45,8 @@ export class ManagestorePage implements OnInit {
     const navigate = this.router.navigate(['/home/tabs/account/managestore/addstore']);
   }
 
-  gotoEdit() {
+  gotoEdit(idstore) {
+    this.datapassService.idstoreformmanagestore = idstore;
     const navigate = this.router.navigate(['/home/tabs/account/managestore/editstore']);
   }
 

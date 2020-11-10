@@ -43,14 +43,18 @@ export class ManagefieldPage implements OnInit {
   }
 
   gotoDelete() {
+    const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
     const dataJSON = {
       "id_field": this.id_Field,
     };
     console.log(dataJSON);
-    this.Http.post('http://localhost:5000/apiFinal/field/delete', JSON.stringify(dataJSON))
-        .subscribe(data => {
-          console.log(data);
-        });
+    this.Http.post('http://localhost:5000/apiFinal/field/delete', JSON.stringify(dataJSON)).subscribe(data =>{
+      const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
+      console.log(data);
+    },error => {
+      const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
+      console.log(error);
+    });
   }
 
   async presentAlertConfirm(idfield) {

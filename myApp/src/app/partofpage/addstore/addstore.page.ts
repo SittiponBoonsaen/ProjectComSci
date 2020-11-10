@@ -10,21 +10,33 @@ import {Router} from '@angular/router';
   styleUrls: ['./addstore.page.scss'],
 })
 export class AddstorePage implements OnInit {
-  selectedamphures: any;
+
   mySelectamphures: any;
   mySelectprovince: any;
+  mySelectdistricts: any;
+
   selectedprovince: any;
+  selecteddistricts: any;
+  selectedamphures: any;
+
+  address: any;
+  otheraddress: any;
+  namestore: any;
+  telephone: any;
+  rulestore: any;
+  dataUsername: any;
+  status_store: any;
 
   constructor(private Http: HttpClient, private datapass: DatapassService, public alertController: AlertController, private router: Router) {
     this.selectedprovince = this.datapass.selectedprovince;
+
   }
 
   ngOnInit() {
   }
   selectedprovincemethod(select: any) {
-    console.log(select);
     const dataJSON = {
-      'PATIENT_ID': select,
+      'PATIENT_ID': this.mySelectprovince.value,
     };
     this.Http.post('http://localhost:5000/apiFinal/amphures', JSON.stringify(dataJSON))
         .subscribe(data => {
@@ -35,6 +47,19 @@ export class AddstorePage implements OnInit {
 
   selectedamphuresmethod(mySelectamphures: any) {
     console.log(mySelectamphures);
+    const dataJSON = {
+      'PATIENT_ID': this.mySelectamphures.value,
+    };
+    this.Http.post('http://localhost:5000/apiFinal/districts', JSON.stringify(dataJSON))
+        .subscribe(data => {
+          this.selecteddistricts = data;
+          console.log(this.selectedamphures);
+        });
+  }
+
+  selecteddistrictsmethod(mySelectdistricts: any) {
+    this.mySelectdistricts = mySelectdistricts;
+
   }
 
   async presentAlertConfirm() {
@@ -47,6 +72,7 @@ export class AddstorePage implements OnInit {
           text: 'ใช่',
           handler: () => {
             const navigate = this.router.navigate(['/login']);
+            this.summit();
             console.log('Confirm Okay');
           }
         }, {
@@ -61,8 +87,29 @@ export class AddstorePage implements OnInit {
     });
     await alert.present();
   }
+  summit(){
+    this.address = this.otheraddress + " ต." + this.mySelectdistricts + " อ." + this.mySelectamphures.name + " จ." + this.mySelectprovince.name;
+    this.dataUsername = this.datapass.userIDLogin;
+    let ownerid;
+    for (ownerid of this.dataUsername) {
+    }
+    const dataJSON = {
+      'name_store': this.namestore,
+      'address_store': this.address,
+      "telephone_store": this.telephone,
+      "rules_store": this.rulestore,
+      "owner_store": ownerid.id_member,
+      'status_store':this.status_store
+    };
 
-  goAccount() {
-
+    console.log(dataJSON);
+    this.Http.post('http://localhost:5000/apiFinal/store/add', JSON.stringify(dataJSON)).subscribe(data =>{
+      console.log(data);
+      window.alert("เพิ่มร้านสำเร็จ");
+      const navigate = this.router.navigate(['/home/tabs/account/managestore']);
+    },error => {
+      console.log(error);
+      window.alert("เพิ่มร้านไม่สำเร็จ");
+    });
   }
 }

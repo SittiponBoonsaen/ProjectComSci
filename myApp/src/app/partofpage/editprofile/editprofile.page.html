@@ -6,7 +6,7 @@
     <ion-buttons>
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title>editprofile</ion-title>
+    <ion-title>แก้ไขข้อมูลส่วนตัว</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -21,6 +21,12 @@
   </div>
 
 <div class="padding">
+  <div class="input-group mb-3" (click)="gochangepassword()">
+    <div class="input-group-prepend">
+      <br>
+    </div>
+    <span class="input-group-text form-control" id="basic-addon3"><ion-icon name="key-outline"> </ion-icon> เปลี่ยนรหัสผ่าน</span>
+  </div>
   <label>ชื่อ-สกุล</label>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
@@ -51,12 +57,6 @@
     <div class="input-group-prepend">
     </div>
     <input type="text" class="form-control" value="{{data.telephone_member}}" id="telephone_member"  aria-label="Username" aria-describedby="basic-addon1">
-  </div>
-  <div class="input-group mb-3" (click)="gochangepassword()">
-    <div class="input-group-prepend">
-  <br>
-    </div>
-    <span class="input-group-text form-control" id="basic-addon3"><ion-icon name="key-outline"> </ion-icon> เปลี่ยนรหัสผ่าน</span>
   </div>
   <div class="centerbutton">
     <button type="button" (click)="presentAlertConfirm(data.id_member)" class="btn btn-success ">ยืนยันการแก้ไข</button>

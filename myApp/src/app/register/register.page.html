@@ -45,14 +45,23 @@
     <div class="input-group mb-3">
       <div class="input-group-prepend">
       </div>
-      <input type="text" class="form-control" [(ngModel)] ="address" placeholder="ที่อยู่" aria-label="Username" aria-describedby="basic-addon1">
+
+        <textarea class="form-control" [(ngModel)] ="address" placeholder="ที่อยู่"  aria-label="With textarea"></textarea>
     </div>
     <label>เบอร์โทรศัพท์</label>
     <div class="input-group mb-3">
       <div class="input-group-prepend">
       </div>
-      <input type="" class="form-control"  [(ngModel)] ="telephone" placeholder="เบอร์โทรศัพท์" aria-label="Username" aria-describedby="basic-addon1">
+        <input type="text" class="form-control" [(ngModel)] ="telephone" placeholder="เบอร์โทรศัพท์" aria-label="Username" aria-describedby="basic-addon1">
     </div>
+        <ion-segment [(ngModel)]="valuedegree" (ionChange)="segmentChanged(valuedegree)">
+            <ion-segment-button value="customer">
+                <ion-label style="font-family: 'Sarabun', sans-serif;">ลูกค้า</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="owner">
+                <ion-label style="font-family: 'Sarabun', sans-serif;">เจ้าของสนาม</ion-label>
+            </ion-segment-button>
+        </ion-segment>
     <ion-button class="ion-button123" expand="block" color="secondary"(click)="register()" >สมัครสมาชิก</ion-button>
     </div>
 </ion-content>

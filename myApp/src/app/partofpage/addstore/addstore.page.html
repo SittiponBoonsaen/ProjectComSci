@@ -20,47 +20,59 @@
     <button type="button" (click)="selectImage()" class="btn btn-link"><ion-icon name="camera-outline"></ion-icon>เพิ่มรูปภาพ</button>
   </div>
   <div class="padding">
+
   <label>ชื่อร้าน</label>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
     </div>
-    <input type="text" class="form-control" placeholder="ชื่อร้าน" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control"[(ngModel)]="namestore" placeholder="ชื่อร้าน" aria-label="Username" aria-describedby="basic-addon1">
   </div>
+
   <label>ที่อยู่</label>
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
-    </div>
-    <div>
-    <ion-item>
-      <ion-label>Select: province</ion-label>
-      <ion-select class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
-        <ion-select-option  *ngFor="let province of this.selectedprovince "
-                            value="{{province.id}}"> {{province.name_th}} </ion-select-option>
-      </ion-select>
-    </ion-item>
+    <textarea class="form-control" [(ngModel)]="otheraddress" placeholder=""  aria-label="With textarea"></textarea>
     <br>
-    <ion-item>
-      <ion-label>Select: amphures</ion-label>
+    <ion-label>จังหวัด</ion-label>
+    <ion-select class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
+      <ion-item>
+        <ion-select-option  *ngFor="let province of this.selectedprovince "
+                            [value]="{value: province.id, name: province.name_th}"> {{province.name_th}} </ion-select-option>
+        </ion-item>
+    </ion-select>
+      <ion-label>อำเภอ</ion-label>
+
       <ion-select class="custom-options" [(ngModel)]="mySelectamphures" (ionChange)="selectedamphuresmethod(mySelectamphures)">
+        <ion-item>
         <ion-select-option  *ngFor="let amphures of this.selectedamphures "
-                            value="{{amphures.id}}"> {{amphures.name_th}} </ion-select-option>
+                            [value]="{value: amphures.id, name: amphures.name_th}"> {{amphures.name_th}} </ion-select-option>
+        </ion-item>
       </ion-select>
-    </ion-item>
-    </div>
-  </div>
+      <ion-label>ตำบล</ion-label>
+      <ion-select class="custom-options" [(ngModel)]="mySelectdistricts" (ionChange)="selecteddistrictsmethod(mySelectdistricts)">
+        <ion-item>
+        <ion-select-option  *ngFor="let districts of this.selecteddistricts "
+                            value="{{districts.name_th}}"> {{districts.name_th}} </ion-select-option>
+        </ion-item>
+      </ion-select>
+
   <label>เบอร์โทรศัพท์</label>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
     </div>
-    <input type="text" class="form-control" placeholder="เบอร์โทรศัพท์" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control" [(ngModel)]="telephone" placeholder="เบอร์โทรศัพท์" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <label>กฏของร้าน</label>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
     </div>
-    <textarea class="form-control" placeholder="กฏของร้าน"  aria-label="With textarea"></textarea>
+    <textarea class="form-control" [(ngModel)]="rulestore" placeholder="กฏของร้าน"  aria-label="With textarea"></textarea>
   </div>
-
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">สถานะของสนาม</label>
+      <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="status_store">
+        <option>เปิดให้บริการ</option>
+        <option>ไม่เปิดให้บริการ</option>
+      </select>
+    </div>
   <div class="centerbutton">
     <button type="button" (click)="presentAlertConfirm()" class="btn btn-success ">เพิ่มสนาม</button>
   </div>

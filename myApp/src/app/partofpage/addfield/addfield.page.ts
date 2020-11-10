@@ -49,8 +49,7 @@ export class AddfieldPage implements OnInit {
         {
           text: 'ใช่',
           handler: () => {
-            this.addfield();
-            window.alert("เพิ่มข้อมูลสำเร็จ");
+            this.summit();
             const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
           }
         }, {
@@ -65,5 +64,21 @@ export class AddfieldPage implements OnInit {
     });
     await alert.present();
   }
-
+  summit(){
+    const dataJSON = {
+      'id_store_field': this.idstore_field,
+      'name_field': this.name_field,
+      'size_field': this.size_field,
+      'price_field': this.price_field,
+      'status_field': this.status_field
+    };
+    console.log(dataJSON);
+    this.Http.post('http://localhost:5000/apiFinal/field/add', JSON.stringify(dataJSON)).subscribe(data =>{
+      console.log(data);
+      window.alert("เพิ่มสนามสำเร็จ");
+    },error => {
+      console.log(error);
+      window.alert("เพิ่มร้านไม่สำเร็จ");
+    });
+  }
 }

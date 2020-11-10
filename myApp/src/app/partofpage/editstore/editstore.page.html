@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="background" style="font-family: 'Sarabun', sans-serif;">
+<ion-content *ngFor="let data of this.datastore" class="background" style="font-family: 'Sarabun', sans-serif;">
   <div class="ion-padding sizeimage centeredit" style="">
     <img src="assets/img/noimage.png" class="rounded" alt="...">
   </div>
@@ -23,45 +23,36 @@
     <div class="input-group-prepend">
 
     </div>
-    <input type="text" class="form-control" value="ร้าน ฟุตบอลหญ้าเทียมFootball" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control"  value="{{data.name_store}}" id="name_store" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <label>ทึ่อยู่</label>
-  <div class="input-group mb-3">
-    <div class="input-group-prepend">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+      </div>
 
+      <textarea class="form-control"  value="{{data.address_store}}" id="address_store" placeholder="ที่อยู่"  aria-label="With textarea"></textarea>
     </div>
-    <div>
-      <ion-item>
-        <ion-label>Select: province</ion-label>
-        <ion-select class="custom-options" [(ngModel)]="mySelectprovince" (ionChange)="selectedprovincemethod(mySelectprovince)">
-          <ion-select-option  *ngFor="let province of this.selectedprovince "
-                              value="{{province.id}}"> {{province.name_th}} </ion-select-option>
-        </ion-select>
-      </ion-item>
-      <br>
-      <ion-item>
-        <ion-label>Select: amphures</ion-label>
-        <ion-select class="custom-options" [(ngModel)]="mySelectamphures" (ionChange)="selectedamphuresmethod(mySelectamphures)">
-          <ion-select-option  *ngFor="let amphures of this.selectedamphures "
-                              value="{{amphures.id}}"> {{amphures.name_th}} </ion-select-option>
-        </ion-select>
-      </ion-item>
-    </div>
-  </div>
+
   <label>เบอร์โทรศัพท์</label>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
     </div>
-    <input type="text" class="form-control" value="0951685495" aria-label="Username" aria-describedby="basic-addon1">
+    <input type="text" class="form-control"  value="{{data.telephone_store}}" id="telephone_store" aria-label="Username" aria-describedby="basic-addon1">
   </div>
 
   <label>กฏของร้าน</label>
   <div class="input-group mb-3">
     <div class="input-group-prepend">
     </div>
-    <textarea class="form-control" value="กฏของร้าน"  aria-label="With textarea"></textarea>
+    <textarea class="form-control"  value="{{data.rules_store}}"  id="rules_store" aria-label="With textarea"></textarea>
   </div>
-
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">สถานะของสนาม</label>
+      <select class="form-control" id="exampleFormControlSelect1"  value="{{data.status_store}}">
+        <option>เปิดให้บริการ</option>
+        <option>ไม่เปิดให้บริการ</option>
+      </select>
+    </div>
   <div class="centerbutton">
     <button type="button" (click)="presentAlertConfirm()" class="btn btn-success ">แก้ไขข้อมูลร้าน</button>
   </div>

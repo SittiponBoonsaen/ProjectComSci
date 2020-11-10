@@ -16,7 +16,7 @@ export class RegisterPage implements OnInit {
   telephone: any;
   address: any;
   status: any;
-  confirmpassword: any;
+  valuedegree: any;
 
 
 
@@ -31,11 +31,11 @@ export class RegisterPage implements OnInit {
       'username_member': this.username,
       'password_member': this.password,
       "firstname_member": this.firstname,
-      "lasname__member": this.lastname,
+      "lasname_member": this.lastname,
       "email_member": this.email,
       "address_member": this.address,
       "telephone_member": this.telephone,
-      "status_member": this.status
+      "status_member": this.valuedegree
     };
     console.log(dataJSON);
     this.Http.post('http://localhost:5000/apiFinal/usermember/register',JSON.stringify(dataJSON)).subscribe(data =>{
@@ -44,9 +44,10 @@ export class RegisterPage implements OnInit {
       console.log(data);
       window.alert("register complete");
     },error => {
-      const navigate = this.router.navigate(['/login']);
       console.log(error);
       window.alert("register fail");
     });
+  }
+  segmentChanged(valuedegree: any) {
   }
 }

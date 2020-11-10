@@ -19,6 +19,10 @@ export class SearchAdvancedPage implements OnInit {
   selectedamphures: any;
   mySelectamphures: any;
   loading:any;
+  selecteddistricts: any;
+  mySelectdistricts: any;
+  otheraddress: any;
+  address: any;
 
   constructor(private Http: HttpClient, private datapass: DatapassService,  private loadingController: LoadingController) {
     this.timeMin2 = this.timeMin;
@@ -35,24 +39,34 @@ export class SearchAdvancedPage implements OnInit {
     console.log(this.timeMax2);
   }
 
-  async selectedprovincemethod(select: any) {
-    this.loading = await this.loadingController.create({
-      message: 'รอสักครู่...',
-    });
-    console.log(select);
-    let dataJSON = {
-      'PATIENT_ID': select,
+  selectedprovincemethod(select: any) {
+    const dataJSON = {
+      'PATIENT_ID': this.mySelectprovince.value,
     };
-    this.Http.post('http://localhost:5000/apiFinal/amphures',JSON.stringify(dataJSON))
+    this.Http.post('http://localhost:5000/apiFinal/amphures', JSON.stringify(dataJSON))
         .subscribe(data => {
           this.selectedamphures = data;
-          this.loading.dismiss();
           console.log(this.selectedamphures);
         });
-    this.loading.present();
   }
 
   selectedamphuresmethod(mySelectamphures: any) {
     console.log(mySelectamphures);
+    const dataJSON = {
+      'PATIENT_ID': this.mySelectamphures.value,
+    };
+    this.Http.post('http://localhost:5000/apiFinal/districts', JSON.stringify(dataJSON))
+        .subscribe(data => {
+          this.selecteddistricts = data;
+          console.log(this.selectedamphures);
+        });
   }
+
+  selecteddistrictsmethod(mySelectdistricts: any) {
+    this.mySelectdistricts = mySelectdistricts;
+    this.address = " ต." + this.mySelectdistricts + " อ." + this.mySelectamphures.name + " จ." + this.mySelectprovince.name;
+    console.log(this.address);
+  }
+
+
 }
