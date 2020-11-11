@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {DatapassService} from '../../datapass.service';
 import {HttpClient} from '@angular/common/http';
+import {AlertController} from '@ionic/angular';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -13,7 +15,7 @@ export class MyhomeFieldPage implements OnInit {
   datastore;
   datafield;
   showdatastore;
-  constructor(private datapass: DatapassService, private Http: HttpClient) {
+  constructor(private datapass: DatapassService, private Http: HttpClient, private router: Router) {
     console.log(datapass.datastore);
     console.log(datapass.datafield);
     const dataJSON = {
@@ -35,4 +37,7 @@ export class MyhomeFieldPage implements OnInit {
     console.log(id_field);
   }
 
+    gotosomething() {
+      const navigate = this.router.navigate(['/home/tabs/myhome/myhome-field/payment']);
+    }
 }

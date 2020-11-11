@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
+
 <ion-header>
   <ion-toolbar>
     <ion-title>payment</ion-title>
@@ -5,5 +8,49 @@
 </ion-header>
 
 <ion-content>
+  <div class="padding">
+    <label style="font-family: 'Sarabun', sans-serif;" >ราคาที่จ่าย</label>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+      </div>
+      <input type="text" class="form-control"[(ngModel)] ="username" placeholder="ใส่จำนวนเงิน" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
 
+
+    <div class="ion-padding sizeimage centeredit" style="">
+      <img src="assets/img/noimage.png" class="rounded" alt="...">
+    </div>
+    <div  class="centerbutton">
+      <button type="button" (click)="selectImage()" class="btn btn-link"><ion-icon name="camera-outline"></ion-icon>แนบหลักฐานการโอน</button>
+    </div>
+    <br>
+    <ion-label>เวลาที่โอนที่เข้ามา</ion-label>
+    <ion-item>
+      <ion-label style="font-family: 'Sarabun', sans-serif;" >เวลาที่โอนที่เข้ามา</ion-label>
+      <ion-datetime displayFormat="HH:mm DD MMM YYYY" min="2020" max="2020" value="12:00-2020-11-11"></ion-datetime>
+    </ion-item>
+    <br>
+    <div class="input-group mb-3" >
+      <div class="input-group-prepend">
+        <br>
+      </div>
+      <span style="font-family: 'Sarabun', sans-serif;" class="input-group-text form-control" id="basic-addon3">
+        <label style="text-align: left;">ส่วนลด</label>
+        <label class="alignme" >0 THB</label>
+       </span>
+    </div>
+    <div class="input-group mb-3" >
+      <div class="input-group-prepend">
+        <br>
+      </div>
+      <span style="font-family: 'Sarabun', sans-serif;" class="input-group-text form-control" id="basic-addon3">
+        <label style="text-align: left;">รวมทั้งสิ้น</label>
+        <label class="alignme" >600 THB</label>
+       </span>
+      <br>
+    </div>
+
+
+
+  </div>
 </ion-content>
