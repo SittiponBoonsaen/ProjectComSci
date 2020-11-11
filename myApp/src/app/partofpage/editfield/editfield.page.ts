@@ -72,7 +72,7 @@ export class EditfieldPage implements OnInit {
     this.Http.post('http://localhost:5000/apiFinal/field/edit', JSON.stringify(dataJSON)).subscribe(data =>{
       console.log(data);
       window.alert("แก้ไขสนามสำเร็จ");
-      const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
+      const navigate = this.router.navigate(['/home/tabs/managestore/managefield']);
     },error => {
       console.log(error);
       window.alert("แก้ไขสนามไม่สำเร็จ");
@@ -80,6 +80,6 @@ export class EditfieldPage implements OnInit {
   }
 
     gotodiscount() {
-      const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield/editfield/discount']);
+      const navigate = this.router.navigate(['/home/tabs/managestore/managefield/editfield/discount']);
     }
 }
