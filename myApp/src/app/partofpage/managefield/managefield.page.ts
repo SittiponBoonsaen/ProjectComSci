@@ -35,26 +35,26 @@ export class ManagefieldPage implements OnInit {
     this.loading.present();
   }
   goToAddfield() {
-    const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield/addfield']);
+    const navigate = this.router.navigate(['/home/tabs/managestore/managefield/addfield']);
   }
 
   gotoEdit(idfield) {
     this.datapassService.idfieldformmanagefield = idfield
     console.log(idfield);
-    const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield/editfield']);
+    const navigate = this.router.navigate(['/home/tabs/managestore/managefield/editfield']);
   }
 
   gotoDelete() {
-    const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
+    const navigate = this.router.navigate(['/home/tabs/managestore/managefield']);
     const dataJSON = {
       "id_field": this.id_Field,
     };
     console.log(dataJSON);
     this.Http.post('http://localhost:5000/apiFinal/field/delete', JSON.stringify(dataJSON)).subscribe(data =>{
-      const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
+      const navigate = this.router.navigate(['/home/tabs/managestore/managefield']);
       console.log(data);
     },error => {
-      const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
+      const navigate = this.router.navigate(['/home/tabs/managestore/managefield']);
       console.log(error);
     });
   }

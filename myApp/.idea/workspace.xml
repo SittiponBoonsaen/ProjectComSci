@@ -22,16 +22,11 @@
     <list default="true" id="2def3aa1-3b4d-45b9-b0e4-18be953b2389" name="Default Changelist" comment="11/11/63">
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Ping_Sittipon.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Ping_Sittipon.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/home-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tabs/account/account.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/account/account.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/account/account-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/account/account-routing.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +156,7 @@
       <workItem from="1604992776255" duration="8891000" />
       <workItem from="1605014439305" duration="17091000" />
       <workItem from="1605066989477" duration="5167000" />
-      <workItem from="1605111236333" duration="5458000" />
+      <workItem from="1605111236333" duration="6442000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2/9/63">
       <created>1599062190699</created>
@@ -345,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605111894569</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="edit again !!!">
+      <created>1605116850238</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1605116850238</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,10 +411,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="598" y="286" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1602814197108" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605111901424">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605116864609">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1605111901424" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1605116864609" />
     <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605008554470">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

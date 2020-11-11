@@ -42,17 +42,17 @@ export class ManagestorePage implements OnInit {
   }
 
   goToAddstore() {
-    const navigate = this.router.navigate(['/home/tabs/account/managestore/addstore']);
+    const navigate = this.router.navigate(['/home/tabs/managestore/addstore']);
   }
 
   gotoEdit(idstore) {
     this.datapassService.idstoreformmanagestore = idstore;
-    const navigate = this.router.navigate(['/home/tabs/account/managestore/editstore']);
+    const navigate = this.router.navigate(['/home/tabs/managestore/editstore']);
   }
 
   gotomanagefiled(idstore) {
     this.datapassService.idstoreformmanagestore = idstore;
     console.log(this.datapassService.idstoreformmanagestore);
-    const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
+    const navigate = this.router.navigate(['/home/tabs/managestore/managefield']);
   }
 }
