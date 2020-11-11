@@ -21,7 +21,7 @@ export class MyhomeFieldPage implements OnInit {
     const dataJSON = {
       id_store:  this.datapass.idstoreformmyhome,
     };
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/getstoreformID', JSON.stringify(dataJSON))
+    this.Http.post('http://localhost:5000/apiFinal/getstoreformID', JSON.stringify(dataJSON))
         .subscribe(datastore => {
           this.showdatastore = datastore;
         });

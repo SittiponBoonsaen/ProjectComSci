@@ -19,7 +19,7 @@ export class EditstorePage implements OnInit {
     const dataJSON = {
       "id_store": this.idstore
     };
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/getstoreformID', JSON.stringify(dataJSON))
+    this.Http.post('http://localhost:5000/apiFinal/getstoreformID', JSON.stringify(dataJSON))
         .subscribe(datastore => {
               this.datastore = datastore;
               console.log(this.datastore);
@@ -73,7 +73,7 @@ export class EditstorePage implements OnInit {
       "id_store": iddatastore.id_store
     };
     console.log(dataJSON);
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/store/edit', JSON.stringify(dataJSON)).subscribe(data =>{
+    this.Http.post('http://localhost:5000/apiFinal/store/edit', JSON.stringify(dataJSON)).subscribe(data =>{
       console.log(data);
       window.alert("แก้ไขร้านสำเร็จ");
       const navigate = this.router.navigate(['/home/tabs/account/managestore']);

@@ -26,7 +26,7 @@ export class ManagefieldPage implements OnInit {
     const dataJSON = {
       id_store: this.idstore,
     };
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON))
+    this.Http.post('http://localhost:5000/apiFinal/getingfield', JSON.stringify(dataJSON))
         .subscribe(datastore => {
           this.datafield = datastore;
           this.loading.dismiss();
@@ -50,7 +50,7 @@ export class ManagefieldPage implements OnInit {
       "id_field": this.id_Field,
     };
     console.log(dataJSON);
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/field/delete', JSON.stringify(dataJSON)).subscribe(data =>{
+    this.Http.post('http://localhost:5000/apiFinal/field/delete', JSON.stringify(dataJSON)).subscribe(data =>{
       const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
       console.log(data);
     },error => {

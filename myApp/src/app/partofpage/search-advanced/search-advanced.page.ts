@@ -43,7 +43,7 @@ export class SearchAdvancedPage implements OnInit {
     const dataJSON = {
       'PATIENT_ID': this.mySelectprovince.value,
     };
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/amphures', JSON.stringify(dataJSON))
+    this.Http.post('http://localhost:5000/piFinal/amphures', JSON.stringify(dataJSON))
         .subscribe(data => {
           this.selectedamphures = data;
           console.log(this.selectedamphures);
@@ -55,7 +55,7 @@ export class SearchAdvancedPage implements OnInit {
     const dataJSON = {
       'PATIENT_ID': this.mySelectamphures.value,
     };
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/districts', JSON.stringify(dataJSON))
+    this.Http.post('http://localhost:5000/apiFinal/districts', JSON.stringify(dataJSON))
         .subscribe(data => {
           this.selecteddistricts = data;
           console.log(this.selectedamphures);

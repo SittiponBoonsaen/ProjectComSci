@@ -20,7 +20,7 @@ export class LoginPage implements OnInit {
   }
   ngOnInit() {
     this.routerOutlet.swipeGesture = false;
-    this.Http.get<any[]>('https://finalprojectcs.000webhostapp.com/apiFinal/province')
+    this.Http.get<any[]>('http://localhost:5000/apiFinal/province')
         .subscribe(data => {
           this.datapassService.selectedprovince = data;
           console.log(data);
@@ -30,7 +30,7 @@ export class LoginPage implements OnInit {
     this.loading = await this.loadingController.create({
       message: 'กำลังโหลดข้อมูล...',
     });
-    this.Http.get('https://finalprojectcs.000webhostapp.com/apiFinal/getstore')
+    this.Http.get('http://localhost:5000/apiFinal/getstore')
         .subscribe(data => {
           this.datapassService.datastore = data;
           console.log(data);
@@ -48,7 +48,7 @@ export class LoginPage implements OnInit {
       'password_member': this.password,
       'status_member': this.valuedegree
     };
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/usermember/login',JSON.stringify(dataJSON)).subscribe(data =>{
+    this.Http.post('http://localhost:5000/apiFinal/usermember/login',JSON.stringify(dataJSON)).subscribe(data =>{
       this.loading2.dismiss();
       console.log("login complete");
       this.router.setUpLocationChangeListener();

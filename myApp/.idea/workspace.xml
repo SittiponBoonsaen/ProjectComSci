@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2def3aa1-3b4d-45b9-b0e4-18be953b2389" name="Default Changelist" comment="11/11/63">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/payment/payment.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/payment/payment.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/partofpage/payment/payment.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/payment/payment.page.scss" afterDir="false" />
-    </list>
+    <list default="true" id="2def3aa1-3b4d-45b9-b0e4-18be953b2389" name="Default Changelist" comment="11/11/63" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,6 +148,7 @@
       <workItem from="1604992776255" duration="8891000" />
       <workItem from="1605014439305" duration="17091000" />
       <workItem from="1605066989477" duration="5167000" />
+      <workItem from="1605111236333" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2/9/63">
       <created>1599062190699</created>

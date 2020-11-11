@@ -18,7 +18,7 @@ export class EditfieldPage implements OnInit {
     const dataJSON = {
       'id_field': this.idfield,
     };
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/getfieldformID', JSON.stringify(dataJSON))
+    this.Http.post('http://localhost:5000/apiFinal/getfieldformID', JSON.stringify(dataJSON))
         .subscribe(datafield => {
           this.datafield = datafield;
           console.log(this.datafield);
@@ -69,7 +69,7 @@ export class EditfieldPage implements OnInit {
     };
 
     console.log(dataJSON);
-    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/field/edit', JSON.stringify(dataJSON)).subscribe(data =>{
+    this.Http.post('http://localhost:5000/apiFinal/field/edit', JSON.stringify(dataJSON)).subscribe(data =>{
       console.log(data);
       window.alert("แก้ไขสนามสำเร็จ");
       const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
