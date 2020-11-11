@@ -38,6 +38,6 @@ export class MyhomeFieldPage implements OnInit {
   }
 
     gotosomething() {
-      const navigate = this.router.navigate(['/home/tabs/myhome/myhome-field/payment']);
+      const navigate = this.router.navigate(['/home/tabs/myhome/myhome-field/chartreservations']);
     }
 }

@@ -45,6 +45,24 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'managestore',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../partofpage/managestore/managestore.module').then(m => m.ManagestorePageModule)
+          }
+        ]
+      },
+      {
+        path: 'datareservations',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../showdetail/datareservations/datareservations.module').then(m => m.DatareservationsPageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: 'tabs/myhome',
         pathMatch: 'full'

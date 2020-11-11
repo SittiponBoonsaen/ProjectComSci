@@ -32,6 +32,8 @@
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
     "@ngx-translate/core": "^13.0.0",
     "@ngx-translate/http-loader": "^6.0.0",
+    "chart.js": "^2.9.4",
+    "highcharts": "^8.2.2",
     "pipes-module": "^1.0.1",
     "primeicons": "^4.0.0",
     "primeng": "^10.0.0",

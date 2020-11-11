@@ -12,6 +12,8 @@
       <w>cordova</w>
       <w>datafield</w>
       <w>datapass</w>
+      <w>dataresercations</w>
+      <w>datareservations</w>
       <w>datasearch</w>
       <w>datastore</w>
       <w>editprofile</w>
@@ -47,6 +49,7 @@
       <w>selectedprovincemethodadd</w>
       <w>selectprovince</w>
       <w>showdatastore</w>
+      <w>showdetail</w>
       <w>texto</w>
       <w>textsearch</w>
       <w>tomanage</w>

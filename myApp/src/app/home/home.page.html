@@ -1,5 +1,5 @@
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
-<ion-tabs>
+<ion-tabs  *ngFor="let data of dataAccount" style="font-family: 'Sarabun', sans-serif;">
     <ion-tab-bar slot="bottom" style="font-family: 'Sarabun', sans-serif;">
         <ion-tab-button tab="myhome">
             <ion-icon name="home"></ion-icon>
@@ -7,11 +7,15 @@
             <ion-badge>6</ion-badge>
         </ion-tab-button>
 
-        <ion-tab-button tab="search">
-            <ion-icon name="search"></ion-icon>
-            <ion-label>search</ion-label>
+        <ion-tab-button *ngIf=" data.status_member == 'owner'"  tab="managestore">
+            <ion-icon name="file-tray-full-outline"></ion-icon>
+            <ion-label>จัดการร้าน</ion-label>
         </ion-tab-button>
 
+        <ion-tab-button tab="datareservations">
+            <ion-icon name="list-outline"></ion-icon>
+            <ion-label>ข้อมูลการจอง</ion-label>
+        </ion-tab-button>
 
         <ion-tab-button tab="account">
             <ion-icon name="person"></ion-icon>
