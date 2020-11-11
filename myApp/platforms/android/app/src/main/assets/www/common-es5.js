@@ -1,7 +1,17 @@
 (function () {
-  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+  function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+  function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+  function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+  function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+  function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
   function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
   function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
@@ -314,6 +324,46 @@
     },
 
     /***/
+    "7O8L":
+    /*!********************************************************************!*\
+      !*** ./src/app/partofpage/changepassword/changepassword.page.scss ***!
+      \********************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function O8L(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = ".padding {\n  border-radius: 5px;\n  padding: 20px;\n}\n\n.background {\n  --background: #f5f5f3;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9jaGFuZ2VwYXNzd29yZC9jaGFuZ2VwYXNzd29yZC5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxrQkFBQTtFQUNBLGFBQUE7QUFDRjs7QUFDQTtFQUNFLHFCQUFBO0FBRUYiLCJmaWxlIjoic3JjL2FwcC9wYXJ0b2ZwYWdlL2NoYW5nZXBhc3N3b3JkL2NoYW5nZXBhc3N3b3JkLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5wYWRkaW5nIHtcclxuICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiAgcGFkZGluZzogMjBweDtcclxufVxyXG4uYmFja2dyb3VuZCB7XHJcbiAgLS1iYWNrZ3JvdW5kOiAjZjVmNWYzO1xyXG59XHJcbiJdfQ== */";
+      /***/
+    },
+
+    /***/
+    "84QB":
+    /*!**********************************************************************************************************!*\
+      !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/partofpage/changepassword/changepassword.page.html ***!
+      \**********************************************************************************************************/
+
+    /*! exports provided: default */
+
+    /***/
+    function QB(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony default export */
+
+
+      __webpack_exports__["default"] = "<link href=\"https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap\" rel=\"stylesheet\">\n<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\n\n<ion-header class=\"background\" style=\"font-family: 'Sarabun', sans-serif;\">\n  <ion-toolbar class=\"background\">\n    <ion-buttons >\n      <ion-back-button style=\"font-family: 'Sarabun', sans-serif;\" defaultHref=\"home\"></ion-back-button>\n    </ion-buttons>\n    <ion-buttons slot=\"primary\" >\n      <ion-button color=\"secondary\" (click)=\"presentAlertConfirm()\" i style=\"font-family: 'Sarabun', sans-serif;\">\n        save\n      </ion-button>\n    </ion-buttons>\n    <ion-title style=\"font-family: 'Sarabun', sans-serif;\">เปลี่ยนรหัสผ่าน</ion-title>\n\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"background\" style=\"font-family: 'Sarabun', sans-serif;\">\n  <div class=\"padding\">\n\n  <label>รหัสผ่านใหม่</label>\n  <div class=\"input-group mb-3 background\">\n    <div class=\"input-group-prepend\">\n    </div>\n    <input type=\"email\" class=\"form-control\"[(ngModel)] =\"password\" placeholder=\"\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\n  </div>\n  <label>ยืนยันรหัสผ่าน</label>\n  <div class=\"input-group mb-3 background\">\n    <div class=\"input-group-prepend\">\n    </div>\n    <input type=\"email\" class=\"form-control\"[(ngModel)] =\"passwordconfirm\" placeholder=\"\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\n  </div>\n  </div>\n</ion-content>\n";
+      /***/
+    },
+
+    /***/
     "NqGI":
     /*!**************************************************************************!*\
       !*** ./node_modules/@ionic/core/dist/esm/framework-delegate-d1eb6504.js ***!
@@ -539,6 +589,79 @@
     },
 
     /***/
+    "Qqm9":
+    /*!********************************************************************!*\
+      !*** ./src/app/partofpage/changepassword/changepassword.module.ts ***!
+      \********************************************************************/
+
+    /*! exports provided: ChangepasswordPageModule */
+
+    /***/
+    function Qqm9(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ChangepasswordPageModule", function () {
+        return ChangepasswordPageModule;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+      /* harmony import */
+
+
+      var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/common */
+      "ofXK");
+      /* harmony import */
+
+
+      var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/forms */
+      "3Pt+");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! @ionic/angular */
+      "TEn/");
+      /* harmony import */
+
+
+      var _changepassword_routing_module__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! ./changepassword-routing.module */
+      "tDmW");
+      /* harmony import */
+
+
+      var _changepassword_page__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! ./changepassword.page */
+      "zzF7");
+
+      var ChangepasswordPageModule = function ChangepasswordPageModule() {
+        _classCallCheck(this, ChangepasswordPageModule);
+      };
+
+      ChangepasswordPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["CommonModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"], _changepassword_routing_module__WEBPACK_IMPORTED_MODULE_5__["ChangepasswordPageRoutingModule"]],
+        declarations: [_changepassword_page__WEBPACK_IMPORTED_MODULE_6__["ChangepasswordPage"]]
+      })], ChangepasswordPageModule);
+      /***/
+    },
+
+    /***/
     "hcCc":
     /*!*************************************************************!*\
       !*** ./node_modules/@ionic/core/dist/esm/theme-3f0b0c04.js ***!
@@ -660,6 +783,66 @@
     },
 
     /***/
+    "tDmW":
+    /*!****************************************************************************!*\
+      !*** ./src/app/partofpage/changepassword/changepassword-routing.module.ts ***!
+      \****************************************************************************/
+
+    /*! exports provided: ChangepasswordPageRoutingModule */
+
+    /***/
+    function tDmW(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ChangepasswordPageRoutingModule", function () {
+        return ChangepasswordPageRoutingModule;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! @angular/router */
+      "tyNb");
+      /* harmony import */
+
+
+      var _changepassword_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! ./changepassword.page */
+      "zzF7");
+
+      var routes = [{
+        path: '',
+        component: _changepassword_page__WEBPACK_IMPORTED_MODULE_3__["ChangepasswordPage"]
+      }];
+
+      var ChangepasswordPageRoutingModule = function ChangepasswordPageRoutingModule() {
+        _classCallCheck(this, ChangepasswordPageRoutingModule);
+      };
+
+      ChangepasswordPageRoutingModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+        imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forChild(routes)],
+        exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+      })], ChangepasswordPageRoutingModule);
+      /***/
+    },
+
+    /***/
     "woWk":
     /*!*************************************!*\
       !*** ./src/app/datapass.service.ts ***!
@@ -702,6 +885,203 @@
       DatapassService = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
         providedIn: 'root'
       })], DatapassService);
+      /***/
+    },
+
+    /***/
+    "zzF7":
+    /*!******************************************************************!*\
+      !*** ./src/app/partofpage/changepassword/changepassword.page.ts ***!
+      \******************************************************************/
+
+    /*! exports provided: ChangepasswordPage */
+
+    /***/
+    function zzF7(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "ChangepasswordPage", function () {
+        return ChangepasswordPage;
+      });
+      /* harmony import */
+
+
+      var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! tslib */
+      "mrSG");
+      /* harmony import */
+
+
+      var _raw_loader_changepassword_page_html__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+      /*! raw-loader!./changepassword.page.html */
+      "84QB");
+      /* harmony import */
+
+
+      var _changepassword_page_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+      /*! ./changepassword.page.scss */
+      "7O8L");
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+      /*! @angular/core */
+      "fXoL");
+      /* harmony import */
+
+
+      var _datapass_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+      /*! ../../datapass.service */
+      "woWk");
+      /* harmony import */
+
+
+      var _angular_common_http__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! @angular/common/http */
+      "tk/3");
+      /* harmony import */
+
+
+      var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! @angular/router */
+      "tyNb");
+      /* harmony import */
+
+
+      var _ionic_angular__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+      /*! @ionic/angular */
+      "TEn/");
+
+      var ChangepasswordPage = /*#__PURE__*/function () {
+        function ChangepasswordPage(datapassService, Http, router, loadingController, alertController) {
+          _classCallCheck(this, ChangepasswordPage);
+
+          this.datapassService = datapassService;
+          this.Http = Http;
+          this.router = router;
+          this.loadingController = loadingController;
+          this.alertController = alertController;
+          this.dataUsername = this.datapassService.userIDLogin;
+        }
+
+        _createClass(ChangepasswordPage, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }, {
+          key: "presentAlertConfirm",
+          value: function presentAlertConfirm() {
+            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee3() {
+              var _this = this;
+
+              var alert;
+              return regeneratorRuntime.wrap(function _callee3$(_context3) {
+                while (1) {
+                  switch (_context3.prev = _context3.next) {
+                    case 0:
+                      _context3.next = 2;
+                      return this.alertController.create({
+                        cssClass: 'my-custom-class',
+                        header: 'Confirm!',
+                        message: 'คุณต้องการที่จะแก้ไขหรือไม่ ?',
+                        buttons: [{
+                          text: 'ใช่',
+                          handler: function handler() {
+                            var navigate = _this.router.navigate(['/login']);
+
+                            _this.summit();
+
+                            console.log('Confirm Okay');
+                          }
+                        }, {
+                          text: 'ไม่',
+                          role: 'cancel',
+                          cssClass: 'secondary',
+                          handler: function handler(blah) {
+                            console.log('Confirm Cancel: blah');
+                          }
+                        }]
+                      });
+
+                    case 2:
+                      alert = _context3.sent;
+                      _context3.next = 5;
+                      return alert.present();
+
+                    case 5:
+                    case "end":
+                      return _context3.stop();
+                  }
+                }
+              }, _callee3, this);
+            }));
+          }
+        }, {
+          key: "summit",
+          value: function summit() {
+            var _this2 = this;
+
+            if (this.password === this.passwordconfirm) {
+              var dataUsername;
+
+              var _iterator = _createForOfIteratorHelper(this.dataUsername),
+                  _step;
+
+              try {
+                for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                  dataUsername = _step.value;
+                }
+              } catch (err) {
+                _iterator.e(err);
+              } finally {
+                _iterator.f();
+              }
+
+              var dataJSON = {
+                'password_member': this.password,
+                'id_member': dataUsername.id_member
+              };
+              console.log(dataJSON);
+              this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/usermember/changepassword', JSON.stringify(dataJSON)).subscribe(function (data) {
+                console.log(data);
+                window.alert("แก้ไขสำเร็จ");
+
+                var navigate = _this2.router.navigate(['/home/tabs/account']);
+              }, function (error) {
+                console.log(error);
+                window.alert("แก้ไขไม่สำเร็จ");
+              });
+            } else {
+              window.alert("รหัสผ่านไม่ตรง");
+            }
+          }
+        }]);
+
+        return ChangepasswordPage;
+      }();
+
+      ChangepasswordPage.ctorParameters = function () {
+        return [{
+          type: _datapass_service__WEBPACK_IMPORTED_MODULE_4__["DatapassService"]
+        }, {
+          type: _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClient"]
+        }, {
+          type: _angular_router__WEBPACK_IMPORTED_MODULE_6__["Router"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["LoadingController"]
+        }, {
+          type: _ionic_angular__WEBPACK_IMPORTED_MODULE_7__["AlertController"]
+        }];
+      };
+
+      ChangepasswordPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([Object(_angular_core__WEBPACK_IMPORTED_MODULE_3__["Component"])({
+        selector: 'app-changepassword',
+        template: _raw_loader_changepassword_page_html__WEBPACK_IMPORTED_MODULE_1__["default"],
+        styles: [_changepassword_page_scss__WEBPACK_IMPORTED_MODULE_2__["default"]]
+      })], ChangepasswordPage);
       /***/
     }
   }]);

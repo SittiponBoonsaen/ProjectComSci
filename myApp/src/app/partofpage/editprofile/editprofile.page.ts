@@ -41,7 +41,7 @@ export class EditprofilePage implements OnInit {
       'telephone_member': inputtelephone,
       'id_member': this.id_member
     };
-    this.Http.post('http://localhost:5000/apiFinal/usermember/edit', JSON.stringify(dataJSON))
+    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/usermember/edit', JSON.stringify(dataJSON))
         .subscribe(data => {
           console.log(data);
           const navigate = this.router.navigate(['/login']);

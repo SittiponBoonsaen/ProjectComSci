@@ -53,6 +53,17 @@
       var routes = [{
         path: '',
         component: _editprofile_page__WEBPACK_IMPORTED_MODULE_3__["EditprofilePage"]
+      }, {
+        path: 'changepassword',
+        loadChildren: function loadChildren() {
+          return __webpack_require__.e(
+          /*! import() | changepassword-changepassword-module */
+          "common").then(__webpack_require__.bind(null,
+          /*! ../changepassword/changepassword.module */
+          "Qqm9")).then(function (m) {
+            return m.ChangepasswordPageModule;
+          });
+        }
       }];
 
       var EditprofilePageRoutingModule = function EditprofilePageRoutingModule() {
@@ -155,7 +166,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = ".sizeimage {\n  width: 150px;\n  height: 150px;\n  border-radius: 50%;\n}\n\n.centeredit {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  width: 50%;\n}\n\n.centerbutton {\n  display: flex;\n  justify-content: center;\n}\n\n.background {\n  --background: #f5f5f3;\n}\n\n.img {\n  width: 125px;\n  height: 125px;\n  border-radius: 50%;\n  border: 8px solid #ffffff;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9lZGl0cHJvZmlsZS9lZGl0cHJvZmlsZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFBO0VBQ0EsYUFBQTtFQUNBLGtCQUFBO0FBQ0Y7O0FBQ0E7RUFDRSxjQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLFVBQUE7QUFFRjs7QUFBQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtBQUdGOztBQURBO0VBQ0UscUJBQUE7QUFJRjs7QUFGQTtFQUNFLFlBQUE7RUFDQSxhQUFBO0VBQ0Esa0JBQUE7RUFDQSx5QkFBQTtBQUtGIiwiZmlsZSI6InNyYy9hcHAvcGFydG9mcGFnZS9lZGl0cHJvZmlsZS9lZGl0cHJvZmlsZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2l6ZWltYWdle1xyXG4gIHdpZHRoOiAxNTBweDtcclxuICBoZWlnaHQ6IDE1MHB4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcclxufVxyXG4uY2VudGVyZWRpdCB7XHJcbiAgZGlzcGxheTogYmxvY2s7XHJcbiAgbWFyZ2luLWxlZnQ6IGF1dG87XHJcbiAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xyXG4gIHdpZHRoOiA1MCU7XHJcbn1cclxuLmNlbnRlcmJ1dHRvbntcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbi5iYWNrZ3JvdW5kIHtcclxuICAtLWJhY2tncm91bmQ6ICNmNWY1ZjM7XHJcbn1cclxuLmltZyB7XHJcbiAgd2lkdGg6IDEyNXB4O1xyXG4gIGhlaWdodDogMTI1cHg7XHJcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gIGJvcmRlcjogOHB4IHNvbGlkICNmZmZmZmY7XHJcbn1cclxuIl19 */";
+      __webpack_exports__["default"] = ".sizeimage {\n  width: 150px;\n  height: 150px;\n  border-radius: 50%;\n  border: 2px solid #ffffff;\n}\n\n.centeredit {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  width: 50%;\n}\n\n.centerbutton {\n  display: flex;\n  justify-content: center;\n}\n\n.background {\n  --background: #f5f5f3;\n}\n\n.img {\n  width: 125px;\n  height: 125px;\n  border-radius: 50%;\n  border: 8px solid #ffffff;\n}\n\nion-content {\n  --background: #f5f5f3;\n}\n\nion-content #header {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\nion-content #header .h1 {\n  font-weight: 700;\n  font-size: 26px;\n  color: #010100;\n  margin-bottom: 15%;\n}\n\nion-content #header img {\n  width: 125px;\n  height: 125px;\n  border-radius: 50%;\n  border: 2px solid #ffffff;\n}\n\nion-content .form456 {\n  margin-top: 15%;\n  padding-left: 30px;\n  padding-right: 30px;\n}\n\nion-content .ion-button123 {\n  margin-top: 35px;\n  height: 48px;\n  font-size: 18px;\n  text-transform: initial;\n  border-radius: 50px;\n  box-shadow: 1px 8px 8px 0px rgba(0, 0, 0, 0.05);\n  --box-shadow: none;\n}\n\n.padding {\n  border-radius: 5px;\n  padding: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9lZGl0cHJvZmlsZS9lZGl0cHJvZmlsZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFBO0VBQ0EsYUFBQTtFQUNBLGtCQUFBO0VBQ0EseUJBQUE7QUFDRjs7QUFDQTtFQUNFLGNBQUE7RUFDQSxpQkFBQTtFQUNBLGtCQUFBO0VBQ0EsVUFBQTtBQUVGOztBQUFBO0VBQ0UsYUFBQTtFQUNBLHVCQUFBO0FBR0Y7O0FBREE7RUFDRSxxQkFBQTtBQUlGOztBQUZBO0VBQ0UsWUFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtFQUNBLHlCQUFBO0FBS0Y7O0FBSEE7RUFDRSxxQkFBQTtBQU1GOztBQUpFO0VBQ0UsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsbUJBQUE7QUFNSjs7QUFKSTtFQUNFLGdCQUFBO0VBQ0EsZUFBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtBQU1OOztBQUhJO0VBQ0UsWUFBQTtFQUNBLGFBQUE7RUFDQSxrQkFBQTtFQUNBLHlCQUFBO0FBS047O0FBREU7RUFDRSxlQUFBO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTtBQUdKOztBQURFO0VBQ0UsZ0JBQUE7RUFDQSxZQUFBO0VBQ0EsZUFBQTtFQUNBLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSwrQ0FBQTtFQUNBLGtCQUFBO0FBR0o7O0FBQ0E7RUFDRSxrQkFBQTtFQUNBLGFBQUE7QUFFRiIsImZpbGUiOiJzcmMvYXBwL3BhcnRvZnBhZ2UvZWRpdHByb2ZpbGUvZWRpdHByb2ZpbGUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNpemVpbWFnZXtcclxuICB3aWR0aDogMTUwcHg7XHJcbiAgaGVpZ2h0OiAxNTBweDtcclxuICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbiAgYm9yZGVyOiAycHggc29saWQgI2ZmZmZmZjtcclxufVxyXG4uY2VudGVyZWRpdCB7XHJcbiAgZGlzcGxheTogYmxvY2s7XHJcbiAgbWFyZ2luLWxlZnQ6IGF1dG87XHJcbiAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xyXG4gIHdpZHRoOiA1MCU7XHJcbn1cclxuLmNlbnRlcmJ1dHRvbntcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbi5iYWNrZ3JvdW5kIHtcclxuICAtLWJhY2tncm91bmQ6ICNmNWY1ZjM7XHJcbn1cclxuLmltZyB7XHJcbiAgd2lkdGg6IDEyNXB4O1xyXG4gIGhlaWdodDogMTI1cHg7XHJcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gIGJvcmRlcjogOHB4IHNvbGlkICNmZmZmZmY7XHJcbn1cclxuaW9uLWNvbnRlbnQge1xyXG4gIC0tYmFja2dyb3VuZDogI2Y1ZjVmMztcclxuXHJcbiAgI2hlYWRlciB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcblxyXG4gICAgLmgxIHtcclxuICAgICAgZm9udC13ZWlnaHQ6IDcwMDtcclxuICAgICAgZm9udC1zaXplOiAyNnB4O1xyXG4gICAgICBjb2xvcjogIzAxMDEwMDtcclxuICAgICAgbWFyZ2luLWJvdHRvbTogMTUlO1xyXG4gICAgfVxyXG5cclxuICAgIGltZyB7XHJcbiAgICAgIHdpZHRoOiAxMjVweDtcclxuICAgICAgaGVpZ2h0OiAxMjVweDtcclxuICAgICAgYm9yZGVyLXJhZGl1czogNTAlO1xyXG4gICAgICBib3JkZXI6IDJweCBzb2xpZCAjZmZmZmZmO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLmZvcm00NTZ7XHJcbiAgICBtYXJnaW4tdG9wOiAxNSU7XHJcbiAgICBwYWRkaW5nLWxlZnQ6IDMwcHg7XHJcbiAgICBwYWRkaW5nLXJpZ2h0OiAzMHB4O1xyXG4gIH1cclxuICAuaW9uLWJ1dHRvbjEyMyB7XHJcbiAgICBtYXJnaW4tdG9wOiAzNXB4O1xyXG4gICAgaGVpZ2h0OiA0OHB4O1xyXG4gICAgZm9udC1zaXplOiAxOHB4O1xyXG4gICAgdGV4dC10cmFuc2Zvcm06IGluaXRpYWw7XHJcbiAgICBib3JkZXItcmFkaXVzOiA1MHB4O1xyXG4gICAgYm94LXNoYWRvdzogMXB4IDhweCA4cHggMHB4IHJnYmEoMCwgMCwgMCwgMC4wNSk7XHJcbiAgICAtLWJveC1zaGFkb3c6IG5vbmU7XHJcbiAgfVxyXG5cclxufVxyXG4ucGFkZGluZyB7XHJcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xyXG4gIHBhZGRpbmc6IDIwcHg7XHJcbn1cclxuXHJcbiJdfQ== */";
       /***/
     },
 
@@ -243,7 +254,6 @@
           this.datapass = datapass;
           this.Http = Http;
           this.dataUser = this.datapass.userIDLogin;
-          console.log(this.dataUser);
         }
 
         _createClass(EditprofilePage, [{
@@ -254,16 +264,18 @@
           value: function editprofile() {
             var _this = this;
 
+            var inputfirstname = document.getElementById('firstname_member').value;
+            var inputlasname = document.getElementById('lasname_member').value;
+            var inputaddress = document.getElementById('address_member').value;
+            var inputtelephone = document.getElementById('telephone_member').value;
             var dataJSON = {
-              password_member: this.password_member,
-              firstname_member: document.getElementById('firstname_member'),
-              lasname_member: document.getElementById('lasname_member'),
-              address_member: document.getElementById('address_member'),
-              telephone_member: document.getElementById('telephone_member'),
-              id_member: this.id_member
+              'firstname_member': inputfirstname,
+              'lasname_member': inputlasname,
+              'address_member': inputaddress,
+              'telephone_member': inputtelephone,
+              'id_member': this.id_member
             };
-            console.log(dataJSON);
-            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/usermember/edit', JSON.stringify(dataJSON)).subscribe(function (data) {
+            this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/usermember/edit', JSON.stringify(dataJSON)).subscribe(function (data) {
               console.log(data);
 
               var navigate = _this.router.navigate(['/login']);
@@ -286,13 +298,15 @@
                       return this.alertController.create({
                         cssClass: 'my-custom-class',
                         header: 'Confirm!',
-                        message: 'คุณต้องการที่จะแก้ไขหรือไม่ ?',
+                        message: 'คุณต้องการที่จะแก้ไขระบบจะเด้งไปหน้าLogin ?',
                         buttons: [{
                           text: 'ใช่',
                           handler: function handler() {
                             _this2.editprofile();
 
                             console.log('Confirm Okay');
+
+                            var navigate = _this2.router.navigate(['/home/tabs/account']);
                           }
                         }, {
                           text: 'ไม่',
@@ -318,9 +332,9 @@
             }));
           }
         }, {
-          key: "goAccount",
-          value: function goAccount() {
-            var navigate = this.router.navigate(['']);
+          key: "gochangepassword",
+          value: function gochangepassword() {
+            var navigate = this.router.navigate(['/home/tabs/account/editprofile/changepassword']);
           }
         }]);
 
@@ -365,7 +379,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\r\n\r\n<link href=\"https://fonts.googleapis.com/css2?family=Sriracha&display=swap\" rel=\"stylesheet\">\r\n<ion-header class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\r\n  <ion-toolbar class=\"background\">\r\n    <ion-buttons>\r\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\r\n    </ion-buttons>\r\n    <ion-title>editprofile</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content *ngFor=\"let data of this.dataUser\" class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\r\n\r\n  <div class=\"ion-padding sizeimage centeredit\" style=\"\">\r\n    <img src=\"assets/img/default-avatar.png\" class=\"rounded\" alt=\"...\">\r\n  </div>\r\n\r\n  <div>\r\n    <ion-button class=\"centeredit\"(click)=\"selectImage()\">เพิ่มรูปภาพใหม่</ion-button>\r\n  </div>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n      <span class=\"input-group-text\" id=\"basic-addon1\">ชื่อ-สกุล</span>\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" value=\"{{data.firstname_member}}\" id=\"firstname_member\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n    <input type=\"text\" class=\"form-control\" value=\"{{data.lasname_member}}\" id=\"lasname_member\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n      <span class=\"input-group-text\" id=\"basic-addon2\">Username</span>\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" value=\"{{data.username_member}}\" id=\"username_member\" aria-label=\"Username\" aria-describedby=\"basic-addon1\" disabled>\r\n  </div>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n      <span class=\"input-group-text\" id=\"basic-addon3\">รหัสผ่าน</span>\r\n    </div>\r\n    <input type=\"password\" class=\"form-control\" [(ngModel)] =\"password_member\" placeholder=\"กรุณาใส่passwordด้วย\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n      <span class=\"input-group-text\" id=\"basic-addon4\">ยืนยันรหัสผ่าน</span>\r\n    </div>\r\n    <input type=\"password\" [(ngModel)] =\"confirmpassword\" class=\"form-control\"  placeholder=\"confirmPassword\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n      <span class=\"input-group-text\" id=\"basic-addon9\">Email</span>\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" value=\"{{data.email_member}}\" id=\"email_member\" aria-label=\"Username\" aria-describedby=\"basic-addon1\" disabled>\r\n  </div>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n      <span class=\"input-group-text\" id=\"basic-addon5\">ที่อยู่</span>\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" value=\"{{data.address_member}}\"id=\"address_member\"  aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n      <span class=\"input-group-text\" id=\"basic-addon6\">เบอร์โทรศัพท์</span>\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" value=\"{{data.telephone_member}}\" id=\"telephone_member\"  aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n  <div class=\"centerbutton\">\r\n    <button type=\"button\" (click)=\"presentAlertConfirm(data.id_member)\" class=\"btn btn-success \">ยืนยันการแก้ไข</button>\r\n    <button type=\"button\"  (click)=\"goAccount()\" class=\"btn btn-danger\">ยกเลิก</button>\r\n  </div>\r\n\r\n</ion-content>\r\n";
+      __webpack_exports__["default"] = "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\r\n<link href=\"https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap\" rel=\"stylesheet\">\r\n\r\n<ion-header class=\"background\" style=\"font-family: 'Sarabun', sans-serif;\">\r\n  <ion-toolbar class=\"background\">\r\n    <ion-buttons>\r\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\r\n    </ion-buttons>\r\n    <ion-title>แก้ไขข้อมูลส่วนตัว</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content *ngFor=\"let data of this.dataUser\" class=\"background\" style=\"font-family: 'Sarabun', sans-serif;\">\r\n\r\n  <div id=\"header\">\r\n    <img src=\"assets/img/default-avatar.png\" />\r\n  </div>\r\n\r\n  <div  class=\"centerbutton\">\r\n    <button type=\"button\" (click)=\"selectImage()\" class=\"btn btn-link\"><ion-icon name=\"camera-outline\"></ion-icon>เพิ่มรูปภาพ</button>\r\n  </div>\r\n\r\n<div class=\"padding\">\r\n  <div class=\"input-group mb-3\" (click)=\"gochangepassword()\">\r\n    <div class=\"input-group-prepend\">\r\n      <br>\r\n    </div>\r\n    <span class=\"input-group-text form-control\" id=\"basic-addon3\"><ion-icon name=\"key-outline\"> </ion-icon> เปลี่ยนรหัสผ่าน</span>\r\n  </div>\r\n  <label>ชื่อ-สกุล</label>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" value=\"{{data.firstname_member}}\" id=\"firstname_member\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n    <input type=\"text\" class=\"form-control\" value=\"{{data.lasname_member}}\" id=\"lasname_member\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n  <label>Username</label>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" value=\"{{data.username_member}}\" id=\"username_member\" aria-label=\"Username\" aria-describedby=\"basic-addon1\" disabled>\r\n  </div>\r\n  <label>Email</label>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" value=\"{{data.email_member}}\" id=\"email_member\" aria-label=\"Username\" aria-describedby=\"basic-addon1\" disabled>\r\n  </div>\r\n  <label>ที่อยู่</label>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" value=\"{{data.address_member}}\"id=\"address_member\"  aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n  <label>เบอร์โทรศัพท์</label>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" value=\"{{data.telephone_member}}\" id=\"telephone_member\"  aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n  <div class=\"centerbutton\">\r\n    <button type=\"button\" (click)=\"presentAlertConfirm(data.id_member)\" class=\"btn btn-success \">ยืนยันการแก้ไข</button>\r\n  </div>\r\n</div>\r\n</ion-content>\r\n";
       /***/
     }
   }]);

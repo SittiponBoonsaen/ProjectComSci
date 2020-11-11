@@ -56,7 +56,7 @@ export class ChangepasswordPage implements OnInit {
         'id_member': dataUsername.id_member,
       };
       console.log(dataJSON);
-      this.Http.post('http://localhost:5000/apiFinal/usermember/changepassword', JSON.stringify(dataJSON)).subscribe(data =>{
+      this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/usermember/changepassword', JSON.stringify(dataJSON)).subscribe(data =>{
         console.log(data);
         window.alert("แก้ไขสำเร็จ");
         const navigate = this.router.navigate(['/home/tabs/account']);

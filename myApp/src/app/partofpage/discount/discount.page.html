@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
+
+
+<ion-header class="background" style="font-family: 'Sarabun', sans-serif;">
+  <ion-toolbar class="background">
+    <ion-buttons>
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="primary" >
+      <ion-button color="secondary" (click)="presentAlertConfirm()" i style="font-family: 'Sarabun', sans-serif;">
+        เพิ่ม
+      </ion-button>
+    </ion-buttons>
+    <ion-title>เพิ่มส่วนลด</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="font-family: 'Sarabun', sans-serif;" class="background">
+  <div class="padding">
+    <label>เปอร์เซ็นส่วนลด</label>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+      </div>
+      <input type="text" class="form-control" placeholder="ใส่เป็นเปอร์เซ็น" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <br>
+    <ion-label>เวลาที่เริ่มโปรโมชั่น</ion-label>
+    <ion-item>
+      <ion-label style="font-family: 'Sarabun', sans-serif;" >วัน/เดือน/ปี</ion-label>
+      <ion-datetime displayFormat="DD MMM YYYY" min="2020" max="2020" value="2020-11-11"></ion-datetime>
+    </ion-item>
+    <br>
+    <ion-label style="font-family: 'Sarabun', sans-serif;" >เวลาที่หมดโปรโมชั่น</ion-label>
+    <ion-item>
+      <ion-label>วัน/เดือน/ปี</ion-label>
+      <ion-datetime displayFormat="DD MMM YYYY" min="2020" max="2020" value="2020-11-12"></ion-datetime>
+    </ion-item>
+    <br>
+    <label>รายเอียดโปรโมชั่น</label>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+      </div>
+      <textarea class="form-control" [(ngModel)] ="detail" placeholder="รายละเอียด"  aria-label="With textarea"></textarea>
+    </div>
+  </div>
+</ion-content>

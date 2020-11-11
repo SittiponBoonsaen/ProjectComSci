@@ -539,6 +539,10 @@ const routes = [
         redirectTo: 'login',
         pathMatch: 'full'
     },
+    {
+        path: 'changepassword',
+        loadChildren: () => __webpack_require__.e(/*! import() | partofpage-changepassword-changepassword-module */ "common").then(__webpack_require__.bind(null, /*! ./partofpage/changepassword/changepassword.module */ "Qqm9")).then(m => m.ChangepasswordPageModule)
+    },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };

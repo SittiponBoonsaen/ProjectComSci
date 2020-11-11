@@ -13,6 +13,8 @@
 <ion-content class="background" style="font-family: 'Sarabun', sans-serif;">
     <div *ngFor="let datastore of showdatastore">
         <img *ngIf="datastore.picture_store != null" src="data:image/png;base64,{{datastore.picture_store}}" [alt]="datastore.name_store">
+        <img *ngIf="datastore.picture_store == null" src="data:image/png;base64,{{datastore.picture_store}}" [alt]="datastore.name_store">
+
         <ion-label>ชื่อร้าน: {{datastore.name_store}}</ion-label>
         <p-rating [ngModel]="datastore.rating" [readonly]="true" [cancel]="false"></p-rating>
     </div>

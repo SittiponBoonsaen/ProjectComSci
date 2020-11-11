@@ -1,4 +1,10 @@
 (function () {
+  function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+  function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+  function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
   function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -93,11 +99,10 @@
           value: function selectedprovincemethod(select) {
             var _this = this;
 
-            console.log(select);
             var dataJSON = {
-              'PATIENT_ID': select
+              'PATIENT_ID': this.mySelectprovince.value
             };
-            this.Http.post('http://localhost:5000/apiFinal/amphures', JSON.stringify(dataJSON)).subscribe(function (data) {
+            this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/amphures', JSON.stringify(dataJSON)).subscribe(function (data) {
               _this.selectedamphures = data;
               console.log(_this.selectedamphures);
             });
@@ -105,13 +110,27 @@
         }, {
           key: "selectedamphuresmethod",
           value: function selectedamphuresmethod(mySelectamphures) {
+            var _this2 = this;
+
             console.log(mySelectamphures);
+            var dataJSON = {
+              'PATIENT_ID': this.mySelectamphures.value
+            };
+            this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/districts', JSON.stringify(dataJSON)).subscribe(function (data) {
+              _this2.selecteddistricts = data;
+              console.log(_this2.selectedamphures);
+            });
+          }
+        }, {
+          key: "selecteddistrictsmethod",
+          value: function selecteddistrictsmethod(mySelectdistricts) {
+            this.mySelectdistricts = mySelectdistricts;
           }
         }, {
           key: "presentAlertConfirm",
           value: function presentAlertConfirm() {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-              var _this2 = this;
+              var _this3 = this;
 
               var alert;
               return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -126,7 +145,9 @@
                         buttons: [{
                           text: 'ใช่',
                           handler: function handler() {
-                            var navigate = _this2.router.navigate(['/login']);
+                            var navigate = _this3.router.navigate(['/login']);
+
+                            _this3.summit();
 
                             console.log('Confirm Okay');
                           }
@@ -154,8 +175,46 @@
             }));
           }
         }, {
-          key: "goAccount",
-          value: function goAccount() {}
+          key: "summit",
+          value: function summit() {
+            var _this4 = this;
+
+            this.address = this.otheraddress + " ต." + this.mySelectdistricts + " อ." + this.mySelectamphures.name + " จ." + this.mySelectprovince.name;
+            this.dataUsername = this.datapass.userIDLogin;
+            var ownerid;
+
+            var _iterator = _createForOfIteratorHelper(this.dataUsername),
+                _step;
+
+            try {
+              for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                ownerid = _step.value;
+              }
+            } catch (err) {
+              _iterator.e(err);
+            } finally {
+              _iterator.f();
+            }
+
+            var dataJSON = {
+              'name_store': this.namestore,
+              'address_store': this.address,
+              "telephone_store": this.telephone,
+              "rules_store": this.rulestore,
+              "owner_store": ownerid.id_member,
+              'status_store': this.status_store
+            };
+            console.log(dataJSON);
+            this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/store/add', JSON.stringify(dataJSON)).subscribe(function (data) {
+              console.log(data);
+              window.alert("เพิ่มร้านสำเร็จ");
+
+              var navigate = _this4.router.navigate(['/home/tabs/account/managestore']);
+            }, function (error) {
+              console.log(error);
+              window.alert("เพิ่มร้านไม่สำเร็จ");
+            });
+          }
         }]);
 
         return AddstorePage;
@@ -197,7 +256,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\r\n<link href=\"https://fonts.googleapis.com/css2?family=Sriracha&display=swap\" rel=\"stylesheet\">\r\n<ion-header class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\r\n  <ion-toolbar>\r\n    <ion-buttons>\r\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\r\n    </ion-buttons>\r\n    <ion-title>addstore</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\r\n\r\n  <div class=\"ion-padding sizeimage centeredit\" style=\"\">\r\n    <img src=\"assets/img/default-avatar.png\" class=\"rounded\" alt=\"...\">\r\n  </div>\r\n\r\n  <div>\r\n    <ion-button class=\"centeredit\"(click)=\"selectImage()\">เพิ่มรูปภาพใหม่</ion-button>\r\n  </div>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n      <span class=\"input-group-text\" id=\"basic-addon1\">ชื่อร้าน</span>\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" placeholder=\"ชื่อร้าน\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n      <span class=\"input-group-text\" id=\"basic-addon5\">ที่อยู่</span>\r\n    </div>\r\n    <div>\r\n    <ion-item>\r\n      <ion-label>Select: province</ion-label>\r\n      <ion-select class=\"custom-options\" [(ngModel)]=\"mySelectprovince\" (ionChange)=\"selectedprovincemethod(mySelectprovince)\">\r\n        <ion-select-option  *ngFor=\"let province of this.selectedprovince \"\r\n                            value=\"{{province.id}}\"> {{province.name_th}} </ion-select-option>\r\n      </ion-select>\r\n    </ion-item>\r\n    <br>\r\n    <ion-item>\r\n      <ion-label>Select: amphures</ion-label>\r\n      <ion-select class=\"custom-options\" [(ngModel)]=\"mySelectamphures\" (ionChange)=\"selectedamphuresmethod(mySelectamphures)\">\r\n        <ion-select-option  *ngFor=\"let amphures of this.selectedamphures \"\r\n                            value=\"{{amphures.id}}\"> {{amphures.name_th}} </ion-select-option>\r\n      </ion-select>\r\n    </ion-item>\r\n    </div>\r\n  </div>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n      <span class=\"input-group-text\" id=\"basic-addon6\">เบอร์โทรศัพท์</span>\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" placeholder=\"เบอร์โทรศัพท์\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n      <span class=\"input-group-text\" id=\"basic-addon5\">ที่อยู่</span>\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" placeholder=\"ที่อยู่\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n\r\n  <div class=\"centerbutton\">\r\n    <button type=\"button\" (click)=\"presentAlertConfirm()\" class=\"btn btn-success \">เพิ่มสนาม</button>\r\n    <button type=\"button\"  (click)=\"goAccount()\" class=\"btn btn-danger\">ยกเลิก</button>\r\n  </div>\r\n</ion-content>\r\n";
+      __webpack_exports__["default"] = "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\r\n<link href=\"https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap\" rel=\"stylesheet\">\r\n\r\n<ion-header class=\"background\" style=\"font-family: 'Sarabun', sans-serif;\">\r\n  <ion-toolbar>\r\n    <ion-buttons>\r\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\r\n    </ion-buttons>\r\n    <ion-title>เพิ่มร้าน</ion-title>\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"background\" style=\"font-family: 'Sarabun', sans-serif;\">\r\n\r\n  <div class=\"ion-padding sizeimage centeredit\" style=\"\">\r\n    <img src=\"assets/img/noimage.png\" class=\"rounded\" alt=\"...\">\r\n  </div>\r\n\r\n  <div  class=\"centerbutton\">\r\n    <button type=\"button\" (click)=\"selectImage()\" class=\"btn btn-link\"><ion-icon name=\"camera-outline\"></ion-icon>เพิ่มรูปภาพ</button>\r\n  </div>\r\n  <div class=\"padding\">\r\n\r\n  <label>ชื่อร้าน</label>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\"[(ngModel)]=\"namestore\" placeholder=\"ชื่อร้าน\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n\r\n  <label>ที่อยู่</label>\r\n    <textarea class=\"form-control\" [(ngModel)]=\"otheraddress\" placeholder=\"\"  aria-label=\"With textarea\"></textarea>\r\n    <br>\r\n    <ion-label>จังหวัด</ion-label>\r\n    <ion-select class=\"custom-options\" [(ngModel)]=\"mySelectprovince\" (ionChange)=\"selectedprovincemethod(mySelectprovince)\">\r\n      <ion-item>\r\n        <ion-select-option  *ngFor=\"let province of this.selectedprovince \"\r\n                            [value]=\"{value: province.id, name: province.name_th}\"> {{province.name_th}} </ion-select-option>\r\n        </ion-item>\r\n    </ion-select>\r\n      <ion-label>อำเภอ</ion-label>\r\n\r\n      <ion-select class=\"custom-options\" [(ngModel)]=\"mySelectamphures\" (ionChange)=\"selectedamphuresmethod(mySelectamphures)\">\r\n        <ion-item>\r\n        <ion-select-option  *ngFor=\"let amphures of this.selectedamphures \"\r\n                            [value]=\"{value: amphures.id, name: amphures.name_th}\"> {{amphures.name_th}} </ion-select-option>\r\n        </ion-item>\r\n      </ion-select>\r\n      <ion-label>ตำบล</ion-label>\r\n      <ion-select class=\"custom-options\" [(ngModel)]=\"mySelectdistricts\" (ionChange)=\"selecteddistrictsmethod(mySelectdistricts)\">\r\n        <ion-item>\r\n        <ion-select-option  *ngFor=\"let districts of this.selecteddistricts \"\r\n                            value=\"{{districts.name_th}}\"> {{districts.name_th}} </ion-select-option>\r\n        </ion-item>\r\n      </ion-select>\r\n\r\n  <label>เบอร์โทรศัพท์</label>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n    </div>\r\n    <input type=\"text\" class=\"form-control\" [(ngModel)]=\"telephone\" placeholder=\"เบอร์โทรศัพท์\" aria-label=\"Username\" aria-describedby=\"basic-addon1\">\r\n  </div>\r\n  <label>กฏของร้าน</label>\r\n  <div class=\"input-group mb-3\">\r\n    <div class=\"input-group-prepend\">\r\n    </div>\r\n    <textarea class=\"form-control\" [(ngModel)]=\"rulestore\" placeholder=\"กฏของร้าน\"  aria-label=\"With textarea\"></textarea>\r\n  </div>\r\n    <div class=\"form-group\">\r\n      <label for=\"exampleFormControlSelect1\">สถานะของสนาม</label>\r\n      <select class=\"form-control\" id=\"exampleFormControlSelect1\" [(ngModel)]=\"status_store\">\r\n        <option>เปิดให้บริการ</option>\r\n        <option>ไม่เปิดให้บริการ</option>\r\n      </select>\r\n    </div>\r\n  <div class=\"centerbutton\">\r\n    <button type=\"button\" (click)=\"presentAlertConfirm()\" class=\"btn btn-success \">เพิ่มสนาม</button>\r\n  </div>\r\n\r\n  </div>\r\n</ion-content>\r\n";
       /***/
     },
 
@@ -350,7 +409,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = ".sizeimage {\n  width: 150px;\n  height: 150px;\n  border-radius: 50%;\n}\n\n.centeredit {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  width: 50%;\n}\n\n.centerbutton {\n  display: flex;\n  justify-content: center;\n}\n\n.background {\n  --background: #f5f5f3;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9hZGRzdG9yZS9hZGRzdG9yZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFBO0VBQ0EsYUFBQTtFQUNBLGtCQUFBO0FBQ0Y7O0FBQ0E7RUFDRSxjQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLFVBQUE7QUFFRjs7QUFBQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtBQUdGOztBQURBO0VBQ0UscUJBQUE7QUFJRiIsImZpbGUiOiJzcmMvYXBwL3BhcnRvZnBhZ2UvYWRkc3RvcmUvYWRkc3RvcmUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNpemVpbWFnZXtcclxuICB3aWR0aDogMTUwcHg7XHJcbiAgaGVpZ2h0OiAxNTBweDtcclxuICBib3JkZXItcmFkaXVzOiA1MCU7XHJcbn1cclxuLmNlbnRlcmVkaXQge1xyXG4gIGRpc3BsYXk6IGJsb2NrO1xyXG4gIG1hcmdpbi1sZWZ0OiBhdXRvO1xyXG4gIG1hcmdpbi1yaWdodDogYXV0bztcclxuICB3aWR0aDogNTAlO1xyXG59XHJcbi5jZW50ZXJidXR0b257XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxufVxyXG4uYmFja2dyb3VuZCB7XHJcbiAgLS1iYWNrZ3JvdW5kOiAjZjVmNWYzO1xyXG59XHJcbiJdfQ== */";
+      __webpack_exports__["default"] = ".sizeimage {\n  width: 150px;\n  height: 150px;\n  border-radius: 50%;\n}\n\n.centeredit {\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n  width: 50%;\n}\n\n.centerbutton {\n  display: flex;\n  justify-content: center;\n}\n\n.background {\n  --background: #f5f5f3;\n}\n\n.padding {\n  border-radius: 5px;\n  padding: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9hZGRzdG9yZS9hZGRzdG9yZS5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFBO0VBQ0EsYUFBQTtFQUNBLGtCQUFBO0FBQ0Y7O0FBQ0E7RUFDRSxjQUFBO0VBQ0EsaUJBQUE7RUFDQSxrQkFBQTtFQUNBLFVBQUE7QUFFRjs7QUFBQTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtBQUdGOztBQURBO0VBQ0UscUJBQUE7QUFJRjs7QUFGQTtFQUNFLGtCQUFBO0VBQ0EsYUFBQTtBQUtGIiwiZmlsZSI6InNyYy9hcHAvcGFydG9mcGFnZS9hZGRzdG9yZS9hZGRzdG9yZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc2l6ZWltYWdle1xyXG4gIHdpZHRoOiAxNTBweDtcclxuICBoZWlnaHQ6IDE1MHB4O1xyXG4gIGJvcmRlci1yYWRpdXM6IDUwJTtcclxufVxyXG4uY2VudGVyZWRpdCB7XHJcbiAgZGlzcGxheTogYmxvY2s7XHJcbiAgbWFyZ2luLWxlZnQ6IGF1dG87XHJcbiAgbWFyZ2luLXJpZ2h0OiBhdXRvO1xyXG4gIHdpZHRoOiA1MCU7XHJcbn1cclxuLmNlbnRlcmJ1dHRvbntcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG59XHJcbi5iYWNrZ3JvdW5kIHtcclxuICAtLWJhY2tncm91bmQ6ICNmNWY1ZjM7XHJcbn1cclxuLnBhZGRpbmcge1xyXG4gIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICBwYWRkaW5nOiAyMHB4O1xyXG59XHJcbiJdfQ== */";
       /***/
     }
   }]);

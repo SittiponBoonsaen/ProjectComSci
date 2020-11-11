@@ -45,7 +45,7 @@ let ManagefieldPage = class ManagefieldPage {
             const dataJSON = {
                 id_store: this.idstore,
             };
-            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON))
+            this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON))
                 .subscribe(datastore => {
                 this.datafield = datastore;
                 this.loading.dismiss();
@@ -57,17 +57,23 @@ let ManagefieldPage = class ManagefieldPage {
     goToAddfield() {
         const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield/addfield']);
     }
-    gotoEdit() {
+    gotoEdit(idfield) {
+        this.datapassService.idfieldformmanagefield = idfield;
+        console.log(idfield);
         const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield/editfield']);
     }
     gotoDelete() {
+        const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
         const dataJSON = {
             "id_field": this.id_Field,
         };
         console.log(dataJSON);
-        this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/field/delete', JSON.stringify(dataJSON))
-            .subscribe(data => {
+        this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/field/delete', JSON.stringify(dataJSON)).subscribe(data => {
+            const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
             console.log(data);
+        }, error => {
+            const navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
+            console.log(error);
         });
     }
     presentAlertConfirm(idfield) {
@@ -190,7 +196,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\n<link href=\"https://fonts.googleapis.com/css2?family=Sriracha&display=swap\" rel=\"stylesheet\">\n<ion-header class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\n  <ion-toolbar>\n    <ion-buttons>\n      <ion-back-button style=\"font-family: 'Sriracha', cursive;\" defaultHref=\"home\"></ion-back-button>\n    </ion-buttons>\n    <ion-title style=\"font-family: 'Sriracha', cursive;\" >จัดการสนาม</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\n\n    <p-table [value]=\"datafield\">\n      <ng-template pTemplate=\"caption\">\n        <div class=\"p-d-flex p-ai-center p-jc-between\" style=\"font-family: 'Sriracha', cursive;\">\n          ข้อมูลสนาม\n        </div>\n      </ng-template>\n      <ng-template pTemplate=\"header\">\n        <tr style=\"font-family: 'Sriracha', cursive;\">\n          <th>Image</th>\n          <th>Name</th>\n          <th>statusField</th>\n          <th>#</th>\n          <!--        <th>Telephone</th>-->\n          <!--        <th>Address</th>-->\n        </tr>\n      </ng-template>\n      <ng-template pTemplate=\"body\" let-datafield>\n        <tr style=\"font-family: 'Sriracha', cursive;\">\n          <td><img *ngIf=\"datafield.picture_picturefield == null\" src=\"assets/img/noimage.png\" [alt]=\"datafield.name_field\" class=\"p-shadow-4\"  />\n            <img *ngIf=\"datafield.picture_picturefield != null\" src=\"data:image/png;base64,{{datafield.picture_picturefield}}\" [alt]=\"datafield.name_field\" width=\"100\" class=\"p-shadow-4\"  />\n\n          </td>\n          <td>{{datafield.name_field}}</td>\n          <td>{{datafield.status_field}}</td>\n          <!--        <td>{{product.address_store}}</td>-->\n\n          <td>\n            <ion-icon name=\"construct-outline\" style=\"width: 25px;height: 25px;\" (click)=\"gotoEdit()\"></ion-icon>\n            <ion-icon name=\"trash-outline\" style=\"width: 25px;height: 25px;\" (click)=\"presentAlertConfirm(datafield.id_field)\"></ion-icon>\n          </td>\n\n          <!--        <td><p-rating [ngModel]=\"product.rating\" [readonly]=\"true\" [cancel]=\"false\"></p-rating></td>-->\n          <!--        <td><span [class]=\"'product-badge status-' + product.inventoryStatus.toLowerCase()\">{{product.inventoryStatus}}</span></td>-->\n        </tr>\n      </ng-template>\n      <ng-template pTemplate=\"summary\">\n        <div class=\"p-d-flex p-ai-center p-jc-between\" style=\"font-family: 'Sriracha', cursive;\">\n          In total there are {{datafield ? datafield.length : 0 }} products.\n        </div>\n      </ng-template>\n    </p-table>\n\n  <ion-fab vertical=\"bottom\" horizontal=\"end\" slot=\"fixed\">\n    <ion-fab-button>\n      <ion-icon (click)=\"goToAddfield()\" name=\"add\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\n<link href=\"https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap\" rel=\"stylesheet\">\n<ion-header class=\"background\" style=\"font-family: 'Sarabun', sans-serif;\">\n  <ion-toolbar>\n    <ion-buttons>\n      <ion-back-button style=\"font-family: 'Sarabun', sans-serif;\" defaultHref=\"home\"></ion-back-button>\n    </ion-buttons>\n    <ion-title style=\"font-family: 'Sarabun', sans-serif;\" >จัดการสนาม</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"background\" style=\"font-family: 'Sarabun', sans-serif;\">\n\n    <p-table [value]=\"datafield\">\n      <ng-template pTemplate=\"caption\">\n        <div class=\"p-d-flex p-ai-center p-jc-between\" style=\"font-family: 'Sarabun', sans-serif;\">\n          ข้อมูลสนาม\n        </div>\n      </ng-template>\n      <ng-template pTemplate=\"header\">\n        <tr style=\"font-family: 'Sarabun', sans-serif;\">\n          <th>รูปภาพ</th>\n          <th>ชื่อสนาม</th>\n          <th>สถานะ</th>\n          <th>การจัดการ</th>\n        </tr>\n      </ng-template>\n      <ng-template pTemplate=\"body\" let-datafield>\n        <tr style=\"font-family: 'Sarabun', sans-serif;\">\n          <td><img *ngIf=\"datafield.picture_picturefield == null\" src=\"assets/img/noimage.png\" [alt]=\"datafield.name_field\" class=\"p-shadow-4\"  />\n            <img *ngIf=\"datafield.picture_picturefield != null\" src=\"data:image/png;base64,{{datafield.picture_picturefield}}\" [alt]=\"datafield.name_field\" width=\"100\" class=\"p-shadow-4\"  />\n          </td>\n          <td>{{datafield.name_field}}</td>\n          <td>{{datafield.status_field}}</td>\n          <!--        <td>{{product.address_store}}</td>-->\n\n          <td>\n            <ion-icon name=\"construct-outline\" style=\"width: 25px;height: 25px;\" (click)=\"gotoEdit(datafield.id_field)\"></ion-icon>\n            <ion-icon name=\"trash-outline\" style=\"width: 25px;height: 25px;\" (click)=\"presentAlertConfirm(datafield.id_field)\"></ion-icon>\n          </td>\n\n          <!--        <td><p-rating [ngModel]=\"product.rating\" [readonly]=\"true\" [cancel]=\"false\"></p-rating></td>-->\n          <!--        <td><span [class]=\"'product-badge status-' + product.inventoryStatus.toLowerCase()\">{{product.inventoryStatus}}</span></td>-->\n        </tr>\n      </ng-template>\n      <ng-template pTemplate=\"summary\">\n        <div class=\"p-d-flex p-ai-center p-jc-between\" style=\"font-family: 'Sarabun', sans-serif;\">\n          In total there are {{datafield ? datafield.length : 0 }} products.\n        </div>\n      </ng-template>\n    </p-table>\n\n  <ion-fab vertical=\"bottom\" horizontal=\"end\" slot=\"fixed\">\n    <ion-fab-button>\n      <ion-icon (click)=\"goToAddfield()\" name=\"add\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>\n");
 
 /***/ }),
 

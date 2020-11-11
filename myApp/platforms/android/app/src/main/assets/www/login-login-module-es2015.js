@@ -36,7 +36,7 @@ let LoginPage = class LoginPage {
     }
     ngOnInit() {
         this.routerOutlet.swipeGesture = false;
-        this.Http.get('https://jongsanamcsmsu.000webhostapp.com/apiFinal/province')
+        this.Http.get('https://finalprojectcs.000webhostapp.com/apiFinal/province')
             .subscribe(data => {
             this.datapassService.selectedprovince = data;
             console.log(data);
@@ -47,7 +47,7 @@ let LoginPage = class LoginPage {
             this.loading = yield this.loadingController.create({
                 message: 'กำลังโหลดข้อมูล...',
             });
-            this.Http.get('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getstore')
+            this.Http.get('https://finalprojectcs.000webhostapp.com/apiFinal/getstore')
                 .subscribe(data => {
                 this.datapassService.datastore = data;
                 console.log(data);
@@ -66,7 +66,7 @@ let LoginPage = class LoginPage {
                 'password_member': this.password,
                 'status_member': this.valuedegree
             };
-            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/usermember/login', JSON.stringify(dataJSON)).subscribe(data => {
+            this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/usermember/login', JSON.stringify(dataJSON)).subscribe(data => {
                 this.loading2.dismiss();
                 console.log("login complete");
                 this.router.setUpLocationChangeListener();
@@ -76,6 +76,7 @@ let LoginPage = class LoginPage {
             }, error => {
                 let navigate = this.router.navigate(['/login']);
                 console.log("login error");
+                this.loading2.dismiss();
                 window.alert("login fail");
             });
             this.loading2.present();
@@ -112,7 +113,7 @@ LoginPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<link href=\"https://fonts.googleapis.com/css2?family=Sriracha&display=swap\" rel=\"stylesheet\">\r\n<ion-header class=\"ion-no-border\" style=\"font-family: 'Sriracha', cursive;\">\r\n    <ion-toolbar>\r\n\r\n        <ion-buttons slot=\"end\">\r\n            <ion-button style=\"font-family: 'Sriracha', cursive;\" [routerLink]=\"'/register'\">สมัครสมาชิก</ion-button>\r\n        </ion-buttons>\r\n    </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content style=\"font-family: 'Sriracha', cursive;\">\r\n    <div id=\"header\">\r\n        <h1>Login</h1>\r\n        <img src=\"assets/img/jongsanam-logo.png\" />\r\n    </div>\r\n\r\n<!--    <ion-item >-->\r\n<!--      <img style=\"text-align: center\" src=\"assets/img/jongsanam-logo.png\">-->\r\n<!--    </ion-item>-->\r\n    <div class=\"form123\">\r\n\r\n\r\n    <ion-item>\r\n      <ion-input style=\"font-family: 'Sriracha', cursive;\" [(ngModel)] =\"username\" placeholder=\"ชื่อผู้ใช้\" ></ion-input>\r\n    </ion-item>\r\n    <br>\r\n    <ion-item>\r\n      <ion-input style=\"font-family: 'Sriracha', cursive;\" [(ngModel)] =\"password\" type=\"password\" placeholder=\"รหัสผู้ใช้\" ></ion-input>\r\n    </ion-item>\r\n    <br>\r\n    <br>\r\n\r\n\r\n\r\n    <ion-segment [(ngModel)]=\"valuedegree\" (ionChange)=\"segmentChanged(valuedegree)\">\r\n      <ion-segment-button value=\"1\">\r\n        <ion-label style=\"font-family: 'Sriracha', cursive;\">ลูกค้า</ion-label>\r\n      </ion-segment-button>\r\n      <ion-segment-button value=\"2\">\r\n        <ion-label style=\"font-family: 'Sriracha', cursive;\">เจ้าของสนาม</ion-label>\r\n      </ion-segment-button>\r\n    </ion-segment>\r\n    <ion-button style=\"font-family: 'Sriracha', cursive;\" class=\"ion-button123\" expand=\"block\" color=\"secondary\"(click)=\"login()\">เข้าสู่ระบบ</ion-button>\r\n    </div>\r\n\r\n</ion-content>\r\n\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<link href=\"https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap\" rel=\"stylesheet\">\r\n<ion-header class=\"ion-no-border\" style=\"font-family: 'Sriracha', cursive;\">\r\n    <ion-toolbar>\r\n\r\n        <ion-buttons slot=\"end\">\r\n            <ion-button style=\"font-family: 'Sriracha', cursive;\" [routerLink]=\"'/register'\">สมัครสมาชิก</ion-button>\r\n        </ion-buttons>\r\n    </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content style=\"font-family: 'Sarabun', sans-serif;\">\r\n    <div id=\"header\">\r\n        <h1>Login</h1>\r\n        <img src=\"assets/img/jongsanam-logo.png\" />\r\n    </div>\r\n\r\n<!--    <ion-item >-->\r\n<!--      <img style=\"text-align: center\" src=\"assets/img/jongsanam-logo.png\">-->\r\n<!--    </ion-item>-->\r\n    <div class=\"form123\">\r\n\r\n\r\n    <ion-item>\r\n      <ion-input style=\"font-family: 'Sarabun', sans-serif;\" [(ngModel)] =\"username\" placeholder=\"ชื่อผู้ใช้\" ></ion-input>\r\n    </ion-item>\r\n    <br>\r\n    <ion-item>\r\n      <ion-input style=\"font-family: 'Sarabun', sans-serif;\"[(ngModel)] =\"password\" type=\"password\" placeholder=\"รหัสผู้ใช้\" ></ion-input>\r\n    </ion-item>\r\n    <br>\r\n    <br>\r\n\r\n\r\n\r\n    <ion-segment [(ngModel)]=\"valuedegree\" (ionChange)=\"segmentChanged(valuedegree)\">\r\n      <ion-segment-button value=\"customer\">\r\n        <ion-label style=\"font-family: 'Sarabun', sans-serif;\">ลูกค้า</ion-label>\r\n      </ion-segment-button>\r\n      <ion-segment-button value=\"owner\">\r\n        <ion-label style=\"font-family: 'Sarabun', sans-serif;\">เจ้าของสนาม</ion-label>\r\n      </ion-segment-button>\r\n    </ion-segment>\r\n    <ion-button style=\"font-family: 'Sarabun', sans-serif;\" class=\"ion-button123\" expand=\"block\" color=\"secondary\"(click)=\"login()\">เข้าสู่ระบบ</ion-button>\r\n    </div>\r\n\r\n</ion-content>\r\n\r\n\r\n");
 
 /***/ }),
 

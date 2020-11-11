@@ -638,6 +638,17 @@
         path: '',
         redirectTo: 'login',
         pathMatch: 'full'
+      }, {
+        path: 'changepassword',
+        loadChildren: function loadChildren() {
+          return __webpack_require__.e(
+          /*! import() | partofpage-changepassword-changepassword-module */
+          "common").then(__webpack_require__.bind(null,
+          /*! ./partofpage/changepassword/changepassword.module */
+          "Qqm9")).then(function (m) {
+            return m.ChangepasswordPageModule;
+          });
+        }
       }];
 
       var AppRoutingModule = function AppRoutingModule() {

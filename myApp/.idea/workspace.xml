@@ -21,7 +21,162 @@
   <component name="ChangeListManager">
     <list default="true" id="2def3aa1-3b4d-45b9-b0e4-18be953b2389" name="Default Changelist" comment="11/11/63">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/common-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/common-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/common-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/common-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/common-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/common-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/common-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/common-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/home-home-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/home-home-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/home-home-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/home-home-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/home-home-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/home-home-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/home-home-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/home-home-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/login-login-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/login-login-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/login-login-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/login-login-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/login-login-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/login-login-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/login-login-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/login-login-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/main-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addfield-addfield-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addfield-addfield-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addfield-addfield-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addfield-addfield-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addfield-addfield-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addfield-addfield-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addfield-addfield-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addfield-addfield-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addstore-addstore-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addstore-addstore-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addstore-addstore-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addstore-addstore-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addstore-addstore-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addstore-addstore-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addstore-addstore-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-addstore-addstore-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editfield-editfield-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editfield-editfield-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editfield-editfield-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editfield-editfield-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editfield-editfield-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editfield-editfield-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editfield-editfield-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editfield-editfield-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editprofile-editprofile-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editprofile-editprofile-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editprofile-editprofile-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editprofile-editprofile-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editprofile-editprofile-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editprofile-editprofile-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editprofile-editprofile-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editprofile-editprofile-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editstore-editstore-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editstore-editstore-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editstore-editstore-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editstore-editstore-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editstore-editstore-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editstore-editstore-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editstore-editstore-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-editstore-editstore-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managefield-managefield-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managefield-managefield-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managefield-managefield-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managefield-managefield-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managefield-managefield-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managefield-managefield-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managefield-managefield-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managefield-managefield-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managestore-managestore-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managestore-managestore-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managestore-managestore-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managestore-managestore-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managestore-managestore-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managestore-managestore-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managestore-managestore-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-managestore-managestore-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-myhome-field-myhome-field-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-myhome-field-myhome-field-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-myhome-field-myhome-field-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-myhome-field-myhome-field-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-myhome-field-myhome-field-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-myhome-field-myhome-field-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-myhome-field-myhome-field-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-myhome-field-myhome-field-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-search-advanced-search-advanced-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-search-advanced-search-advanced-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-search-advanced-search-advanced-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-search-advanced-search-advanced-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-search-advanced-search-advanced-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-search-advanced-search-advanced-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-search-advanced-search-advanced-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/partofpage-search-advanced-search-advanced-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/register-register-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/register-register-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/register-register-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/register-register-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/register-register-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/register-register-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/register-register-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/register-register-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-account-account-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-account-account-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-account-account-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-account-account-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-account-account-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-account-account-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-account-account-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-account-account-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-myhome-myhome-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-myhome-myhome-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-myhome-myhome-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-myhome-myhome-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-myhome-myhome-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-myhome-myhome-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-myhome-myhome-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-myhome-myhome-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-search-search-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-search-search-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-search-search-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-search-search-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-search-search-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-search-search-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-search-search-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/tabs-search-search-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addfield/addfield.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/addstore/addstore.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/changepassword/changepassword.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/changepassword/changepassword.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editfield/editfield.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editprofile/editprofile.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/editstore/editstore.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managefield/managefield.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/managestore/managestore.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/myhome-field/myhome-field.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/partofpage/search-advanced/search-advanced.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/myhome/myhome.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/tabs/search/search.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/tabs/search/search.page.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/common-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/common-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/common-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/common-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/common-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/common-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/common-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/common-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/home-home-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/home-home-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/home-home-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/home-home-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/home-home-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/home-home-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/home-home-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/home-home-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/login-login-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/login-login-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/login-login-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/login-login-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/login-login-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/login-login-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/login-login-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/login-login-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/main-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/main-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/main-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/main-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/main-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/main-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/main-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/main-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-addfield-addfield-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-addfield-addfield-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-addfield-addfield-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-addfield-addfield-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-addfield-addfield-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-addfield-addfield-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-addfield-addfield-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-addfield-addfield-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-addstore-addstore-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-addstore-addstore-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-addstore-addstore-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-addstore-addstore-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-addstore-addstore-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-addstore-addstore-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-addstore-addstore-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-addstore-addstore-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-editfield-editfield-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-editfield-editfield-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-editfield-editfield-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-editfield-editfield-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-editfield-editfield-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-editfield-editfield-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-editfield-editfield-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-editfield-editfield-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-editprofile-editprofile-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-editprofile-editprofile-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-editprofile-editprofile-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-editprofile-editprofile-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-editprofile-editprofile-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-editprofile-editprofile-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-editprofile-editprofile-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-editprofile-editprofile-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-editstore-editstore-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-editstore-editstore-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-editstore-editstore-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-editstore-editstore-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-editstore-editstore-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-editstore-editstore-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-editstore-editstore-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-editstore-editstore-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-managefield-managefield-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-managefield-managefield-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-managefield-managefield-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-managefield-managefield-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-managefield-managefield-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-managefield-managefield-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-managefield-managefield-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-managefield-managefield-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-managestore-managestore-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-myhome-field-myhome-field-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/partofpage-search-advanced-search-advanced-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/register-register-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/register-register-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/register-register-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/register-register-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/register-register-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/register-register-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/register-register-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/register-register-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/tabs-account-account-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-account-account-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/tabs-account-account-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-account-account-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/tabs-account-account-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-account-account-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/tabs-account-account-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-account-account-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/tabs-myhome-myhome-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-myhome-myhome-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/tabs-myhome-myhome-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-myhome-myhome-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/tabs-myhome-myhome-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-myhome-myhome-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/tabs-myhome-myhome-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-myhome-myhome-module-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/tabs-search-search-module-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-search-search-module-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/tabs-search-search-module-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-search-search-module-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/tabs-search-search-module-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-search-search-module-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/tabs-search-search-module-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/www/tabs-search-search-module-es5.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,6 +305,7 @@
       <workItem from="1604891219005" duration="299000" />
       <workItem from="1604992776255" duration="8891000" />
       <workItem from="1605014439305" duration="17091000" />
+      <workItem from="1605066989477" duration="1914000" />
     </task>
     <task id="LOCAL-00001" summary="commit 2/9/63">
       <created>1599062190699</created>
@@ -305,7 +461,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605042376036</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="11/11/63">
+      <created>1605043350955</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1605043350955</updated>
+    </task>
+    <task id="LOCAL-00024" summary="11/11/63">
+      <created>1605043548595</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1605043548595</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,10 +537,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="598" y="286" key="MultipleFileMergeDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1602814197108" />
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605042383912">
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2" timestamp="1605043559472">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1605042383912" />
+    <state x="552" y="258" key="Vcs.Push.Dialog.v2/0.0.1920.1050@0.0.1920.1050" timestamp="1605043559472" />
     <state x="769" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605008554470">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -402,7 +572,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/register/register.page.ts</url>
           <line>38</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

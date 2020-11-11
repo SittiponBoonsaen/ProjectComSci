@@ -38,7 +38,7 @@ export class AddstorePage implements OnInit {
     const dataJSON = {
       'PATIENT_ID': this.mySelectprovince.value,
     };
-    this.Http.post('http://localhost:5000/apiFinal/amphures', JSON.stringify(dataJSON))
+    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/amphures', JSON.stringify(dataJSON))
         .subscribe(data => {
           this.selectedamphures = data;
           console.log(this.selectedamphures);
@@ -50,7 +50,7 @@ export class AddstorePage implements OnInit {
     const dataJSON = {
       'PATIENT_ID': this.mySelectamphures.value,
     };
-    this.Http.post('http://localhost:5000/apiFinal/districts', JSON.stringify(dataJSON))
+    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/districts', JSON.stringify(dataJSON))
         .subscribe(data => {
           this.selecteddistricts = data;
           console.log(this.selectedamphures);
@@ -103,7 +103,7 @@ export class AddstorePage implements OnInit {
     };
 
     console.log(dataJSON);
-    this.Http.post('http://localhost:5000/apiFinal/store/add', JSON.stringify(dataJSON)).subscribe(data =>{
+    this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/store/add', JSON.stringify(dataJSON)).subscribe(data =>{
       console.log(data);
       window.alert("เพิ่มร้านสำเร็จ");
       const navigate = this.router.navigate(['/home/tabs/account/managestore']);

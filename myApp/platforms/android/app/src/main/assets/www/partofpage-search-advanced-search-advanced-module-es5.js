@@ -96,46 +96,36 @@
         }, {
           key: "selectedprovincemethod",
           value: function selectedprovincemethod(select) {
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
-              var _this = this;
+            var _this = this;
 
-              var dataJSON;
-              return regeneratorRuntime.wrap(function _callee$(_context) {
-                while (1) {
-                  switch (_context.prev = _context.next) {
-                    case 0:
-                      _context.next = 2;
-                      return this.loadingController.create({
-                        message: 'รอสักครู่...'
-                      });
-
-                    case 2:
-                      this.loading = _context.sent;
-                      console.log(select);
-                      dataJSON = {
-                        'PATIENT_ID': select
-                      };
-                      this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/amphures', JSON.stringify(dataJSON)).subscribe(function (data) {
-                        _this.selectedamphures = data;
-
-                        _this.loading.dismiss();
-
-                        console.log(_this.selectedamphures);
-                      });
-                      this.loading.present();
-
-                    case 7:
-                    case "end":
-                      return _context.stop();
-                  }
-                }
-              }, _callee, this);
-            }));
+            var dataJSON = {
+              'PATIENT_ID': this.mySelectprovince.value
+            };
+            this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/amphures', JSON.stringify(dataJSON)).subscribe(function (data) {
+              _this.selectedamphures = data;
+              console.log(_this.selectedamphures);
+            });
           }
         }, {
           key: "selectedamphuresmethod",
           value: function selectedamphuresmethod(mySelectamphures) {
+            var _this2 = this;
+
             console.log(mySelectamphures);
+            var dataJSON = {
+              'PATIENT_ID': this.mySelectamphures.value
+            };
+            this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/districts', JSON.stringify(dataJSON)).subscribe(function (data) {
+              _this2.selecteddistricts = data;
+              console.log(_this2.selectedamphures);
+            });
+          }
+        }, {
+          key: "selecteddistrictsmethod",
+          value: function selecteddistrictsmethod(mySelectdistricts) {
+            this.mySelectdistricts = mySelectdistricts;
+            this.address = " ต." + this.mySelectdistricts + " อ." + this.mySelectamphures.name + " จ." + this.mySelectprovince.name;
+            console.log(this.address);
           }
         }]);
 
@@ -176,7 +166,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = ".background {\n  --background: #f5f5f3;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9zZWFyY2gtYWR2YW5jZWQvc2VhcmNoLWFkdmFuY2VkLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFBO0FBQ0YiLCJmaWxlIjoic3JjL2FwcC9wYXJ0b2ZwYWdlL3NlYXJjaC1hZHZhbmNlZC9zZWFyY2gtYWR2YW5jZWQucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmJhY2tncm91bmQge1xyXG4gIC0tYmFja2dyb3VuZDogI2Y1ZjVmMztcclxufVxyXG4iXX0= */";
+      __webpack_exports__["default"] = ".background {\n  --background: #f5f5f3;\n}\n\n.padding {\n  border-radius: 5px;\n  padding: 30px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcGFydG9mcGFnZS9zZWFyY2gtYWR2YW5jZWQvc2VhcmNoLWFkdmFuY2VkLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHFCQUFBO0FBQ0Y7O0FBQ0E7RUFDRSxrQkFBQTtFQUNBLGFBQUE7QUFFRiIsImZpbGUiOiJzcmMvYXBwL3BhcnRvZnBhZ2Uvc2VhcmNoLWFkdmFuY2VkL3NlYXJjaC1hZHZhbmNlZC5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuYmFja2dyb3VuZCB7XHJcbiAgLS1iYWNrZ3JvdW5kOiAjZjVmNWYzO1xyXG59XHJcbi5wYWRkaW5nIHtcclxuICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiAgcGFkZGluZzogMzBweDtcclxufVxyXG4iXX0= */";
       /***/
     },
 
@@ -196,7 +186,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<link href=\"https://fonts.googleapis.com/css2?family=Sriracha&display=swap\" rel=\"stylesheet\">\r\n<ion-header class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\r\n  <ion-toolbar class=\"background\">\r\n        <ion-buttons >\r\n          <ion-back-button style=\"font-family: 'Sriracha', cursive;\" defaultHref=\"home\"></ion-back-button>\r\n        </ion-buttons>\r\n        <ion-buttons slot=\"primary\" >\r\n          <ion-button color=\"secondary\" style=\"font-family: 'Sriracha', cursive;\">\r\n            Done\r\n          </ion-button>\r\n        </ion-buttons>\r\n        <ion-title style=\"font-family: 'Sriracha', cursive;\">ค้นหาขั้นสูง</ion-title>\r\n\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\r\n\r\n\r\n  <ion-range dualKnobs=\"true\" [min]=timeMin [max]=timeMax step=\"3\"\r\n              [(ngModel)]=\"time\" (ionChange)=\"setBadge(time)\" ></ion-range>\r\n  <div >\r\n    <ion-item  class=\"background\">\r\n      <ion-text style=\"font-family: 'Sriracha', cursive;\" color=\"primary\">{{this.timeMin2}} - </ion-text>\r\n      <ion-text style=\"font-family: 'Sriracha', cursive;\" color=\"primary\">{{ this.timeMax2}} บาท /ชั่วโมง</ion-text>\r\n    </ion-item>\r\n  </div>\r\n\r\n  <ion-item  class=\"background\">\r\n    <ion-label style=\"font-family: 'Sriracha', cursive;\">Select: province</ion-label>\r\n    <ion-select style=\"font-family: 'Sriracha', cursive;\"  class=\"custom-options\" [(ngModel)]=\"mySelectprovince\" (ionChange)=\"selectedprovincemethod(mySelectprovince)\">\r\n      <ion-select-option  *ngFor=\"let province of this.selectedprovince \" style=\"font-family: 'Sriracha', cursive;\"\r\n                          value=\"{{province.id}}\"> {{province.name_th}} </ion-select-option>\r\n    </ion-select>\r\n  </ion-item>\r\n\r\n  <ion-item  class=\"background\">\r\n    <ion-label style=\"font-family: 'Sriracha', cursive;\" >Select: amphures</ion-label>\r\n    <ion-select style=\"font-family: 'Sriracha', cursive;\" class=\"custom-options\" [(ngModel)]=\"mySelectamphures\" (ionChange)=\"selectedamphuresmethod(mySelectamphures)\">\r\n      <ion-select-option  *ngFor=\"let amphures of this.selectedamphures \" style=\"font-family: 'Sriracha', cursive;\"\r\n                          value=\"{{amphures.id}}\"> {{amphures.name_th}} </ion-select-option>\r\n    </ion-select>\r\n  </ion-item>\r\n\r\n<!--  <ion-item>-->\r\n<!--    <ion-label>Time</ion-label>-->\r\n<!--    <ion-datetime cancelText=\"cancel\" doneText=\"done\" displayFormat=\"DD : MMMM\"></ion-datetime>-->\r\n<!--  </ion-item>-->\r\n\r\n\r\n\r\n</ion-content>\r\n\r\n\r\n";
+      __webpack_exports__["default"] = "<link href=\"https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap\" rel=\"stylesheet\">\r\n<ion-header class=\"background\" style=\"font-family: 'Sarabun', sans-serif;\">\r\n  <ion-toolbar class=\"background\">\r\n        <ion-buttons >\r\n          <ion-back-button style=\"font-family: 'Sarabun', sans-serif;\" defaultHref=\"home\"></ion-back-button>\r\n        </ion-buttons>\r\n        <ion-buttons slot=\"primary\" >\r\n          <ion-button color=\"secondary\" style=\"font-family: 'Sarabun', sans-serif;\">\r\n            Done\r\n          </ion-button>\r\n        </ion-buttons>\r\n        <ion-title style=\"font-family: 'Sarabun', sans-serif;\">ค้นหาขั้นสูง</ion-title>\r\n\r\n  </ion-toolbar>\r\n</ion-header>\r\n\r\n<ion-content class=\"background\" style=\"font-family: 'Sarabun', sans-serif;\">\r\n\r\n  <div class=\"padding\">\r\n\r\n  <ion-range dualKnobs=\"true\" [min]=timeMin [max]=timeMax step=\"3\"\r\n              [(ngModel)]=\"time\" (ionChange)=\"setBadge(time)\" ></ion-range>\r\n  <div >\r\n    <ion-item  class=\"background\">\r\n      <ion-text style=\"font-family: 'Sarabun', sans-serif;\" color=\"primary\">{{this.timeMin2}} - </ion-text>\r\n      <ion-text style=\"font-family: 'Sarabun', sans-serif;\" color=\"primary\">{{ this.timeMax2}} บาท /ชั่วโมง</ion-text>\r\n    </ion-item>\r\n  </div>\r\n    <br>\r\n\r\n    <label>ที่อยู่</label>\r\n    <br>\r\n    <br>\r\n    <ion-label>จังหวัด</ion-label>\r\n    <ion-select class=\"custom-options\" [(ngModel)]=\"mySelectprovince\" (ionChange)=\"selectedprovincemethod(mySelectprovince)\">\r\n      <ion-item>\r\n        <ion-select-option  *ngFor=\"let province of this.selectedprovince \"\r\n                            [value]=\"{value: province.id, name: province.name_th}\"> {{province.name_th}} </ion-select-option>\r\n      </ion-item>\r\n    </ion-select>\r\n    <ion-label>อำเภอ</ion-label>\r\n\r\n    <ion-select class=\"custom-options\" [(ngModel)]=\"mySelectamphures\" (ionChange)=\"selectedamphuresmethod(mySelectamphures)\">\r\n      <ion-item>\r\n        <ion-select-option  *ngFor=\"let amphures of this.selectedamphures \"\r\n                            [value]=\"{value: amphures.id, name: amphures.name_th}\"> {{amphures.name_th}} </ion-select-option>\r\n      </ion-item>\r\n    </ion-select>\r\n    <ion-label>ตำบล</ion-label>\r\n    <ion-select class=\"custom-options\" [(ngModel)]=\"mySelectdistricts\" (ionChange)=\"selecteddistrictsmethod(mySelectdistricts)\">\r\n      <ion-item>\r\n        <ion-select-option  *ngFor=\"let districts of this.selecteddistricts \"\r\n                            value=\"{{districts.name_th}}\"> {{districts.name_th}} </ion-select-option>\r\n      </ion-item>\r\n    </ion-select>\r\n  </div>\r\n\r\n\r\n</ion-content>\r\n\r\n\r\n";
       /***/
     },
 

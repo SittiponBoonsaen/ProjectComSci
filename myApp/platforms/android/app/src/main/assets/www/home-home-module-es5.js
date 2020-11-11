@@ -143,7 +143,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<ion-tabs>\r\n    <ion-tab-bar slot=\"bottom\" style=\"font-family: 'Sriracha', cursive;\">\r\n        <ion-tab-button tab=\"myhome\">\r\n            <ion-icon name=\"home\"></ion-icon>\r\n            <ion-label>home</ion-label>\r\n            <ion-badge>6</ion-badge>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button tab=\"search\">\r\n            <ion-icon name=\"search\"></ion-icon>\r\n            <ion-label>search</ion-label>\r\n        </ion-tab-button>\r\n\r\n\r\n        <ion-tab-button tab=\"account\">\r\n            <ion-icon name=\"person\"></ion-icon>\r\n            <ion-label>My Account</ion-label>\r\n        </ion-tab-button>\r\n    </ion-tab-bar>\r\n</ion-tabs>\r\n";
+      __webpack_exports__["default"] = "<link href=\"https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap\" rel=\"stylesheet\">\r\n<ion-tabs>\r\n    <ion-tab-bar slot=\"bottom\" style=\"font-family: 'Sarabun', sans-serif;\">\r\n        <ion-tab-button tab=\"myhome\">\r\n            <ion-icon name=\"home\"></ion-icon>\r\n            <ion-label>home</ion-label>\r\n            <ion-badge>6</ion-badge>\r\n        </ion-tab-button>\r\n\r\n        <ion-tab-button tab=\"search\">\r\n            <ion-icon name=\"search\"></ion-icon>\r\n            <ion-label>search</ion-label>\r\n        </ion-tab-button>\r\n\r\n\r\n        <ion-tab-button tab=\"account\">\r\n            <ion-icon name=\"person\"></ion-icon>\r\n            <ion-label>My Account</ion-label>\r\n        </ion-tab-button>\r\n    </ion-tab-bar>\r\n</ion-tabs>\r\n";
       /***/
     },
 

@@ -8,6 +8,10 @@ const routes: Routes = [
     path: '',
     component: EditfieldPage
   },
+  {
+    path: 'discount',
+    loadChildren: () => import('../discount/discount.module').then( m => m.DiscountPageModule)
+  },
 ];
 
 @NgModule({

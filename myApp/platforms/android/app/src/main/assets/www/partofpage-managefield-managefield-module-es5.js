@@ -110,7 +110,7 @@
                       dataJSON = {
                         id_store: this.idstore
                       };
-                      this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON)).subscribe(function (datastore) {
+                      this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/getingfield', JSON.stringify(dataJSON)).subscribe(function (datastore) {
                         _this.datafield = datastore;
 
                         _this.loading.dismiss();
@@ -134,25 +134,36 @@
           }
         }, {
           key: "gotoEdit",
-          value: function gotoEdit() {
+          value: function gotoEdit(idfield) {
+            this.datapassService.idfieldformmanagefield = idfield;
+            console.log(idfield);
             var navigate = this.router.navigate(['/home/tabs/account/managestore/managefield/editfield']);
           }
         }, {
           key: "gotoDelete",
           value: function gotoDelete() {
+            var _this2 = this;
+
+            var navigate = this.router.navigate(['/home/tabs/account/managestore/managefield']);
             var dataJSON = {
               "id_field": this.id_Field
             };
             console.log(dataJSON);
-            this.Http.post('https://jongsanamcsmsu.000webhostapp.com/apiFinal/field/delete', JSON.stringify(dataJSON)).subscribe(function (data) {
+            this.Http.post('https://finalprojectcs.000webhostapp.com/apiFinal/field/delete', JSON.stringify(dataJSON)).subscribe(function (data) {
+              var navigate = _this2.router.navigate(['/home/tabs/account/managestore/managefield']);
+
               console.log(data);
+            }, function (error) {
+              var navigate = _this2.router.navigate(['/home/tabs/account/managestore/managefield']);
+
+              console.log(error);
             });
           }
         }, {
           key: "presentAlertConfirm",
           value: function presentAlertConfirm(idfield) {
             return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, /*#__PURE__*/regeneratorRuntime.mark(function _callee2() {
-              var _this2 = this;
+              var _this3 = this;
 
               var alert;
               return regeneratorRuntime.wrap(function _callee2$(_context2) {
@@ -169,7 +180,7 @@
                         buttons: [{
                           text: 'ใช่',
                           handler: function handler() {
-                            _this2.gotoDelete();
+                            _this3.gotoDelete();
                           }
                         }, {
                           text: 'ไม่',
@@ -348,7 +359,7 @@
       /* harmony default export */
 
 
-      __webpack_exports__["default"] = "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\n<link href=\"https://fonts.googleapis.com/css2?family=Sriracha&display=swap\" rel=\"stylesheet\">\n<ion-header class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\n  <ion-toolbar>\n    <ion-buttons>\n      <ion-back-button style=\"font-family: 'Sriracha', cursive;\" defaultHref=\"home\"></ion-back-button>\n    </ion-buttons>\n    <ion-title style=\"font-family: 'Sriracha', cursive;\" >จัดการสนาม</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"background\" style=\"font-family: 'Sriracha', cursive;\">\n\n    <p-table [value]=\"datafield\">\n      <ng-template pTemplate=\"caption\">\n        <div class=\"p-d-flex p-ai-center p-jc-between\" style=\"font-family: 'Sriracha', cursive;\">\n          ข้อมูลสนาม\n        </div>\n      </ng-template>\n      <ng-template pTemplate=\"header\">\n        <tr style=\"font-family: 'Sriracha', cursive;\">\n          <th>Image</th>\n          <th>Name</th>\n          <th>statusField</th>\n          <th>#</th>\n          <!--        <th>Telephone</th>-->\n          <!--        <th>Address</th>-->\n        </tr>\n      </ng-template>\n      <ng-template pTemplate=\"body\" let-datafield>\n        <tr style=\"font-family: 'Sriracha', cursive;\">\n          <td><img *ngIf=\"datafield.picture_picturefield == null\" src=\"assets/img/noimage.png\" [alt]=\"datafield.name_field\" class=\"p-shadow-4\"  />\n            <img *ngIf=\"datafield.picture_picturefield != null\" src=\"data:image/png;base64,{{datafield.picture_picturefield}}\" [alt]=\"datafield.name_field\" width=\"100\" class=\"p-shadow-4\"  />\n\n          </td>\n          <td>{{datafield.name_field}}</td>\n          <td>{{datafield.status_field}}</td>\n          <!--        <td>{{product.address_store}}</td>-->\n\n          <td>\n            <ion-icon name=\"construct-outline\" style=\"width: 25px;height: 25px;\" (click)=\"gotoEdit()\"></ion-icon>\n            <ion-icon name=\"trash-outline\" style=\"width: 25px;height: 25px;\" (click)=\"presentAlertConfirm(datafield.id_field)\"></ion-icon>\n          </td>\n\n          <!--        <td><p-rating [ngModel]=\"product.rating\" [readonly]=\"true\" [cancel]=\"false\"></p-rating></td>-->\n          <!--        <td><span [class]=\"'product-badge status-' + product.inventoryStatus.toLowerCase()\">{{product.inventoryStatus}}</span></td>-->\n        </tr>\n      </ng-template>\n      <ng-template pTemplate=\"summary\">\n        <div class=\"p-d-flex p-ai-center p-jc-between\" style=\"font-family: 'Sriracha', cursive;\">\n          In total there are {{datafield ? datafield.length : 0 }} products.\n        </div>\n      </ng-template>\n    </p-table>\n\n  <ion-fab vertical=\"bottom\" horizontal=\"end\" slot=\"fixed\">\n    <ion-fab-button>\n      <ion-icon (click)=\"goToAddfield()\" name=\"add\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>\n";
+      __webpack_exports__["default"] = "<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\">\n<link href=\"https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap\" rel=\"stylesheet\">\n<ion-header class=\"background\" style=\"font-family: 'Sarabun', sans-serif;\">\n  <ion-toolbar>\n    <ion-buttons>\n      <ion-back-button style=\"font-family: 'Sarabun', sans-serif;\" defaultHref=\"home\"></ion-back-button>\n    </ion-buttons>\n    <ion-title style=\"font-family: 'Sarabun', sans-serif;\" >จัดการสนาม</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"background\" style=\"font-family: 'Sarabun', sans-serif;\">\n\n    <p-table [value]=\"datafield\">\n      <ng-template pTemplate=\"caption\">\n        <div class=\"p-d-flex p-ai-center p-jc-between\" style=\"font-family: 'Sarabun', sans-serif;\">\n          ข้อมูลสนาม\n        </div>\n      </ng-template>\n      <ng-template pTemplate=\"header\">\n        <tr style=\"font-family: 'Sarabun', sans-serif;\">\n          <th>รูปภาพ</th>\n          <th>ชื่อสนาม</th>\n          <th>สถานะ</th>\n          <th>การจัดการ</th>\n        </tr>\n      </ng-template>\n      <ng-template pTemplate=\"body\" let-datafield>\n        <tr style=\"font-family: 'Sarabun', sans-serif;\">\n          <td><img *ngIf=\"datafield.picture_picturefield == null\" src=\"assets/img/noimage.png\" [alt]=\"datafield.name_field\" class=\"p-shadow-4\"  />\n            <img *ngIf=\"datafield.picture_picturefield != null\" src=\"data:image/png;base64,{{datafield.picture_picturefield}}\" [alt]=\"datafield.name_field\" width=\"100\" class=\"p-shadow-4\"  />\n          </td>\n          <td>{{datafield.name_field}}</td>\n          <td>{{datafield.status_field}}</td>\n          <!--        <td>{{product.address_store}}</td>-->\n\n          <td>\n            <ion-icon name=\"construct-outline\" style=\"width: 25px;height: 25px;\" (click)=\"gotoEdit(datafield.id_field)\"></ion-icon>\n            <ion-icon name=\"trash-outline\" style=\"width: 25px;height: 25px;\" (click)=\"presentAlertConfirm(datafield.id_field)\"></ion-icon>\n          </td>\n\n          <!--        <td><p-rating [ngModel]=\"product.rating\" [readonly]=\"true\" [cancel]=\"false\"></p-rating></td>-->\n          <!--        <td><span [class]=\"'product-badge status-' + product.inventoryStatus.toLowerCase()\">{{product.inventoryStatus}}</span></td>-->\n        </tr>\n      </ng-template>\n      <ng-template pTemplate=\"summary\">\n        <div class=\"p-d-flex p-ai-center p-jc-between\" style=\"font-family: 'Sarabun', sans-serif;\">\n          In total there are {{datafield ? datafield.length : 0 }} products.\n        </div>\n      </ng-template>\n    </p-table>\n\n  <ion-fab vertical=\"bottom\" horizontal=\"end\" slot=\"fixed\">\n    <ion-fab-button>\n      <ion-icon (click)=\"goToAddfield()\" name=\"add\"></ion-icon>\n    </ion-fab-button>\n  </ion-fab>\n</ion-content>\n";
       /***/
     },
 
